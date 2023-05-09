@@ -59,6 +59,7 @@ form {
   /* The "Forgot password" text */
   label.forget-password{
     float: right;
+    font-size: 15px;
   }
 
   
