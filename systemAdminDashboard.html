@@ -35,6 +35,7 @@
                 <tbody id="tableBody">
                   <!-- The table body will be populated dynamically -->
                 </tbody>
+                <a href="view-user-details.html?userId=1">View User Details</a>
             </table>
         </div>
         
@@ -67,76 +68,41 @@
     }
 
     // Example data of user objects
-    var users = [
+        var users = [
     { id: 1, name: "Alfreds Futterkiste", role: "System Admin", email: "alfred@example.com" },
     { id: 2, name: "Berglunds snabbkop", role: "Manager", email: "berglunds@example.com" },
     // Add more user objects as needed
-  ];
+    ];
 
-  // Function to generate the table rows dynamically
-  function generateTable() {
+    // Function to generate the table rows dynamically
+    function generateTable() {
     var tableBody = document.getElementById("tableBody");
     tableBody.innerHTML = ""; // Clear previous table rows
 
     users.forEach(function (user) {
-      var row = document.createElement("tr");
-      var nameCell = document.createElement("td");
-      var nameLink = document.createElement("a");
-      nameLink.href = "userDetails.html"; // Replace with the appropriate link destination
-      nameLink.textContent = user.name; // Set the text content of the link
+        var row = document.createElement("tr");
+        var nameCell = document.createElement("td");
+        var nameLink = document.createElement("a");
+        nameLink.href = "view-user-details.html?userId=" + user.id; // Modify the href value with the appropriate link destination
 
-      // Attach event listener to handle click event
-      nameLink.addEventListener("click", function (event) {
+        nameLink.textContent = user.name; // Set the text content of the link
+
+        // Attach event listener to handle click event
+        nameLink.addEventListener("click", function (event) {
         event.preventDefault(); // Prevent the default hyperlink behavior
         var userId = user.id; // Get the user ID from the user object
         // Call a function or perform any desired action with the user ID
         displayUserDetails(userId);
-      });
+        });
 
-      nameCell.appendChild(nameLink);
-      row.appendChild(nameCell);
-      row.innerHTML += `
+        nameCell.appendChild(nameLink);
+        row.appendChild(nameCell);
+        row.innerHTML += `
         <td>${user.role}</td>
         <td>${user.email}</td>
-      `;
-      tableBody.appendChild(row);
+        `;
+        tableBody.appendChild(row);
     });
-  }
-
-  // Function to display user details based on the user ID
-//   function displayUserDetails(userId) {
-//     // Find the user object with the matching ID
-//     var user = users.find(function (user) {
-//       return user.id === userId;
-//     });
-
-//     if (user) {
-//       console.log("View User Detail:", user); // Example: Log the user details to the console
-//       // Perform any other actions to display the user details
-//     }
-//   }
-    function displayUserDetails(userId) {
-    // Find the user object with the matching ID
-    var user = users.find(function (user) {
-        return user.id === userId;
-    });
-
-    if (user) {
-        // Access the DOM elements to update and display the user details
-        var userDetailsContainer = document.getElementById("userDetailsContainer");
-        var nameElement = document.getElementById("userName");
-        var roleElement = document.getElementById("userRole");
-        var emailElement = document.getElementById("userEmail");
-
-        // Update the text content of the DOM elements with the user details
-        nameElement.textContent = user.name;
-        roleElement.textContent = user.role;
-        emailElement.textContent = user.email;
-
-        // Show the user details container (e.g., display:block or remove "hidden" class)
-        userDetailsContainer.style.display = "block";
     }
-    }
-
   generateTable(); // Call the function to generate the table initially
     </script>

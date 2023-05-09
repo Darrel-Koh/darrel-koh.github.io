@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="systemAdminDashboard.css">
+    </head>
+    <body>
+        <div class="topnav">
+            
+            <a class="logo" href="#home"><img src="5B2G_Logo.jpg" alt="Logo" ></a>
+            <a href="#home">Home</a>
+            <a href="#userManagement">User Management</a>
+            <a href="#profileManagement">Profile Management</a>
+            <a href="#profile" class="split">Profile</a>
+        </div>
+        
+        <div class="user-details-form">
+            <h2>User Details</h2>
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" readonly>
+          
+              <label for="role">Role:</label>
+              <input type="text" id="role" readonly>
+          
+              <label for="email">Email:</label>
+              <input type="email" id="email" readonly>
+            </form>
+          </div>
+
+    </body>
+</html>
+
+<!-- Javascript to view UserTable -->
+<script>
+    // Retrieve user details from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const userId = urlParams.get('userId');
+  
+    // Simulate fetching user details based on the userId
+    // Replace this code with your actual logic to fetch the user details
+    const user = fetchUserDetails(userId); // Function to fetch user details
+  
+    // Populate the form-like view with the user details
+    if (user) {
+      document.getElementById('name').value = user.name;
+      document.getElementById('role').value = user.role;
+      document.getElementById('email').value = user.email;
+    }
+  </script>
