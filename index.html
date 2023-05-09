@@ -51,10 +51,13 @@
       var username = document.getElementById("usernameInput").value;
       var password = document.getElementById("passwordInput").value;
       
-      if (username !== "" && password !== "") {
+      if (username !== "" && password !== "")
+      {
+        if (username == "admin" && password !== "admin")
         window.location.href = 'systemAdminDashboard.html';
       } else {
         alert("Please enter both username and password.");
       }
+
     }
 </script>
