@@ -24,35 +24,18 @@
 
         <div class="userTable">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-
             <table id="myTable">
-            <tr class="header">
-                <th style="width:20%;">Name</th>
-                <th style="width:20%;">Role</th>
-                <th style="width:20%;">Email</th>
-            </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>System Admin</td>
-                <td>Alfred@email.com</td>
-            </tr>
-            <tr>
-                <td>Berglunds snabbkop</td>
-                <td>Manager</td>
-                <td>Berglunds@email.com</td>
-            </tr>
-            <tr>
-                <td>Island Trading</td>
-                <td>Staff</td>
-                <td>Islandd@email.com</td>
-            </tr>
-            <tr>
-                <td>Koniglich Essen</td>
-                <td>Customer</td>
-                <td>Essen@email.com</td>
-            </tr>
+                <thead>
+                  <tr class="header">
+                    <th style="width:20%;">Name</th>
+                    <th style="width:20%;">Role</th>
+                    <th style="width:20%;">Email</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  <!-- The table body will be populated dynamically -->
+                </tbody>
             </table>
-
         </div>
 
     </body>
@@ -81,4 +64,30 @@
         }
       }
     }
+
+    // Example data of user objects
+    var users = [
+        { name: "Alfreds Futterkiste", role: "System Admin", email: "alfred@example.com" },
+        { name: "Berglunds snabbkop", role: "Manager", email: "berglunds@example.com" },
+        { name: "Koniglich Essen", role: "Customer", email: "KoniglichEssen@example.com" },
+        // Add more user objects as needed
+    ];
+
+    // Function to generate the table rows dynamically
+    function generateTable() {
+        var tableBody = document.getElementById("tableBody");
+        tableBody.innerHTML = ""; // Clear previous table rows
+
+        users.forEach(function (user) {
+        var row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${user.name}</td>
+            <td>${user.role}</td>
+            <td>${user.email}</td>
+        `;
+        tableBody.appendChild(row);
+        });
+    }
+
+    generateTable(); // Call the function to generate the table initially
     </script>
