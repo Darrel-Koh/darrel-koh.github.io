@@ -1,7 +1,23 @@
 /* Create a top navigation bar with a black background color  */
+/* .imgcontainer {
+
+    width: auto;
+    height: 10px;
+  } */
+a.logo {
+    display: inline-block;
+    vertical-align: middle; /* Adjust vertical alignment as needed */
+    padding:0% !important;
+  }
+  
+a.logo img {
+    height: 50px; /* Adjust the height of the logo image */
+    /* Add any other necessary styling for the logo image */
+  }
 .topnav {
   background-color: #333;
   overflow: hidden;
+  height: 50px;
 }
 
 /* Style the links inside the navigation bar */
@@ -12,6 +28,7 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  height: 50px;
 }
 
 /* Change the color of links on hover */
