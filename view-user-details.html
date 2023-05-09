@@ -41,18 +41,34 @@
 
 <!-- Javascript to view UserTable -->
 <script>
-    // Retrieve user details from URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const userId = urlParams.get('userId');
-  
-    // Simulate fetching user details based on the userId
-    // Replace this code with your actual logic to fetch the user details
-    const user = fetchUserDetails(userId); // Function to fetch user details
-  
-    // Populate the form-like view with the user details
-    if (user) {
-      document.getElementById('name').value = user.name;
-      document.getElementById('role').value = user.role;
-      document.getElementById('email').value = user.email;
-    }
+   // Function to fetch user details based on the userId
+   function fetchUserDetails(userId) {
+            // Replace this code with your actual logic to fetch the user details
+            var users = [
+                { id: 1, name: "Alfreds Futterkiste", role: "System Admin", email: "alfred@example.com" },
+                { id: 2, name: "Berglunds snabbkop", role: "Manager", email: "berglunds@example.com" },
+                // Add more user objects as needed
+            ];
+      
+            // Find the user with the matching userId
+            var user = users.find(function (user) {
+                return user.id == userId;
+            });
+      
+            return user;
+        }
+      
+        // Retrieve user details from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('userId');
+      
+        // Fetch user details based on the userId
+        const user = fetchUserDetails(userId);
+      
+        // Populate the form-like view with the user details
+        if (user) {
+            document.getElementById('name').value = user.name;
+            document.getElementById('role').value = user.role;
+            document.getElementById('email').value = user.email;
+        }
   </script>
