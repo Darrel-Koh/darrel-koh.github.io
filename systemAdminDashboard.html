@@ -80,13 +80,19 @@
 
         users.forEach(function (user) {
         var row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${user.name}</td>
+        var nameCell = document.createElement("td");
+        var nameLink = document.createElement("a");
+        nameLink.href = "#"; // Replace with the appropriate link destination
+        nameLink.textContent = user.name; // Set the text content of the link
+        nameCell.appendChild(nameLink);
+        row.appendChild(nameCell);
+        row.innerHTML += `
             <td>${user.role}</td>
             <td>${user.email}</td>
         `;
         tableBody.appendChild(row);
         });
+        
     }
 
     generateTable(); // Call the function to generate the table initially
