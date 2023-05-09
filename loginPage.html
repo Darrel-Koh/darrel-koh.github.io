@@ -13,28 +13,46 @@
         <link rel="stylesheet" href="loginPage.css">
     </head>
     <body>
-        <form action="/submit" method="post">
+        <form onsubmit="validateLogin(event)" method="post">
             <div class="imgcontainer">
               <img src="5B2G_Logo.jpg" alt="Logo" class="logo">
             </div>
-          
-            <div class="container">
-              <label for="uname"><b>Username</b></label>
-              <input type="text" placeholder="Enter Username" name="uname" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-          
-              <button type="submit">Login</button>
-              <!-- <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-              </label> -->
+
             </div>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" id="usernameInput" required>
+                
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="passwordInput" required>
+                
+                <button type="submit">Login</button>
+                <label>
+                <!-- <input type="checkbox" checked="checked" name="remember"> Remember me -->
+              </label> 
+              </div>
           
             <div class="container" style="background-color:#f1f1f1">
-              <button type="button" class="cancelbtn">Cancel</button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
+              <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+              <span class="psw"> <a href="#">Forgot password?</a></span>
             </div>
         </form>
     </body>
 </html>
+
+<!-- Javascript -->
+<script>
+    // to handle validatation temporarily
+    function validateLogin() {
+    event.preventDefault(); // Prevent default form submission behavior
+
+      var username = document.getElementById("usernameInput").value;
+      var password = document.getElementById("passwordInput").value;
+      
+      if (username !== "" && password !== "") {
+        window.location.href = 'systemAdminDashboard.html';
+      } else {
+        alert("Please enter both username and password.");
+      }
+    }
+</script>
