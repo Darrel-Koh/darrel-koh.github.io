@@ -52,16 +52,17 @@ form {
   
   /* Add padding to containers */
   .container {
-    padding: 16px;
+    padding: 16px 16px 30px;
+    
   }
   
   /* The "Forgot password" text */
-  span.psw {
+  label.forget-password{
     float: right;
-    padding-top: 16px;
   }
+
   
-  /* Change styles for span and cancel button on extra small screens */
+  /* Change styles for span and cancel button on extra small screens 
   @media screen and (max-width: 300px) {
     span.psw {
       display: block;
@@ -70,4 +71,4 @@ form {
     .cancelbtn {
       width: 100%;
     }
-  }
+  }*/
