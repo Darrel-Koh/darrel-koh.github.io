@@ -45,7 +45,7 @@
 <!-- Javascript -->
 <script>
     // to handle validatation temporarily
-    function validateLogin() {
+    function validateLogin(event) {
     event.preventDefault(); // Prevent default form submission behavior
 
       var username = document.getElementById("usernameInput").value;
@@ -53,10 +53,15 @@
       
       if (username !== "" && password !== "")
       {
-        if (username == "admin" && password !== "admin")
-        window.location.href = 'systemAdminDashboard.html';
+        // if (username == "admin" && password == "admin")
+        // {
+        //   window.location.href = 'systemAdminDashboard.html';
+        // }
+        // else{
+        //   alert("Wrong account details");
+        // }
       } else {
-        alert("Please enter both username and password.");
+        alert("Please enter both username and password again.");
       }
 
     }
