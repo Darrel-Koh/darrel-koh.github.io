@@ -1,10 +1,11 @@
 ﻿# CinemaBookingSystem
 
 ## Homepage login page is at index.html
-
+Here is the deployed webpage: https://darrel-koh.github.io
 
 ### Do use the following commands to help
 
+```
 git clone https://github.com/Darrel-Koh/darrel-koh.github.io.git
 
 git status (To check current status of your git progress)
@@ -20,6 +21,7 @@ git switch <file-name> (Switch between branches)
 git commit -m (To commit changes, and include a message)
 
 git push (To push changes to the main repo)
+```
 
 
 ### Before you start coding:
