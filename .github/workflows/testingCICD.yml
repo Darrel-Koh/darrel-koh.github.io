@@ -19,20 +19,17 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Build and test
-        run: |
-          # Build your project (e.g., compile Java files, bundle JavaScript files)
-          # Replace the commands below with your own build steps
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
 
-          # Build Java files
-          javac -d dist SystemAdmin/javaFiles/*.java
+      - name: Run HTMLHint on HTML files
+        run: htmlhint SystemAdmin/*.html
 
-          # Bundle JavaScript files
-          npm install
-          npm run build
+      - name: Install Stylelint
+        run: npm install -g stylelint
 
-          # Run unit tests (replace with your own testing commands)
-          npm run test
+      - name: Run Stylelint on CSS files
+        run: stylelint SystemAdmin/styles/*.css
 
   deploy:
     runs-on: ubuntu-latest
