@@ -25,7 +25,7 @@ jobs:
           # Replace the commands below with your own build steps
 
           # Build Java files
-          javac -d dist src/*.java
+          javac -d dist SystemAdmin/javaFiles/*.java
 
           # Bundle JavaScript files
           npm install
