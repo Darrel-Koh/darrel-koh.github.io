@@ -7,13 +7,47 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Login Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./styles/loginPage.css">
     </head>
     <body>
-        <h1>Hello World</h1>
-        <script src="" async defer></script>
+        <form onsubmit="validateLogin(event)" method="post">
+            <div class="imgcontainer">
+              <img src="./Images/5B2G_Logo.jpg" alt="Logo" class="logo">
+            </div>
+            
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" id="usernameInput" required>
+                
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="passwordInput" required>
+                
+                <button type="submit">Login</button>
+                <label>
+                <!-- <input type="checkbox" checked="checked" name="remember"> Remember me -->
+              </label> 
+                <label class="forget-password"> <a href="forgot-password.html">Forgot Password?</a> </label>
+              </div>
+        </form>
     </body>
 </html>
+
+<!-- Javascript -->
+<script>
+    // to handle validatation temporarily
+    function validateLogin() {
+    event.preventDefault(); // Prevent default form submission behavior
+
+      var username = document.getElementById("usernameInput").value;
+      var password = document.getElementById("passwordInput").value;
+      
+      if (username !== "" && password !== "") {
+        window.location.href = 'systemAdminDashboard.html';
+      } else {
+        alert("Please enter both username and password.");
+      }
+    }
+</script>
