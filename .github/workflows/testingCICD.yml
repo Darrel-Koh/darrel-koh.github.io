@@ -24,12 +24,13 @@ jobs:
 
       - name: Run HTMLHint on HTML files
         run: htmlhint SystemAdmin/*.html
+        
+      - name: Install csslint
+        run: npm install -g csslint
 
-      - name: Install Stylelint
-        run: npm install -g stylelint
-
-      - name: Run Stylelint on CSS files
-        run: stylelint SystemAdmin/styles/*.css
+      - name: Test CSS with csslint
+        run: csslint SystemAdmin/styles/*.css
+        
 
   deploy:
     runs-on: ubuntu-latest
