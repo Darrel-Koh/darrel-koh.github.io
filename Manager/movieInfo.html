@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<!-- Specify the language of the content as English -->
+<html lang="en">
+
+    <!-- Specify the character encoding by using the charset attribute -->
+    <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <head>
+        <title>Movies</title>
+
+        <style>
+
+            body{background-color: black;}
+
+            #navbar{background: rgba(64, 59, 59, 0.572); font-family: 'Franklin Gothic Medium'; padding-right: 15px; padding-left: 15px;}
+            #navdiv{display: flex; align-items: center; position: relative; justify-content: space-between;}
+            #cinemaLogo{width: 70px;}
+            #moviePageTitle{text-decoration: underline;}
+            #managerPic{width: 40px; border-radius: 50%; cursor: pointer; margin-left: 30px;}
+
+            li{display: inline-block;}
+            li a{color: rgb(255, 255, 255); font-size: 18px; font-weight: normal; margin-right: 25px; text-decoration: none;}
+   
+            #movieName{color: white;  font-family: 'Franklin Gothic Medium'; padding-left: 40px; }
+            #movieImg{width: 400px; height: 470px;; margin-bottom: 0rem; padding-left: 30px; padding-top: 30px; padding-right: 30px;}
+            .detailTitle{color: white; font-family: Arial;}
+            .details{color: white; font-family: Arial;}
+            #detailsTable{display: flex}
+            #movieDetails{display: flex;}
+
+            table{width: fit-content;}
+            th{text-align: left; padding: 20; vertical-align: top;}
+            .desc{width: 90%;}
+
+            #btns{margin: auto; width: 50%; text-align: center;}
+            #deleteBtn{background-color: rgba(169, 25, 25, 0.827);color: white; font-family: 'Franklin Gothic Medium'; font-size: 90%;}
+            #editBtn{font-family: 'Franklin Gothic Medium'; font-size: 90%;height: 10%;}
+
+        </style>
+
+        <script>
+            
+        </script>
+    </head>
+
+    <body>
+
+        <nav id="navbar">
+            <div id="navdiv">
+                <img src="./images/cinemaLogo.png" id="cinemaLogo">
+                <ul>
+                    <li><a href="movies.html" id="moviePageTitle">Movies</a></li>
+                    <li><a href="fnb.html" >Food & Baverage</a></li>
+                    <li><a href="cinemaRoom.html">Cinema Rooms</a></li>
+                    <li><a href="report.html">Generate Reports</a></li>
+                </ul>
+                <img src="./images/profilePicture.png" alt="pic" id="managerPic">
+            </div>
+        </nav> 
+
+        <h1 id="movieName">Joker</h1><hr/>
+
+        <div id="movieDetails">
+            <img src="./images/joker.jpg" id="movieImg" alt="movie-pic">
+
+            <div>            
+                <h3 class="detailTitle">Details</h3>
+                <div id="detailsTable">
+                    <table border="0" class="details">
+                        <tr id="cast">
+                            <th>Cast:</th>
+                            <th class="desc">Joaquin Phoenix · Arthur Fleck ; Robert De Niro · 
+                                Murray Franklin ; Zazie Beetz · Sophie Dumond ; Frances Conroy · 
+                                Penny Fleck
+                            </th>
+                        </tr>
+                        <tr id="director">
+                            <th>Director:</th>
+                            <th class="desc">Todd Phillips</th>
+                        </tr>
+                        <tr id="Genre">
+                            <th>Genre:</th>
+                            <th class="desc">Thriller</th>
+                        </tr>
+
+                        <tr id="rating">
+                            <th>Rating:</th>
+                            <th class="desc">4.5</th>
+                        </tr>
+                    </table>
+
+                    <table border="0" class="details">
+                        <tr id="release">
+                            <th>Release:</th>
+                            <th>03-10-2019</th>
+                        </tr>
+                        <tr id="runningTime">
+                            <th>Running Time:</th>
+                            <th>122 minutes</th>
+                        </tr>
+                        <tr id="language">
+                            <th>Language:</th>
+                            <th>English</th>
+                        </tr>
+                        <tr id="pg">
+                            <th>Parental Guidance Rating:</th>
+                            <th>pg-13</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div>
+                    <h3 class="detailTitle">Synopsis</h3>
+                    <p class="details">
+                        Forever alone in a crowd, failed comedian Arthur Fleck seeks connection 
+                        as he walks the streets of Gotham City. Arthur wears two masks -- the one 
+                        he paints for his day job as a clown, and the guise he projects in a 
+                        futile attempt to feel like he's part of the world around him. Isolated, 
+                        bullied and disregarded by society, Fleck begins a slow descent into 
+                        madness as he transforms into the criminal mastermind known as the Joker.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="btns">
+            <button id="editBtn">Edit Movie</button>
+            <button id="deleteBtn">Delete Movie</button>
+        </div>
+    </body>
+</html>

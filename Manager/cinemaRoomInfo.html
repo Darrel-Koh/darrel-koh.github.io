@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<!-- Specify the language of the content as English -->
+<html lang="en">
+
+    <!-- Specify the character encoding by using the charset attribute -->
+    <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <head>
+        <title>FoodAndBaverage</title>
+
+        <style>
+
+            body{background-color: black;}
+
+            #navbar{background: rgba(64, 59, 59, 0.572); font-family: 'Franklin Gothic Medium'; padding-right: 15px; padding-left: 15px;}
+            #navdiv{display: flex; align-items: center; position: relative; justify-content: space-between;}
+            #cinemaLogo{width: 70px;}
+            #CRPageTitle{text-decoration: underline;}
+            #managerPic{width: 40px; border-radius: 50%; cursor: pointer; margin-left: 30px;}
+
+            li{display: inline-block;}
+            li a{color: rgb(255, 255, 255); font-size: 18px; font-weight: normal; margin-right: 25px; text-decoration: none;}
+   
+            #CRName{color: white;  font-family: 'Franklin Gothic Medium'; padding-left: 40px; }
+            .detailTitle{color: white; font-family: Arial;padding-left: 10px;}
+            .details{color: white; font-family: Arial;}
+            #CRDetails{display: flex; padding-left: 20px; padding-top: 20px; padding-right: 20px; padding-bottom: 40px;}
+
+            table{width: fit-content;}
+            th{text-align: left; vertical-align: top; padding: 10px;}
+            .desc{width: 40%;}
+
+            #seatMap{border: 1px solid white; width: 60%; height: 500px;}
+
+            #btns{margin: auto; width: 50%; text-align: center;}
+            #deleteBtn{background-color: rgba(169, 25, 25, 0.827);color: white; font-family: 'Franklin Gothic Medium'; font-size: 90%;}
+            #editBtn{font-family: 'Franklin Gothic Medium'; font-size: 90%;height: 10%;}
+
+        </style>
+
+        <script>
+            
+        </script>
+    </head>
+
+    <body>
+
+        <nav id="navbar">
+            <div id="navdiv">
+                <img src="./images/cinemaLogo.png" id="cinemaLogo">
+                <ul>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="fnb.html">Food & Baverage</a></li>
+                    <li><a href="cinemaRoom.html" id="CRPageTitle">Cinema Rooms</a></li>
+                    <li><a href="report.html">Generate Reports</a></li>
+                </ul>
+                <img src="./images/profilePicture.png" alt="pic" id="managerPic">
+            </div>
+        </nav> 
+
+        <h1 id="CRName">CR-1</h1><hr/>
+
+        <div id="CRDetails">
+
+            <div id="seatMap">
+
+            </div>
+
+            <div>            
+                <h3 class="detailTitle">Details</h3>
+                <table border="0" class="details">
+                    <tr id="seatsAv">
+                        <th>Seats available:</th>
+                        <th class="desc">100 pax</th>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+
+        <div id="btns">
+            <button id="editBtn">Edit Details</button>
+            <button id="deleteBtn">Delete Cinema Room</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<!-- Specify the language of the content as English -->
+<html lang="en">
+
+    <!-- Specify the character encoding by using the charset attribute -->
+    <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <head>
+        <title>cinemaRooms</title>
+
+        <style>
+
+            body{background-color: black;}
+
+            #navbar{background: rgba(64, 59, 59, 0.572); font-family: 'Franklin Gothic Medium'; padding-right: 15px; padding-left: 15px;}
+            #navdiv{display: flex; align-items: center; position: relative; justify-content: space-between;}
+            #cinemaLogo{width: 70px;}
+            #CRPageTitle{text-decoration: underline;}
+            #managerPic{width: 40px; border-radius: 50%; cursor: pointer; margin-left: 30px;}
+
+            li{display: inline-block;}
+            li a{color: rgb(255, 255, 255); font-size: 18px; font-weight: normal; margin-right: 25px; text-decoration: none;}
+   
+            #searchAndCreate{margin: auto; width: 50%; text-align: center}
+            
+            #CRList{display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, auto)); gap: 1.5rem;}
+            .CRBox{border: 0.5px solid white; padding: 20px; width: fit-content; text-align: center;}
+            .CRTitle{color: white; font-family: Arial; font-size: medium;}
+            .viewInfoBtn{background-color: rgba(169, 25, 25, 0.827); color: white; font-family: 'Franklin Gothic Medium'; width: 100%; font-size: 90%;}
+
+        </style>
+
+        <script>
+            
+        </script>
+    </head>
+
+    <body>
+
+        <nav id="navbar">
+            <div id="navdiv">
+                <img src="./images/cinemaLogo.png" id="cinemaLogo">
+                <ul>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="fnb.html">Food & Baverage</a></li>
+                    <li><a href="cinemaRoom.html" id="CRPageTitle">Cinema Rooms</a></li>
+                    <li><a href="report.html">Generate Reports</a></li>
+                </ul>
+                <img src="./images/profilePicture.png" alt="pic" id="managerPic">
+            </div>
+        </nav> 
+
+        <div id="searchAndCreate">
+            <br/><input type="text" placeholder="Search by room number..">
+            <button>&#43; Add Cinema Ro</button><br/><br/>
+        </div>
+
+        <section>
+            <div id="CRList">
+
+                <div class="CRBox">
+                    <h2 class="CRTitle">CR 1</h2>
+                    <button class="viewInfoBtn"><a href="cinemaRoomInfo.html">VIEW INFO</a></button>
+                </div>
+
+                <div class="CRBox">
+                    <h2 class="CRTitle">CR 2</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="CRBox">
+                    <h2 class="CRTitle">CR 3</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="CRBox">
+                    <h2 class="CRTitle">CR 4</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="CRBox">
+                    <h2 class="CRTitle">CR 5</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="CRBox">
+                    <h2 class="CRTitle">CR 6</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="CRBox">
+                    <h2 class="CRTitle">CR 7</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="CRBox">
+                    <h2 class="CRTitle">CR 8</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="CRBox">
+                    <h2 class="CRTitle">CR 9</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+            </div>
+        </section>
+        
+    </body>
+</html>
