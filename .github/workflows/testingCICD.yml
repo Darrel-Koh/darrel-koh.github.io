@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List files
-        run: |
+        run:
           echo "Files in root directory:"
           ls
 
