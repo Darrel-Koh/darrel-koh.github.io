@@ -26,12 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List files
-        run:
-          echo "Files in root directory:"
-          ls
-
-          echo "Files in subdirectory:"
-          ls path/to/subdirectory
+        run: echo "Files in root directory:" && ls && echo "Files in subdirectory:" && ls path/to/subdirectory
     
       - name: Install HTMLHint
         run: npm install -g htmlhint
