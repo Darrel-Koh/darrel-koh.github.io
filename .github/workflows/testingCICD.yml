@@ -34,7 +34,7 @@ jobs:
       - name: Install CSSLint
         run: npm install -g csslint
       - name: Run CSSLint on CSS files
-        run: csslint SystemAdmin/styles/*.css
+        run: csslint /SystemAdmin/styles/*.css
         
       - name: Checkout
         uses: actions/checkout@v3
