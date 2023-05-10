@@ -25,6 +25,7 @@ git push (To push changes to the main repo)
 Before you start coding:
 git status (To check current status of your git progress)
 git fetch (To fetch Teammates changes before starting)
+git pull (To complete fetching changes)
 
 After make changes:
 git status (To check current status of your git progress)
