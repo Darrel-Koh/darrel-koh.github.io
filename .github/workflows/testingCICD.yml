@@ -38,11 +38,11 @@ jobs:
       - name: Run HTMLHint on HTML files
         run: htmlhint SystemAdmin/*.html
 
-      - name: Install CSSValidator
-        run: npm install -g cssvalidator
+      - name: Install csslint
+        run: npm install -g csslint
 
-      - name: Run CSSValidator on CSS files
-        run: cssvalidator SystemAdmin/styles/*.css
+      - name: Test CSS with csslint
+        run: csslint SystemAdmin/styles/*.css
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
