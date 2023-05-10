@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<!-- Specify the language of the content as English -->
+<html lang="en">
+
+    <!-- Specify the character encoding by using the charset attribute -->
+    <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <head>
+        <title>FoodAndBaverage</title>
+
+        <style>
+
+            body{background-color: black;}
+
+            #navbar{background: rgba(64, 59, 59, 0.572); font-family: 'Franklin Gothic Medium'; padding-right: 15px; padding-left: 15px;}
+            #navdiv{display: flex; align-items: center; position: relative; justify-content: space-between;}
+            #cinemaLogo{width: 70px;}
+            #fnbPageTitle{text-decoration: underline;}
+            #managerPic{width: 40px; border-radius: 50%; cursor: pointer; margin-left: 30px;}
+
+            li{display: inline-block;}
+            li a{color: rgb(255, 255, 255); font-size: 18px; font-weight: normal; margin-right: 25px; text-decoration: none;}
+   
+            #searchAndCreate{margin: auto; width: 50%; text-align: center}
+            
+            #fnbList{display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, auto)); gap: 1.5rem;}
+            .fnbBox{border: 0.5px solid white; padding: 20px; width: fit-content; text-align: center;}
+            .fnbTitle{color: white; font-family: Arial; font-size: medium;}
+            .fnbImg{margin-bottom: 0rem; width: 200px; height: 250px;}
+            .viewInfoBtn{background-color: rgba(169, 25, 25, 0.827); color: white; font-family: 'Franklin Gothic Medium'; width: 100%; font-size: 90%;height: 10%;}
+
+        </style>
+
+        <script>
+            
+        </script>
+    </head>
+
+    <body>
+
+        <nav id="navbar">
+            <div id="navdiv">
+                <img src="./images/cinemaLogo.png" id="cinemaLogo">
+                <ul>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="fnb.html" id="fnbPageTitle">Food & Baverage</a></li>
+                    <li><a href="cinemaRoom.html">Cinema Rooms</a></li>
+                    <li><a href="report.html">Generate Reports</a></li>
+                </ul>
+                <img src="./images/profilePicture.png" alt="pic" id="managerPic">
+            </div>
+        </nav> 
+
+        <div id="searchAndCreate">
+            <br/><input type="text" placeholder="Search..">
+            <button>&#43; Add Food</button><br/><br/>
+        </div>
+
+        <section>
+            <div id="fnbList">
+
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 1" class="fnbImg">
+                    <h2 class="fnbTitle">Item 1</h2>
+                    <button class="viewInfoBtn"><a href="fnbInfo.html">VIEW INFO</a></button>
+                </div>
+
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 2" class="fnbImg">
+                    <h2 class="fnbTitle">Item 2</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 3" class="fnbImg">
+                    <h2 class="fnbTitle">Item 3</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 4" class="fnbImg">
+                    <h2 class="fnbTitle">Item 4</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 5" class="fnbImg">
+                    <h2 class="fnbTitle">Item 5</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 6" class="fnbImg">
+                    <h2 class="fnbTitle">Item 6</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 7" class="fnbImg">
+                    <h2 class="fnbTitle">Item 7</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 8" class="fnbImg">
+                    <h2 class="fnbTitle">Item 8</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 9" class="fnbImg">
+                    <h2 class="fnbTitle">Item 9</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 10" class="fnbImg">
+                    <h2 class="fnbTitle">Item 10</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 11" class="fnbImg">
+                    <h2 class="fnbTitle">Item 11</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+                
+                <div class="fnbBox">
+                    <img src="./images/popcorn.jpg" alt="Item 12" class="fnbImg">
+                    <h2 class="fnbTitle">Item 12</h2>
+                    <button class="viewInfoBtn">VIEW INFO</button>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+</html>

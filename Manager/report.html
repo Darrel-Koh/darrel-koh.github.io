@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- Specify the language of the content as English -->
+<html lang="en">
+
+    <!-- Specify the character encoding by using the charset attribute -->
+    <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <head>
+        <title>generateReports</title>
+
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function() {
+            $("#date").datepicker();
+            });
+        </script>
+
+        <style>
+
+            body{background-color: black;}
+
+            #navbar{background: rgba(64, 59, 59, 0.572); font-family: 'Franklin Gothic Medium'; padding-right: 15px; padding-left: 15px;}
+            #navdiv{display: flex; align-items: center; position: relative; justify-content: space-between;}
+            #cinemaLogo{width: 70px;}
+            #reportsPageTitle{text-decoration: underline;}
+            #managerPic{width: 40px; border-radius: 50%; cursor: pointer; margin-left: 30px;}
+
+            li{display: inline-block;}
+            li a{color: rgb(255, 255, 255); font-size: 18px; font-weight: normal; margin-right: 25px; text-decoration: none;}
+   
+            #reportdiv{margin: 40px; width: 50%; text-align: center;}
+            #generateReportBtn{background-color: rgba(169, 25, 25, 0.827); color: white; font-family: 'Franklin Gothic Medium'; padding: 5px 10px;
+                font-size: 90%; border: none; border-radius: 5px; cursor: pointer;}
+        
+        </style>
+
+        <script>
+            
+        </script>
+    </head>
+
+    <body>
+
+        <nav id="navbar">
+            <div id="navdiv">
+                <img src="./images/cinemaLogo.png" id="cinemaLogo">
+                <ul>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="fnb.html">Food & Baverage</a></li>
+                    <li><a href="cinemaRoom.html">Cinema Rooms</a></li>
+                    <li><a href="report.html" id="reportsPageTitle">Generate Reports</a></li>
+                </ul>
+                <img src="./images/profilePicture.png" alt="pic" id="managerPic">
+            </div>
+        </nav> 
+
+        <div id="reportdiv">
+            <label for="date">Select a date:</label>
+            <input type="text" id="date" name="date">
+            <button id="generateReportBtn">Generate Reports</button>
+        </div>
+
+        <section>
+            <div id="generatedReport">
+
+            </div>
+        </section>
+        
+    </body>
+</html>
