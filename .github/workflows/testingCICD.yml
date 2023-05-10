@@ -1,0 +1,44 @@
+name: CI/CD for GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Build and test
+        run: |
+          # Build your project (e.g., compile Java files, bundle JavaScript files)
+          # Replace the commands below with your own build steps
+
+          # Build Java files
+          javac -d dist src/*.java
+
+          # Bundle JavaScript files
+          npm install
+          npm run build
+
+          # Run unit tests (replace with your own testing commands)
+          npm run test
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
