@@ -1,9 +1,9 @@
 name: CI/CD for GitHub Pages
+
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches:
-      - main
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,6 +25,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+      - name: Run HTMLHint on HTML files
+        run: htmlhint SystemAdmin/*.html
+
+      - name: Install CSSLint
+        run: npm install -g csslint
+      - name: Run CSSLint on CSS files
+        run: csslint SystemAdmin/styles/*.css
+        
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
@@ -34,26 +45,9 @@ jobs:
         with:
           source: ./
           destination: ./_site
-
-      - name: Install HTMLHint
-        run: npm install -g htmlhint
-
-      - name: Run HTMLHint on HTML files
-        run: htmlhint SystemAdmin/*.html
-
-      - name: Install CSSLint
-        run: npm install -g csslint
-
-      - name: Run CSSLint on CSS files
-        run: csslint SystemAdmin/styles/*.css
-
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: build-artifact
-          path: _site
+        uses: actions/upload-pages-artifact@v1
 
-          
   # Deployment job
   deploy:
     environment:
