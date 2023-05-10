@@ -5,6 +5,8 @@ Homepage login page is at index.html
 
 Do use the following commands to help
 
+git clone https://github.com/Darrel-Koh/darrel-koh.github.io.git
+
 git status (To check current status of your git progress)
 
 git fetch (To fetch Teammates changes before starting)
