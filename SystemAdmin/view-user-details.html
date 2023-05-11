@@ -10,17 +10,32 @@
         <title>View User Details</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./styles/systemAdminDashboard.css">
+
+        <!-- swiper link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+        <!-- font awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <link rel="stylesheet" href="./styles/viewUserDetails.css">
     </head>
     <body>
-        <div class="topnav">
-            
-          <a class="logo" href="./systemAdminDashboard.html"><img src="./Images/5B2G_Logo.jpg" alt="Logo"></a>
-          <a href="./systemAdminDashboard.html">Home</a>
-          <a href="./systemAdminDashboard.html">User Management</a>
-          <a href="#profileManagement">Profile Management</a>
-          <a href="#profile" class="split">Profile</a>
-        </div>
+        <header>
+            <a class="logo" href="./systemAdminDashboard.html"><img src="./Images/5B2G_Logo.jpg" alt="Logo"></a>
+      
+            <nav class="navbar">
+                <a class="active" href="./systemAdminDashboard.html">Home</a>
+                <a href="./systemAdminDashboard.html">User Management</a>
+                <a href="#profileManagement">Profile Management</a>
+                <a href="#profile" class="split">Profile</a>
+            </nav>
+        
+            <div class="icons">
+              <i class="fas fa-bars" id="menu-bars"></i>
+              <i class="fas fa-search" id="search-icon"></i> 
+              <a href="#" class="fas fa-shopping-cart"></a>
+          </div>
+        </header>
         
         <div class="user-details-form">
             <h2>User Details</h2>
@@ -73,3 +88,9 @@
             document.getElementById('email').value = user.email;
         }
   </script>
+
+   <!-- swiper js link -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+   <!-- js file link -->
+   <script src="../staff/staff.js"></script>
