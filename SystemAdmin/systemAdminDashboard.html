@@ -10,17 +10,40 @@
         <title>System Admin Dashboard</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- swiper link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+        <!-- font awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
         <link rel="stylesheet" href="./styles/systemAdminDashboard.css">
     </head>
+
+    <header>
+      <a class="logo" href="./systemAdminDashboard.html"><img src="./Images/5B2G_Logo.jpg" alt="Logo"></a>
+
+      <nav class="navbar">
+          <a class="active" href="./systemAdminDashboard.html">Home</a>
+          <a href="./systemAdminDashboard.html">User Management</a>
+          <a href="#profileManagement">Profile Management</a>
+          <a href="#profile" class="split">Profile</a>
+      </nav>
+  
+      <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i> 
+        <a href="#" class="fas fa-shopping-cart"></a>
+    </div>
+  </header>
     <body>
-        <div class="topnav">
-            
+        <!-- <div class="navbar">
             <a class="logo" href="./systemAdminDashboard.html"><img src="./Images/5B2G_Logo.jpg" alt="Logo"></a>
             <a href="./systemAdminDashboard.html">Home</a>
             <a href="./systemAdminDashboard.html">User Management</a>
             <a href="#profileManagement">Profile Management</a>
             <a href="#profile" class="split">Profile</a>
-        </div>
+        </div> -->
 
         <div class="userTable">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
@@ -107,3 +130,9 @@
     }
   generateTable(); // Call the function to generate the table initially
     </script>
+
+    <!-- swiper js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- js file link -->
+    <script src="../staff/staff.js"></script>

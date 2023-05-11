@@ -1,6 +1,33 @@
-.body{
-    background-color: grey;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+:root{
+  --orange:#cd8c38;
+  --black:#2E2E2E;
+  --light-color:#D1D0D0;
+  --box-shadow:0 .5rem 1.5rem rgb(255, 255, 255);
+}
+
+*{
+  font-family: 'Joan', serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none; border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+
+body{
+  background-color: grey;
+}
+
 a.logo {
     display: inline-block;
     vertical-align: middle; /* Adjust vertical alignment as needed */
@@ -18,36 +45,55 @@ a.logo img {
   width: 100%;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  height: 50px;
+/* Style for Header */
+header{
+  position: none;
+  top: 0; left: 0; right: 0;
+  background: #2E2E2E;
+  padding: 1rem 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+}
+header .navbar a{
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  color: var(--light-color);
+}
+header .navbar a.active,
+header .navbar a:hover{
+  color:#cd8c38;
+  background: var(--black);
+}
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 3rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: var(--light-color);
+}
+header .icons i:hover,
+header .icons a:hover{
+    color: var(--light-color);
+    background: var(--orange);
+    transform: rotate(360deg);
+}
+header .icons #menu-bars{
+    display: none;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Create a right-aligned (split) link inside the navigation bar */
-.topnav a.split {
-  float: right;
-  background-color: #04AA6D;
-  color: white;
-}
 /* for Search bar */
-* {
-    box-sizing: border-box;
-  }
-  
   #myInput {
-    background-image: url('/css/searchicon.png');
+    background-image: url('https://www.w3schools.com/css/searchicon.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
     width: 100%;
@@ -76,3 +122,69 @@ a.logo img {
   #myTable tr.header, #myTable tr:hover {
     background-color: #f1f1f1;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Responsive media queries */
+
+@media (max-width:991px){
+  html{
+      font-size: 55%;
+  }
+  header{
+      padding: 1rem 2rem;
+  }
+  section{
+    padding: 2rem;
+}
+}
+
+@media (max-width:768px){
+  header .icons #menu-bars{
+      display: inline-block;
+  }
+  header .navbar{
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: #2E2E2E;
+      border-top: 1rem solid var(--black);
+      border-bottom: 1rem solid var(--black);
+      padding: 1rem;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  header .navbar a{
+      display: block;
+      padding: 1.5rem;
+      margin: 1rem;
+      font-size: 2rem;
+      background: #2E2E2E;
+  }
+  #search-form #search-box{
+      width: 90%;
+      margin: 0 1rem;
+  }
+  .home .home-slider .slide .content h3{
+    font-size: 5rem;
+  }
+}
+@media (max-width:991px){
+  html{
+      font-size: 50%;
+  } 
+}
