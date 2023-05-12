@@ -166,7 +166,7 @@ header .icons #menu-bars{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 6px;
+    font-size: 16px;
 }
 .print-ticket:hover {
     color: var(--light-color);
