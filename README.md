@@ -27,13 +27,15 @@ git push (To push changes to the main repo)
 
 
 ### Before you start coding:
-```git status (To check current status of your git progress)
+```
+git status (To check current status of your git progress)
 git fetch (To fetch Teammates changes before starting)
 git pull (To complete fetching changes)
 ```
 
 ### After make changes:
-```git status (To check current status of your git progress)
+```
+git status (To check current status of your git progress)
 git fetch (To fetch Teammates changes before starting)
 git pull(To confirm pull in Teammates changes)
 git commit -m (To commit changes, and include a message)
@@ -41,7 +43,8 @@ git push (To push changes to the main repo)
 ```
 
 ### To start a new feature:
-```git checkout -b <new-branch-name> (Creates a new branch for a new feature)
+```
+git checkout -b <new-branch-name> (Creates a new branch for a new feature)
 git push origin <new-branch-name> (Push new branch from local machine to main)
 git commit -m (To commit changes, and include a message)
 git push (To push changes to the main repo)
