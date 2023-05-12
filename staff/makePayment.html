@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5B2G Cinema | Payment</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="../staff/styles/makePayment.css">
+</head>
+<body>
+
+
+<!-- header section starts -->
+<header>
+    <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#ticket">Ticket Management</a>
+        <a href="#order">Order Management</a>
+        <a href="#redeem">Redeem Rewards</a>
+        <a href="#about">About Us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i> 
+        <a href="#" class="fas fa-shopping-cart"></a>
+    </div>
+</header>
+
+<!-- header section ends -->
+
+<!-- search form start -->
+<form action="" id="search-form">
+    <input type="search" placeholder="Search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- search form ends  -->
+
+<div class="container">
+    <h6>Checkout</h6>
+    <a href="staff.html" class="cancel">x</a>
+    <h1>Payment</h1>
+    <form action="">
+        <label for="paymethod">Payment Method
+            <select name="paymethod" id="paymethod">
+                <option value="cash">Cash</option>
+                <option value="debit-card">Debit Card</option>
+                <option value="credit-card">Credit Card</option>
+            </select>
+        </label>
+        <label for="cardnum">Card Number
+            <input type="text" name="cardnum" id="cardnum" maxlength="16" onkeypress="cardspace()"/>
+        </label>
+        <div class="float">
+            <label for="validtill">Valid Till
+                <input type="text" name="validtill" id="validtill" maxlength="6" onkeypress="addSlashes()"/>
+            </label>
+            <label for="cvv">CVV
+                <input type="text" name="cvv" id="cvv" maxlength="3"/>
+            </label>
+        </div>
+            <label for="checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox"/>
+                <p>Terms and Conditions Apply</p>
+            </label>
+            <a href="staffTicket.html" class="btn">Buy Now</a>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- js file link -->
+<script src="makePayment.js"></script>
+
+</body>
+</html>
