@@ -1,13 +1,91 @@
 <!DOCTYPE html>
+
+<!-- Specify the language of the content as English -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 
-</head>
-<body>
+    <!-- Specify the character encoding by using the charset attribute -->
+    <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <head>
+        <title>Movies</title>
 
-</body>
+        <style>
+
+            body{background-color: black;}
+
+            #navbar{background: rgba(64, 59, 59, 0.572); font-family: 'Franklin Gothic Medium'; padding-right: 15px; padding-left: 15px;}
+            #navdiv{display: flex; align-items: center; position: relative; justify-content: space-between;}
+            #cinemaLogo{width: 70px;}
+            #moviePageTitle{text-decoration: underline;}
+            #managerPic{width: 40px; border-radius: 50%; cursor: pointer; margin-left: 30px;}
+
+            li{display: inline-block;}
+            li a{color: rgb(255, 255, 255); font-size: 18px; font-weight: normal; margin-right: 25px; text-decoration: none;}
+            label {color: white;}
+   
+            #addFnbTitle{color: white;  font-family: 'Franklin Gothic Medium'; padding-left: 40px; }
+            #movieImg{width: 400px; height: 470px;; margin-bottom: 0rem; padding-left: 30px; padding-top: 30px; padding-right: 30px;}
+            .detailTitle{color: white; font-family: Arial;}
+            .details{color: white; font-family: Arial;}
+            #detailsTable{display: flex}
+            #movieDetails{display: flex;}
+
+            table{width: fit-content;}
+            th{text-align: left; padding: 20; vertical-align: top;}
+            .desc{width: 90%;}
+
+            #btns{margin: auto; width: 50%; text-align: center;}
+            #confirmBtn{background-color: rgba(169, 25, 25, 0.827);color: white; font-family: 'Franklin Gothic Medium'; font-size: 90%;}
+            #cancelBtn{font-family: 'Franklin Gothic Medium'; font-size: 90%;height: 10%;}
+
+        </style>
+
+        <script>
+            
+        </script>
+    </head>
+
+    <body>
+
+        <nav id="navbar">
+            <div id="navdiv">
+                <img src="./images/cinemaLogo.png" id="cinemaLogo">
+                <ul>
+                    <li><a href="movies.html" id="moviePageTitle">Movies</a></li>
+                    <li><a href="fnb.html" >Food & Baverage</a></li>
+                    <li><a href="cinemaRoom.html">Cinema Rooms</a></li>
+                    <li><a href="report.html">Generate Reports</a></li>
+                </ul>
+                <img src="./images/profilePicture.png" alt="pic" id="managerPic">
+            </div>
+        </nav> 
+
+        <h1 id="addFnbTitle">New Food</h1><hr/>
+
+        <!-- <dli id="movieDetails"> -->
+            <label for="picture">Upload Picture:</label>
+            <input type="file" id="picture" name="picture" accept="image/*"><br/>
+            
+            <label for="id">Food ID:</label>
+            <input type="text" id="id" name="id"><br/>
+
+            <label for="name">Food Name:</label>
+            <input type="text" id="name" name="name"><br/>
+
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price"><br/>
+
+            <label for="size">Size:</label>
+            <input type="text" id="size" name="size"><br/>
+
+            <label for="desc">Description:</label>
+            <input type="text" id="desc" name="desc"><br/>
+        <!-- </div> -->
+
+        <div id="btns">
+            <button id="confirmBtn">Confirm</button>
+            <button id="cancelBtn">Cancel</button>
+        </div>
+    </body>
 </html>
