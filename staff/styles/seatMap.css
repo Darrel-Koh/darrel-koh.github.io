@@ -223,7 +223,7 @@ p.text span{
 .btn:hover{
     color: var(--light-color);
     background: var(--orange);
-    letter-spacing: .1rem;
+    letter-spacin: .1rem;
 }
 
 
