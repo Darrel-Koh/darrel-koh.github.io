@@ -197,15 +197,9 @@ header .icons #menu-bars{
 
 
 #managerPic{width: 40px; border-radius: 50%; cursor: pointer; margin-left: 30px;}
-
-/* li{display: inline-block;}
-li a{color: rgb(255, 255, 255); font-size: 18px; font-weight: normal; margin-right: 25px; text-decoration: none;}
-*/
 #searchAndCreate{margin: auto; width: 50%; text-align: center; padding-top: 70px;}
 
 #movieList{display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, auto)); gap: 1.5rem;}
 .movieBox{border: 0.5px solid white; box-shadow: 2px 2px 4px white;;; padding: 20px; width: fit-content; text-align: center;}
 .movieTitle{color: white; font-size: medium;}
-.movieImg{width: 200px; height: 270px;; margin-bottom: 0rem;}
-/* .viewInfoBtn{background-color: rgba(169, 25, 25, 0.827); color: white; font-family: 'Franklin Gothic Medium';  */
-    /* width: 100%; font-size: 90%;height: 10%; text-decoration: none; border: none; cursor: pointer;} */
+.movieImg{width: 200px; height: 270px;; margin-bottom: 0rem;} 
