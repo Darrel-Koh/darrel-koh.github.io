@@ -27,6 +27,11 @@ git push (To push changes to the main repo)
 ### To start out:
 ``` 
 git clone https://github.com/Darrel-Koh/darrel-koh.github.io.git
+
+System may prompt you request for your credentials,  replace <username> with your desired username and <email> with your email address. Dont need <>
+These commands configure Git to associate your name and email with the commits you make on your repository. 
+git config user.name <username>
+git config user.email <email>
 ```
 
 ### Before you start coding:
