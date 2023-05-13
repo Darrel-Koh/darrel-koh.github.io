@@ -25,7 +25,9 @@ git commit -m (To commit changes, and include a message)
 git push (To push changes to the main repo)
 ```
 ### To start out:
+``` 
 git clone https://github.com/Darrel-Koh/darrel-koh.github.io.git
+```
 
 ### Before you start coding:
 ```
