@@ -5,6 +5,7 @@
     --black:#2E2E2E;
     --light-color:#D1D0D0;
     --box-shadow:0 .5rem 1.5rem rgb(255, 255, 255);
+    --text-color: rgb(110, 110, 110);
 }
 *{
     font-family: 'Joan', serif;
@@ -14,15 +15,22 @@
     outline: none; border: none;
     text-transform: capitalize;
     transition: all .2s linear;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--black);
 }
 html{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
-}
-body{
-    background: var(--black);
 }
 header{
     position: fixed;
@@ -117,96 +125,97 @@ header .icons #menu-bars{
     top: 2rem; right: 3rem;
     font-size: 5rem;
 }
-section{
-    padding: 4rem 0 3rem;
-}
-.section-title{
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    color: var(--light-color);
-}
-.order{
-    margin-top: 2rem;
-}
-.order-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-    gap: 1.5rem;
-}
-.product-box{
+.container{
+    width: 350px;
+    background: #fff;
+    padding: 30px;
     position: relative;
 }
-.product-box:hover{
-    padding: 10px;
-    border: 1px solid var(--light-color);
-    transition: 0.4s;
+h6{
+    font-size: 20px;
+    color: var(--text-color);
 }
-.product-img{
-    width: 100%;
-    height: auto;
-    margin-bottom: 0.5rem;
+.cancel{
+    position: absolute;
+    right: 34px;
+    top: 28px;
+    font-size: 18px;
+    color: var(--text-color);
 }
-.product-title{
-    font-size: 1.1rem;
-    font-weight: 600;
+h1{
+    padding: 30px 0px;
+    font-size: 40px;
+    color: var(--text-color);
+}
+form label{
+    color: var(--text-color);
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    color: var(--light-color);
+    position: relative;
+    font-size: 10px;
+    word-spacing: 4px;
 }
-.price{
-    font-weight: 500;
-    color: var(--light-color);
+form select{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    text-transform: capitalize;
+    padding-top: 3px;
+    color: var(--text-color);
+    padding-bottom: 3px;
+    font-size: 18px;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+form #cardnum{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding-top: 5px;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    color: var(--text-color);
+    font-size: 18px;
+    background-color: transparent;
+    padding-bottom: 5px;
+}
+.float{
+    display: flex;
+}
+#validtill , #cvv{
+    border: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    outline: none;
+    width: 130px;
+    padding-top: 14px;
+    margin-bottom: 56px;
+    color: var(--text-color);
+    background-color: transparent;
+    font-size: 18px;
+}
+p{
+    margin: -20px 0px 56px 25px;
+    font-size: 16px;
+    text-transform: none;
 }
 .btn{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: var(--light-color);
-    color: var(--black);
-    padding: 10px;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--text-color);
+    border-radius: .5rem;
     cursor: pointer;
+    padding: .8rem 3rem;
 }
 .btn:hover{
-    color: var(--light-color);
+    color: #eee;
     background: var(--orange);
     letter-spacing: .1rem;
 }
-/* footer css */
-.footer .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 1.5rem;
-    background: rgba(0, 0, 0, 0.167);
-  }
-  .footer .box-container .box h3{
-    padding: .5rem 0;
-    font-size: 2.5rem;
-    color: var(--light-color);
-  }
-  .footer .box-container .box a{
-    display: block;
-    padding: .5rem 0;
-    font-size: 1.5rem;
-    color: var(--light-color);
-  }
-  .footer .box-container .box a:hover{
-    color: var(--orange);
-    text-decoration: underline;
-  }
-  .footer .credit{
-    text-align: center;
-    border-top: 1rem solid rgba(0, 0, 0, 0.01);
-    font-size: 2rem;
-    color: var(--light-color);
-    padding: .5rem;
-    padding-top: 1.5rem;
-    margin-top: 1.5rem;
-  }
-  .footer .credit span{
-    color: var(--orange);
-  }
-  /* footer css end */
+
 
 
 
