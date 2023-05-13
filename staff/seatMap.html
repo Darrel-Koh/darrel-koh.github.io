@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5B2G Cinema | Order Management</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="../staff/styles/seatMap.css">
+</head>
+<body>
+
+
+<!-- header section starts -->
+<header>
+    <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
+
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a class="active" href="#ticket">Ticket Management</a>
+        <a href="#order">Order Management</a>
+        <a href="#redeem">Redeem Rewards</a>
+        <a href="#about">About Us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i> 
+        <a href="#" class="fas fa-shopping-cart"></a>
+    </div>
+</header>
+
+<!-- header section ends -->
+
+<!-- search form start -->
+<form action="" id="search-form">
+    <input type="search" placeholder="Search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- search form ends  -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- seatmap section starts -->
+<div class="movie-container">
+    <label> Select a movie:</label>
+    <select id="movie">
+      <option value="15">Avengers: Endgame</option>
+      <option value="15">F9: The Fast Saga</option>
+      <option value="15">Mission: Impossible - Fallout</option>
+      <option value="15">Guardians of the Galaxy Vol. 3</option>
+      <option value="10">Vikram</option>
+      <option value="15">Avatar: The Way of Water</option>
+      <option value="10">The Wandering Earth</option>
+      <option value="10">Sword Art Online the Movie: Progressive - Scherzo of Deep Night</option>
+      <option value="15">John Wick: Chapter 4</option>
+      <option value="10">From Vegas to Macau III</option>
+      <option value="10">Doctor Strange in the Multiverse of Madness</option>
+      <option value="15">Top Gun: Maverick</option>
+    </select>
+  </div>
+
+  <ul class="showcase">
+    <li>
+      <div class="seat"></div>
+      <small>Available</small>
+    </li>
+    <li>
+      <div class="seat selected"></div>
+      <small>Selected</small>
+    </li>
+    <li>
+      <div class="seat sold"></div>
+      <small>Sold</small>
+    </li>
+  </ul>
+  <div class="container">
+    <div class="screen"></div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat sold"></div>
+      <div class="seat sold"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat sold"></div>
+      <div class="seat sold"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat sold"></div>
+      <div class="seat sold"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+    
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat sold"></div>
+      <div class="seat sold"></div>
+      <div class="seat sold"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+    
+    <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat sold"></div>
+        <div class="seat"></div>
+    </div>
+  </div>
+
+  <p class="text">
+    You have selected <span id="count">0</span> seat.
+  </p>
+
+  <p class="text">
+    price (sGD): <span id="total">0</span>
+  </p>
+
+  <a href="#" class="btn">Continue</a>
+
+  <!-- seatmap section ends -->
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- js file link -->
+<script src="seatMap.js"></script>
+
+</body>
+</html>
