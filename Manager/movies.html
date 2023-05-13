@@ -2,39 +2,24 @@
 
 <!-- Specify the language of the content as English -->
 <html lang="en">
-
-    <!-- Specify the character encoding by using the charset attribute -->
-    <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
-    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-    
     <head>
-        <title>Movies</title>
 
-        <style>
+        <!-- Specify the character encoding by using the charset attribute -->
+        <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ManagerMoviesManagement</title>
 
-            body{background-color: black;}
+        <!-- swiper link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-            #navbar{background: rgba(64, 59, 59, 0.572); font-family: 'Franklin Gothic Medium'; padding-right: 15px; padding-left: 15px;}
-            #navdiv{display: flex; align-items: center; position: relative; justify-content: space-between;}
-            #cinemaLogo{width: 70px;}
-            #moviePageTitle{text-decoration: underline;}
-            #managerPic{width: 40px; border-radius: 50%; cursor: pointer; margin-left: 30px;}
+        <!-- font awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-            li{display: inline-block;}
-            li a{color: rgb(255, 255, 255); font-size: 18px; font-weight: normal; margin-right: 25px; text-decoration: none;}
-   
-            #searchAndCreate{margin: auto; width: 50%; text-align: center}
-            
-            #movieList{display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, auto)); gap: 1.5rem;}
-            .movieBox{border: 0.5px solid white; padding: 20px; width: fit-content; text-align: center;}
-            .movieTitle{color: white; font-family: Arial; font-size: medium;}
-            .movieImg{width: 200px; height: 270px;; margin-bottom: 0rem;}
-            .viewInfoBtn{background-color: rgba(169, 25, 25, 0.827); color: white; font-family: 'Franklin Gothic Medium'; 
-                width: 100%; font-size: 90%;height: 10%; text-decoration: none; border: none; cursor: pointer;}
+        <!-- css file link -->
+        <link rel="stylesheet" href="../Manager/styles/movies.css">
 
-        </style>
-s
-        <script>
+        <!-- <script>
             function showLogOut() {
                 var list = document.getElementById("list");
                 if (list.style.display === "none") {
@@ -44,110 +29,134 @@ s
                 }
             }
             
-        </script>
+            
+        </script> -->
+        <!-- js file link -->
+        <script src="movies.js"></script>
     </head>
 
     <body>
 
-        <nav id="navbar">
-            <div id="navdiv">
-                <img src="./images/cinemaLogo.png" id="cinemaLogo">
-                <ul>
-                    <li><a href="movies.html" id="moviePageTitle">Movies</a></li>
-                    <li><a href="fnb.html">Food & Baverage</a></li>
-                    <li><a href="cinemaRoom.html">Cinema Rooms</a></li>
-                    <li><a href="report.html">Generate Reports</a></li>
-                </ul>
-                <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
+        <!-- header section starts -->
+        <header>
+            <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
+
+            <nav class="navbar">
+                <a class="active" href="movies.html">Movies</a></li>
+                <a class="fnb" href="fnb.html">Food & Baverage</a></li>
+                <a class="CR" href="cinemaRoom.html">Cinema Rooms</a></li>
+                <a class="report" href="report.html">Generate Reports</a></li>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i> 
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <!-- <i class="fas fa-managerProfile" id="manager-icon"> -->
+                    <!-- <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
                     <div id="list" style="display:none;">
                         <select>
                             <option value="logOut">Log Out</option>
                         </select>
-                    </div>
+                    </div> -->
+                <!-- </i>  -->
             </div>
-        </nav> 
+        </header>
+        <!-- header section ends -->
 
+        <!-- search form start -->
+        <form action="" id="search-form">
+            <input type="search" placeholder="Search By Movie Name..." name="" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+            <i class="fas fa-times" id="close"></i>
+        </form>
+        <!-- search form ends  --> 
+
+        <!-- Create movie starts -->
         <div id="searchAndCreate">
-            <br/><input type="text" placeholder="Search movie by name...">
-            <button>&#43; Add movie</button><br/><br/>
+            <button class="btn">&#43; Add New Movie</button><br/><br/>
         </div>
+        <!-- Create movie ends -->
 
+        <!-- Movie List starts -->
         <section>
             <div id="movieList">
 
                 <div class="movieBox">
                     <img src="./images/joker.jpg" alt="Movie 1" class="movieImg">
                     <h2 class="movieTitle">Joker</h2>
-                    <button class="viewInfoBtn"><a href="movieInfo.html">VIEW INFO</a></button>
+                    <button class="Btn"><a href="movieInfo.html">VIEW INFO</a></button>
                 </div>
 
                 <div class="movieBox">
                     <img src="./images/antman.jpg" alt="Movie 2" class="movieImg">
                     <h2 class="movieTitle">Antman</h2>
-                    <button class="viewInfoBtn">VIEW INFO</button>
+                    <button class="Btn">VIEW INFO</button>
                 </div>
 
                 <div class="movieBox">
                     <img src="./images/titanic.jpg" alt="Movie 3" class="movieImg">
                     <h2 class="movieTitle">Titanic</h2>
-                    <button class="viewInfoBtn">VIEW INFO</button>
+                    <button class="Btn">VIEW INFO</button>
                 </div>
 
                 <div class="movieBox">
                     <img src="./images/jurassicPark.jpg" alt="Movie 4" class="movieImg">
                     <h2 class="movieTitle">Jurassic Park</h2>
-                    <button class="viewInfoBtn">VIEW INFO</button>
+                    <button class="Btn">VIEW INFO</button>
                 </div>
 
                 <div class="movieBox">
                     <img src="./images/thor.jpg" alt="Movie 5" class="movieImg">
                     <h2 class="movieTitle">Thor</h2>
-                    <button class="viewInfoBtn">VIEW INFO</button>
+                    <button class="Btn">VIEW INFO</button>
                 </div>
 
                 <div class="movieBox">
                     <img src="./images/blackPanther.jpg" alt="Movie 6" class="movieImg">
                     <h2 class="movieTitle">Black Panther</h2>
-                    <button class="viewInfoBtn">VIEW INFO</button>
+                    <button class="Btn">VIEW INFO</button>
                 </div>
 
                 <div class="movieBox">
                     <img src="./images/dune.jpg" alt="Movie 7" class="movieImg">
                     <h2 class="movieTitle">Dune</h2>
-                    <button class="viewInfoBtn">VIEW INFO</button>
+                    <button class="Btn">VIEW INFO</button>
                 </div>
 
                 <div class="movieBox">
                     <img src="./images/Shrek.jpg" alt="Movie 8" class="movieImg">
                     <h2 class="movieTitle">Shrek</h2>
-                    <button class="viewInfoBtn">VIEW INFO</button>
+                    <button class="Btn">VIEW INFO</button>
                 </div>
 
                 <div class="movieBox">
                     <img src="./images/StrangeWorld.jpg" alt="Movie 9" class="movieImg">
                     <h2 class="movieTitle">Strange World</h2>
-                    <button class="viewInfoBtn">VIEW INFO</button>
+                    <button class="Btn">VIEW INFO</button>
                 </div>
 
                 <div class="movieBox">
                     <img src="./images/Shrek.jpg" alt="Movie 10" class="movieImg">
                     <h2 class="movieTitle">Shrek</h2>
-                    <button class="viewInfoBtn">VIEW INFO</button>
+                    <button class="Btn">VIEW INFO</button>
                 </div>
 
                 <div class="movieBox">
                     <img src="./images/Shrek.jpg" alt="Movie 11" class="movieImg">
                     <h2 class="movieTitle">Shrek</h2>
-                    <button class="viewInfoBtn">VIEW INFO</button>
+                    <button class="Btn">VIEW INFO</button>
                 </div>
 
                 <div class="movieBox">
                     <img src="./images/Shrek.jpg" alt="Movie 12" class="movieImg">
                     <h2 class="movieTitle">Shrek</h2>
-                    <button class="viewInfoBtn">VIEW INFO</button>
+                    <button class="Btn">VIEW INFO</button>
                 </div>
             </div>
         </section>
+        <!-- Movie List ends -->
+        
         
     </body>
 </html>
