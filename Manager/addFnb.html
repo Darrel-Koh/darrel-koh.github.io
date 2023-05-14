@@ -3,89 +3,105 @@
 <!-- Specify the language of the content as English -->
 <html lang="en">
 
+<head>
+
     <!-- Specify the character encoding by using the charset attribute -->
     <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
-    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-    
-    <head>
-        <title>Movies</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ManagerAddMovies</title>
 
-        <style>
+    <!-- swiper link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-            body{background-color: black;}
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-            #navbar{background: rgba(64, 59, 59, 0.572); font-family: 'Franklin Gothic Medium'; padding-right: 15px; padding-left: 15px;}
-            #navdiv{display: flex; align-items: center; position: relative; justify-content: space-between;}
-            #cinemaLogo{width: 70px;}
-            #moviePageTitle{text-decoration: underline;}
-            #managerPic{width: 40px; border-radius: 50%; cursor: pointer; margin-left: 30px;}
+    <!-- css file link -->
+    <link rel="stylesheet" href="../Manager/styles/addFnb.css">
 
-            li{display: inline-block;}
-            li a{color: rgb(255, 255, 255); font-size: 18px; font-weight: normal; margin-right: 25px; text-decoration: none;}
-            label {color: white;}
-   
-            #addFnbTitle{color: white;  font-family: 'Franklin Gothic Medium'; padding-left: 40px; }
-            #movieImg{width: 400px; height: 470px;; margin-bottom: 0rem; padding-left: 30px; padding-top: 30px; padding-right: 30px;}
-            .detailTitle{color: white; font-family: Arial;}
-            .details{color: white; font-family: Arial;}
-            #detailsTable{display: flex}
-            #movieDetails{display: flex;}
+    <!-- <script>
+        function showLogOut() {
+            var list = document.getElementById("list");
+            if (list.style.display === "none") {
+                list.style.display = "block";
+            } else {
+                list.style.display = "none";
+            }
+        }
+    </script> -->
 
-            table{width: fit-content;}
-            th{text-align: left; padding: 20; vertical-align: top;}
-            .desc{width: 90%;}
-
-            #btns{margin: auto; width: 50%; text-align: center;}
-            #confirmBtn{background-color: rgba(169, 25, 25, 0.827);color: white; font-family: 'Franklin Gothic Medium'; font-size: 90%;}
-            #cancelBtn{font-family: 'Franklin Gothic Medium'; font-size: 90%;height: 10%;}
-
-        </style>
-
-        <script>
-            
-        </script>
-    </head>
+</head>
 
     <body>
 
-        <nav id="navbar">
-            <div id="navdiv">
-                <img src="./images/cinemaLogo.png" id="cinemaLogo">
-                <ul>
-                    <li><a href="movies.html" id="moviePageTitle">Movies</a></li>
-                    <li><a href="fnb.html" >Food & Baverage</a></li>
-                    <li><a href="cinemaRoom.html">Cinema Rooms</a></li>
-                    <li><a href="report.html">Generate Reports</a></li>
-                </ul>
-                <img src="./images/profilePicture.png" alt="pic" id="managerPic">
+        <!-- header section starts -->
+        <header>
+            <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
+
+            <nav class="navbar">
+                <a class="active" href="movies.html">Movies</a></li>
+                <a class="fnb" href="fnb.html">Food & Baverage</a></li>
+                <a class="CR" href="cinemaRoom.html">Cinema Rooms</a></li>
+                <a class="report" href="report.html">Generate Reports</a></li>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <!-- <i class="fas fa-managerProfile" id="manager-icon"> -->
+                    <!-- <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
+                    <div id="list" style="display:none;">
+                        <select>
+                            <option value="logOut">Log Out</option>
+                        </select>
+                    </div> -->
+                <!-- </i>  -->
             </div>
-        </nav> 
+        </header>
+        <!-- header section ends -->
 
-        <h1 id="addFnbTitle">New Food</h1><hr/>
+        <section>
 
-        <!-- <dli id="movieDetails"> -->
-            <label for="picture">Upload Picture:</label>
-            <input type="file" id="picture" name="picture" accept="image/*"><br/>
-            
-            <label for="id">Food ID:</label>
-            <input type="text" id="id" name="id"><br/>
+            <h1 id="addFnbTitle">New Food</h1><hr/>
 
-            <label for="name">Food Name:</label>
-            <input type="text" id="name" name="name"><br/>
+            <table>
+                <tr>
+                    <th><label for="picture">Upload Picture:</label></th>
+                    <th><input type="file" id="picture" name="picture" accept="image/*"></th>
+                </tr>
+                
+                <tr>
+                    <th><label for="id">Food ID:</label></th>
+                    <th><input type="text" id="id" name="id"></th>
+                </tr>
+                
+                <tr>
+                    <th><label for="name">Food Name:</label></th>
+                    <th><input type="text" id="name" name="name"></th>
+                </tr>
 
-            <label for="price">Price:</label>
-            <input type="text" id="price" name="price"><br/>
+                <tr>
+                    <th><label for="price">Price:</label></th>
+                    <th><input type="text" id="price" name="price"></th>
+                </tr>
 
-            <label for="size">Size:</label>
-            <input type="text" id="size" name="size"><br/>
+                <tr>
+                    <th><label for="size">Size:</label></th>
+                    <th><input type="text" id="size" name="size"></th>
+                </tr>
 
-            <label for="desc">Description:</label>
-            <input type="text" id="desc" name="desc"><br/>
-        <!-- </div> -->
+                <tr>
+                    <th><label for="desc">Description:</label></th>
+                    <th><input type="text" id="desc" name="desc"></th>
+                </tr>
+            </table>
 
-        <div id="btns">
-            <button id="confirmBtn">Confirm</button>
-            <button id="cancelBtn">Cancel</button>
-        </div>
+            <div class="btn">
+                <button id="confirmBtn">Confirm</button>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+        </section>
+
+        <script src="addMovie.js"></script>
     </body>
 </html>

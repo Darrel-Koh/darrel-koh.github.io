@@ -82,7 +82,7 @@ header .icons #menu-bars{
 }
 /* Header part css */
 
-/* Add movie css starts */
+/* Add fnb css starts */
 section{
     padding: 2rem 9%;
 }
@@ -103,7 +103,7 @@ input{
     height: 4rem;
     border-radius: .5rem;
 }
-#addMovieTitle{
+#addFnbTitle{
     color: var(--light-color);  
     padding-top: 60px; 
     padding-bottom: 15px;
@@ -151,7 +151,7 @@ hr{
     text-align: center;
 }
 
-/* Add movie css ends */
+/* Add fnb css ends */
 
 /* Media queries starts */
 @media (max-width:991px){
