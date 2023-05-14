@@ -74,7 +74,7 @@ header .icons i:hover, header .icons a:hover{
 header .icons #menu-bars{
     display: none;
 }
-#search-form{
+/* #search-form{
     position: fixed;
     top: -110%; left: 0;
     height: 100%; width: 100%;
@@ -117,7 +117,7 @@ header .icons #menu-bars{
     cursor: pointer;
     top: 2rem; right: 3rem;
     font-size: 5rem;
-}
+} */
 #managerPic{
     width: 40px; 
     border-radius: 50%; 
@@ -126,7 +126,7 @@ header .icons #menu-bars{
 }
 /* Header part css */
 
-/* Fnb css starts */
+/* Report css starts */
 section{
     padding: 2rem 9%;
 }
@@ -144,35 +144,26 @@ section:nth-child(even){
     padding: .8rem 3rem;
 }
 .btn:hover{
-color: var(--light-color);
-background: var(--orange);
-letter-spacing: .1rem;
+    color: var(--light-color);
+    background: var(--orange);
+    letter-spacing: .1rem;
 }
-#createFnb{margin: auto; 
+#reportdiv{
+    margin: auto; 
     width: 50%; 
     text-align: center; 
     padding-top: 70px;
 }
-#fnbList{display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto)); 
-    gap: 1.5rem;
+#month{
+    margin-right: 0.3cm;
+    padding: .8rem 3rem;
 }
-.fnbBox{
-    border: 0.5px solid white; 
-    box-shadow: 2px 2px 4px white; 
-    padding: 20px; width: fit-content; 
-    text-align: center;
+#generatedReport{
+    border: 1px solid white; 
+    width: 60%; 
+    height: 500px;
 }
-.fnbTitle{
-    color: white; 
-    font-size: medium;
-}
-.fnbImg{
-    width: 200px; 
-    height: 270px; 
-    margin-bottom: 0rem;
-} 
-/* Fnb css ends */
+/* Report css ends */
 
 /* Media queries starts */
 @media (max-width:991px){
