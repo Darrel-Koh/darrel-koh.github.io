@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<!-- Specify the language of the content as English -->
+<html lang="en">
+
+    <head>
+
+        <!-- Specify the character encoding by using the charset attribute -->
+        <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ManagerAddMovies</title>
+
+        <!-- swiper link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+        <!-- font awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- css file link -->
+        <link rel="stylesheet" href="../Manager/styles/addCinemaRoom.css">
+
+        <!-- <script>
+            function showLogOut() {
+                var list = document.getElementById("list");
+                if (list.style.display === "none") {
+                    list.style.display = "block";
+                } else {
+                    list.style.display = "none";
+                }
+            }
+        </script> -->
+
+    </head>
+
+    <body>
+
+         <!-- header section starts -->
+         <header>
+            <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
+
+            <nav class="navbar">
+                <a class="movie" href="movies.html">Movies</a></li>
+                <a class="fnb" href="fnb.html">Food & Baverage</a></li>
+                <a class="active" href="cinemaRoom.html">Cinema Rooms</a></li>
+                <a class="report" href="report.html">Generate Reports</a></li>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <!-- <i class="fas fa-managerProfile" id="manager-icon"> -->
+                    <!-- <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
+                    <div id="list" style="display:none;">
+                        <select>
+                            <option value="logOut">Log Out</option>
+                        </select>
+                    </div> -->
+                <!-- </i>  -->
+            </div>
+        </header>
+        <!-- header section ends -->
+
+        <section>
+
+            <h1 id="addCRTitle">New Cinema Room</h1><hr/>
+
+            <table>
+                <tr>
+                    <th><label for="seatmapId">Seat Map ID:</label></th>
+                    <th><input type="text" id="seatmapId" name="seatmapId"></th>
+                </tr>
+                
+                <tr>
+                    <th><label for="seatType">Seat Type:</label></th>
+                    <th><input type="text" id="seatType" name="seatType"></th>
+                </tr>
+                
+                <tr>
+                    <th><label for="roomNum">Room Number:</label></th>
+                    <th><input type="text" id="roomNum" name="roomNum"></th>
+                </tr>
+
+                <tr>
+                    <th><label for="roomType">Room Type:</label></th>
+                    <th><input type="text" id="roomType" name="roomType"></th>
+                </tr>
+
+                <tr>
+                    <th><label for="rows">Rows:</label></th>
+                    <th><input type="text" id="rows" name="rows"></th>
+                </tr>
+
+                <tr>
+                    <th><label for="cols">Columns:</label></th>
+                    <th><input type="text" id="cols" name="cols"></th>
+                </tr>
+            </table>
+
+            <div class="btn">
+                <button id="confirmBtn">Confirm</button>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+        </section>
+
+        <script src="addMovie.js"></script>
+    </body>
+</html>

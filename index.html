@@ -54,13 +54,17 @@
         {
           window.location.href = "./SystemAdmin/systemAdminDashboard.html";
         }
-        if (username == "manager" && password == "manager")
+        else if (username == "manager" && password == "manager")
         {
           window.location.href = "./Manager/movies.html"; 
         }
-        if (username == "staff" && password == "staff")
+        else if (username == "staff" && password == "staff")
         {
           window.location.href = "./staff/staff.html";
+        }
+        else if (username == "customer" && password == "customer")
+        {
+          window.location.href = "./customer/custHome.html";
         }
         else{
           alert("Wrong account details");

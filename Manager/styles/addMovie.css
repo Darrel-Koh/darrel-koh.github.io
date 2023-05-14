@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+/* Basic css starts */
+:root{
+    --orange:#cd8c38;
+    --black:#2E2E2E;
+    --light-color:#D1D0D0;
+    --box-shadow:0 .5rem 1.5rem rgb(255, 255, 255);
+}
+*{
+    font-family: 'Joan', serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #2E2E2E;
+}
+/* Basic css ends */
+
+/* Header part css starts */
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #2E2E2E;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+header .logo{
+    color: #cd8c38;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+}
+header .navbar a.active, header .navbar a:hover{
+    color:#cd8c38;
+    background: var(--black);
+}
+header .icons i, header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 3rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: var(--light-color);
+}
+header .icons i:hover, header .icons a:hover{
+    color: var(--light-color);
+    background: var(--orange);
+    transform: rotate(360deg);
+}
+header .icons #menu-bars{
+    display: none;
+}
+#managerPic{
+    width: 40px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    margin-left: 30px;
+}
+/* Header part css */
+
+/* Add movie css starts */
+section{
+    padding: 2rem 9%;
+}
+section:nth-child(even){
+    background: var(--black);
+}
+label {
+    color: var(--light-color);
+    font-size: 1.8rem;
+}
+th{
+    padding-bottom: .5rem;
+}
+input{
+    color: var(--black);
+    background-color: #D1D0D0;
+    width: 50rem;
+    height: 4rem;
+    border-radius: .5rem;
+}
+#addMovieTitle{
+    color: var(--light-color);  
+    padding-top: 60px; 
+    padding-bottom: 15px;
+    font-size: 3rem;
+}
+hr{
+    border: none;
+    border-top: 1px solid white;
+    padding-bottom: 2rem;
+}
+#confirmBtn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: var(--black);
+    background: var(--orange);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+    margin-right: .1cm;
+}
+#confirmBtn:hover{
+    color: var(--light-color);
+    background: var(--orange);
+    letter-spacing: .1rem;
+}
+#cancelBtn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: var(--black);
+    background: var(--light-color);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+#cancelBtn:hover{
+    color: var(--orange);
+    background: var(--light-color);
+    letter-spacing: .1rem;
+}
+.btn{
+    margin: auto; 
+    width: 50%; 
+    text-align: center;
+}
+
+/* Add movie css ends */
+
+/* Media queries starts */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+    section{
+    padding: 2rem;
+    }
+}
+@media (max-width:768px){
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #2E2E2E;
+        border-top: 1rem solid var(--black);
+        border-bottom: 1rem solid var(--black);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #2E2E2E;
+    }
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
+    }
+}
+@media (max-width:991px){
+    html{
+        font-size: 50%;
+    } 
+}
+/* Media queries ends */

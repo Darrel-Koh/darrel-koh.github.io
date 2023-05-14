@@ -3,65 +3,54 @@
 <!-- Specify the language of the content as English -->
 <html lang="en">
 
-    <!-- Specify the character encoding by using the charset attribute -->
-    <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
-    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-    
     <head>
-        <title>generateReports</title>
+        <!-- Specify the character encoding by using the charset attribute -->
+        <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ManagerReportManagement</title>
 
-        <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script>
-            $(function() {
-            $("#date").datepicker();
-            });
-        </script> -->
+        <!-- swiper link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-        <style>
+        <!-- font awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-            body{background-color: black;}
-
-            #navbar{background: rgba(64, 59, 59, 0.572); font-family: 'Franklin Gothic Medium'; padding-right: 15px; padding-left: 15px;}
-            #navdiv{display: flex; align-items: center; position: relative; justify-content: space-between;}
-            #cinemaLogo{width: 70px;}
-            #reportsPageTitle{text-decoration: underline;}
-            #managerPic{width: 40px; border-radius: 50%; cursor: pointer; margin-left: 30px;}
-
-            li{display: inline-block;}
-            li a{color: rgb(255, 255, 255); font-size: 18px; font-weight: normal; margin-right: 25px; text-decoration: none;}
-   
-            #reportdiv{margin: 40px; width: 50%; text-align: center;}
-            #generateReportBtn{background-color: rgba(169, 25, 25, 0.827); color: white; font-family: 'Franklin Gothic Medium'; padding: 5px 10px;
-                font-size: 90%; border: none; border-radius: 5px; cursor: pointer;}
-            #generatedReport{border: 1px solid white; width: 60%; height: 500px;}
+        <!-- css file link -->
+        <link rel="stylesheet" href="../Manager/styles/report.css">    
         
-        </style>
-
-        <script>
-            
-        </script>
     </head>
 
     <body>
 
-        <nav id="navbar">
-            <div id="navdiv">
-                <img src="./images/cinemaLogo.png" id="cinemaLogo">
-                <ul>
-                    <li><a href="movies.html">Movies</a></li>
-                    <li><a href="fnb.html">Food & Baverage</a></li>
-                    <li><a href="cinemaRoom.html">Cinema Rooms</a></li>
-                    <li><a href="report.html" id="reportsPageTitle">Generate Reports</a></li>
-                </ul>
-                <img src="./images/profilePicture.png" alt="pic" id="managerPic">
+        <!-- header section starts -->
+        <header>
+            <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
+
+            <nav class="navbar">
+                <a class="movie" href="movies.html">Movies</a></li>
+                <a class="fnb" href="fnb.html">Food & Baverage</a></li>
+                <a class="CR" href="cinemaRoom.html">Cinema Rooms</a></li>
+                <a class="active" href="report.html">Generate Reports</a></li>
+            </nav>
+
+            <div class="icons">
+                <i class="fas fa-bars" id="menu-bars"></i>
+                <i class="fas fa-search" id="search-icon"></i> 
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <!-- <i class="fas fa-managerProfile" id="manager-icon"> -->
+                    <!-- <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
+                    <div id="list" style="display:none;">
+                        <select>
+                            <option value="logOut">Log Out</option>
+                        </select>
+                    </div> -->
+                <!-- </i>  -->
             </div>
-        </nav> 
+        </header>
+        <!-- header section ends --> 
 
         <div id="reportdiv">
-            <!-- <label for="date">Select a date:</label> -->
-            <!-- <input type="text" id="date" name="date"> -->
             <select id="month">
                 <option value="01">January</option>
                 <option value="02">February</option>
@@ -76,14 +65,11 @@
                 <option value="11">November</option>
                 <option value="12">December</option>
               </select>
-            <button id="generateReportBtn">Generate Reports</button>
+            <button class="btn">Generate Reports</button>
         </div>
 
-        <section>
-            <div id="generatedReport">
-
-            </div>
-        </section>
+        <div id="generatedReport"></div>
+        <script src="fnb.js"></script>
         
     </body>
 </html>

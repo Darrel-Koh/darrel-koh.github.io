@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../staff/styles/staffMovie.css">
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- boxIcon cdn link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>5B2G Cinema | Ticket Management</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">5B2G Cinema</a>
+    
+        <nav class="navbar">
+            <a class="#home" href="staff.html">Home</a>
+            <a class="active" id="#ticket" href="staffMovie.html">Ticket Management</a>
+            <a class="#order" href="staffOrder.html">Order Management</a>
+            <a class="#redeem" href="staffRedeem.html">Redeem Rewards</a>
+        </nav>
+    
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i> 
+            <a href="../SystemAdmin/loginPage.html" class="bx bx-lock-open"></a> <!--logout button-->
+        </div>
+    </header>
+    
+    <!-- header section ends -->
+    
+    <!-- search form start -->
+    <form action="" id="search-form">
+        <input type="search" placeholder="Search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+    
+    <!-- search form ends  -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section class="main-container">
+        <div class="sidebar">
+            <form action="#">
+                <div class="sidebar-groups">
+                    <h3 class="sg-title">Categories</h3>
+                    <input type="checkbox" id="adventure" name="adventure" value="adventure">
+                    <label for="adventure">Adventure</label><br>
+                    <input type="checkbox" id="action" name="action" value="action">
+                    <label for="action">Action</label><br>
+                    <input type="checkbox" id="animation" name="animation" value="animation">
+                    <label for="animation">Animation</label><br>
+                    <input type="checkbox" id="comedy" name="comedy" value="comedy">
+                    <label for="comedy">Comedy</label><br>
+                    <input type="checkbox" id="science" name="science" value="science">
+                    <label for="science">Sci-Fi</label><br>
+                    <input type="checkbox" id="thriller" name="thriller" value="thriller">
+                    <label for="thriller">Thriller</label><br>
+                    <input type="checkbox" id="history" name="history" value="history">
+                    <label for="history">History</label><br>
+                    <input type="checkbox" id="documentary" name="documentary" value="documentary">
+                    <label for="documentary">Documentary</label><br>
+                    <input type="checkbox" id="fantasy" name="fantasy" value="fantasy">
+                    <label for="fantasy">Fantasy</label><br>
+                    <input type="checkbox" id="drama" name="drama" value="drama">
+                    <label for="drama">Drama</label><br>
+                    <input type="checkbox" id="crime" name="crime" value="crime">
+                    <label for="crime">Crime</label><br>
+                </div>
+
+                <div class="sidebar-groups">
+                    <h3 class="sg-title">Language</h3>
+                    <input type="checkbox" id="english" name="english" value="english">
+                    <label for="english">English</label><br>
+                    <input type="checkbox" id="chinese" name="chinese" value="chinese">
+                    <label for="chinese">Chinese</label><br>
+                    <input type="checkbox" id="hindi" name="hindi" value="hindi">
+                    <label for="hindi">Hindi</label><br>
+                </div>
+                
+                <div class="sidebar-groups">
+                    <h3 class="sg-title">Rating <i class="fas fa-star"></i></h3>
+                    <input type="radio" id="star" name="Rating" value="star">
+                    <label for="star">0 - 2</label><br>
+                    <input type="radio" id="star" name="Rating" value="star">
+                    <label for="star">2.1 -4</label><br>
+                    <input type="radio" id="star" name="Rating" value="star">
+                    <label for="star">4.1 -6</label><br>
+                    <input type="radio" id="star" name="Rating" value="star">
+                    <label for="star">6.1 -8</label><br>
+                    <input type="radio" id="star" name="Rating" value="star">
+                    <label for="star">8.1 -10</label><br>
+                </div>
+
+                <div class="sidebar-groups">
+                    <a href="#" class="btn-l btn">Apply Filters</a>
+                </div>
+            </form>
+        </div>
+        
+            <div class="current-movies">
+                <div class="current-movie">
+                    <div class="cm-img-box">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg" alt="">
+                    </div>
+                    <h3 class="movie-title">Guardians of the Galaxy Vol. 3</h3>
+                    <p>Categories: Action Adventure Comedy</p>
+                    <br>
+                    <div class="content">
+                        <div class="stars">
+                            Rating: <i class="fas fa-star"> 8.3</i>
+                        </div>
+                    </div>
+                    <div class="booking">
+                        <h2 class="price">$15</h2>
+                        <a href="staffBuy.html" class="btn">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="current-movie">
+                    <div class="cm-img-box">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYTEyYjgzNmUtM2QyYi00MWMwLWExMDctZmY1NmZhNGY5MWNiXkEyXkFqcGdeQXVyOTcwMTQxMTM@._V1_.jpg" alt="">
+                    </div>
+                    <h3 class="movie-title">Vikram</h3>
+                    <p>Categories: Action Crime Drama</p>
+                    <br>
+                    <div class="content">
+                        <div class="stars">
+                            Rating: <i class="fas fa-star"> 7.1</i>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="booking">
+                        <h2 class="price">$10</h2>
+                        <a href="staffBuy.html" class="btn">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="current-movie">
+                    <div class="cm-img-box">
+                        <img src="https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_FMjpg_UX1000_.jpg" alt="">
+                    </div>
+                    <h3 class="movie-title">Avatar: The Way of Water</h3>
+                    <p>Categories: Action Adventure Fantasy</p>
+                    <br>
+                    <div class="content">
+                        <div class="stars">
+                            Rating: <i class="fas fa-star"> 7.7</i>
+                        </div>
+                    </div>
+                    <div class="booking">
+                        <h2 class="price">$15</h2>
+                        <a href="staffBuy.html" class="btn">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="current-movie">
+                    <div class="cm-img-box">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMjE2NzZlMGItMzA4OS00ZjRiLTk3NzItMDRkOGFlZmNhYzJkXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_.jpg" alt="">
+                    </div>
+                    <h3 class="movie-title">The Wandering Earth</h3>
+                    <p>Categories: Action Adventure Sci-Fi</p>
+                    <br>
+                    <div class="content">
+                        <div class="stars">
+                            Rating: <i class="fas fa-star"> 5.9</i>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="booking">
+                        <h2 class="price">$10</h2>
+                        <a href="staffBuy.html" class="btn">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="current-movie">
+                    <div class="cm-img-box">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzA4YWVkMmEtMGEwOS00ZGYxLTljODAtNzk4ZDA1MmQxN2Y5XkEyXkFqcGdeQXVyMTEwMjgyMzIz._V1_FMjpg_UX1000_.jpg" alt="">
+                    </div>
+                    <h3 class="movie-title">Sword Art Online the Movie: Progressive - Scherzo of Deep Night</h3>
+                    <p>Categories: Action Adventure Animation</p>
+                    <br>
+                    <div class="content">
+                        <div class="stars">
+                            Rating: <i class="fas fa-star"> 6.7</i>
+                        </div>
+                    </div>
+                    <div class="booking">
+                        <h2 class="price">$10</h2>
+                        <a href="staffBuy.html" class="btn">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="current-movie">
+                    <div class="cm-img-box">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg" alt="">
+                    </div>
+                    <h3 class="movie-title">John Wick: Chapter 4</h3>
+                    <p>Categories: Action Crime Thriller</p>
+                    <br>
+                    <div class="content">
+                        <div class="stars">
+                            Rating: <i class="fas fa-star"> 8.2</i>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="booking">
+                        <h2 class="price">$15</h2>
+                        <a href="staffBuy.html" class="btn">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="current-movie">
+                    <div class="cm-img-box">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOTYxNjcyNmEtYjU4NC00NmViLWE0NzItOTlmMGQ3YWI4NmU2XkEyXkFqcGdeQXVyMjI1OTU2OTE@._V1_.jpg" alt="">
+                    </div>
+                    <h3 class="movie-title">From Vegas to Macau III</h3>
+                    <p>Categories: Comedy Drama</p>
+                    <br>
+                    <div class="content">
+                        <div class="stars">
+                            Rating: <i class="fas fa-star"> 2.6</i>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="booking">
+                        <h2 class="price">$10</h2>
+                        <a href="staffBuy.html" class="btn">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="current-movie">
+                    <div class="cm-img-box">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNWM0ZGJlMzMtZmYwMi00NzI3LTgzMzMtNjMzNjliNDRmZmFlXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_.jpg" alt="">
+                    </div>
+                    <h3 class="movie-title">Doctor Strange in the Multiverse of Madness</h3>
+                    <p>Categories: Action Adventure Fantasy</p>
+                    <br>
+                    <div class="content">
+                        <div class="stars">
+                            Rating: <i class="fas fa-star"> 6.9</i>
+                        </div>
+                    </div>
+                    <div class="booking">
+                        <h2 class="price">$10</h2>
+                        <a href="staffBuy.html" class="btn">Buy Tickets</a>
+                    </div>
+                </div>
+
+                <div class="current-movie">
+                    <div class="cm-img-box">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg" alt="">
+                    </div>
+                    <h3 class="movie-title">Top Gun: Maverick</h3>
+                    <p>Categories: Action Drama</p>
+                    <br>
+                    <div class="content">
+                        <div class="stars">
+                            Rating: <i class="fas fa-star"> 8.3</i>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="booking">
+                        <h2 class="price">$15</h2>
+                        <a href="staffBuy.html" class="btn">Buy Tickets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+<!-- js file link -->
+<script src="staffMovie.js"></script>
+
+</body>
+</html> 

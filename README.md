@@ -12,6 +12,8 @@ git status (To check current status of your git progress)
 
 git fetch (To fetch Teammates changes before starting)
 
+git pull (To confirm pull in Teammates changes)
+
 git checkout -b <new-branch-name> (Creates a new branch for a new feature)
 
 git push origin <new-branch-name> (Push new branch from local machine to main)
@@ -22,23 +24,35 @@ git commit -m (To commit changes, and include a message)
 
 git push (To push changes to the main repo)
 ```
+### To start out:
+``` 
+git clone https://github.com/Darrel-Koh/darrel-koh.github.io.git
 
+System may prompt you request for your credentials,  replace <username> with your desired username and <email> with your email address. Dont need <>
+These commands configure Git to associate your name and email with the commits you make on your repository. 
+git config user.name <username>
+git config user.email <email>
+```
 
 ### Before you start coding:
-```git status (To check current status of your git progress)
+```
+git status (To check current status of your git progress)
 git fetch (To fetch Teammates changes before starting)
 git pull (To complete fetching changes)
 ```
 
 ### After make changes:
-```git status (To check current status of your git progress)
+```
+git status (To check current status of your git progress)
 git fetch (To fetch Teammates changes before starting)
+git pull(To confirm pull in Teammates changes)
 git commit -m (To commit changes, and include a message)
 git push (To push changes to the main repo)
 ```
 
 ### To start a new feature:
-```git checkout -b <new-branch-name> (Creates a new branch for a new feature)
+```
+git checkout -b <new-branch-name> (Creates a new branch for a new feature)
 git push origin <new-branch-name> (Push new branch from local machine to main)
 git commit -m (To commit changes, and include a message)
 git push (To push changes to the main repo)
