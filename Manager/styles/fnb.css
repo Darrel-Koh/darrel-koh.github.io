@@ -126,7 +126,7 @@ header .icons #menu-bars{
 }
 /* Header part css */
 
-/* Movie list css starts */
+/* Fnb css starts */
 section{
     padding: 2rem 9%;
 }
@@ -172,7 +172,7 @@ letter-spacing: .1rem;
     height: 270px; 
     margin-bottom: 0rem;
 } 
-/* Movie list css ends */
+/* Fnb css ends */
 
 /* Media queries starts */
 @media (max-width:991px){
