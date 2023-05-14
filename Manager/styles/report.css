@@ -157,11 +157,15 @@ section:nth-child(even){
 #month{
     margin-right: 0.3cm;
     padding: .8rem 3rem;
+    border-radius: .5rem;
 }
 #generatedReport{
     border: 1px solid white; 
-    width: 60%; 
+    width: 80%; 
     height: 500px;
+    margin: auto; 
+    text-align: center;
+    margin-top: 2rem;
 }
 /* Report css ends */
 
