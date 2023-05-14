@@ -5,32 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Customer/styles/custMovie.css">
+
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- boxIcon cdn link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>5B2G Cinema | Ticket Management</title>
 </head>
 <body>
-    <section class="top-bar">
-        <div class="left-side">
-            <h2 class="title">5B2G Cinema</h2>
-            <ul class="navigation">
-                <li><a class="#home" href="custHome.html">Home</a></li>
-                <li><a class="active" id="#ticket" href="custMovie.html">Ticket Management</a></li>
-                <li><a class="#order" href="custOrder.html">Order Management</a></li>
-                <li><a class="#redeem" href="custRedeem.html">Redeem Rewards</a></li>
-            </ul>
+    <header>
+        <a href="#" class="logo">5B2G Cinema</a>
+    
+        <nav class="navbar">
+            <a class="#home" href="custHome.html">Home</a>
+            <a class="active" id="#ticket" href="custMovie.html">Ticket Management</a>
+            <a class="#order" href="custOrder.html">Order Management</a>
+            <a class="#redeem" href="custRedeem.html">Redeem Rewards</a>
+        </nav>
+    
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i> 
+            <a href="../SystemAdmin/loginPage.html" class="bx bx-lock-open"></a> <!--logout button-->
         </div>
+    </header>
+    
+    <!-- header section ends -->
+    
+    <!-- search form start -->
+    <form action="" id="search-form">
+        <input type="search" placeholder="Search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+    
+    <!-- search form ends  -->
 
-        <div class="right-side">
-            <img src="../Customer/images/filter.png" alt="" class="filter">
-            <img src="../Customer/images/cart.png" alt="" class="cart">
-            <img src="../Customer/images/help.png" alt="" class="help">
-            <div class="profile-img-box">
-                <img src="../Customer/images/profile.jpg" alt="">
-            </div>
-            <img src="../Customer/images/menu.png" alt="" class="menu">
-        </div>
-    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <section class="main-container">
         <div class="sidebar">
@@ -265,5 +284,15 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+<!-- js file link -->
+<script src="custMovie.js"></script>
+
 </body>
 </html> 
