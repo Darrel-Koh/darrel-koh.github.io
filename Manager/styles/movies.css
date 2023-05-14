@@ -144,16 +144,18 @@ section:nth-child(even){
     padding: .8rem 3rem;
 }
 .btn:hover{
-color: var(--light-color);
-background: var(--orange);
-letter-spacing: .1rem;
+    color: var(--light-color);
+    background: var(--orange);
+    letter-spacing: .1rem;
 }
-#createMovie{margin: auto; 
+#createMovie{
+    margin: auto; 
     width: 50%; 
     text-align: center; 
     padding-top: 70px;
 }
-#movieList{display: grid; 
+#movieList{
+    display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(220px, auto)); 
     gap: 1.5rem;
 }
