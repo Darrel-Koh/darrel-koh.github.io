@@ -47,7 +47,7 @@ a.logo img {
 
 /* Style for Header */
 header{
-  position: none;
+  position: fixed;
   top: 0; left: 0; right: 0;
   background: #2E2E2E;
   padding: 1rem 7%;
