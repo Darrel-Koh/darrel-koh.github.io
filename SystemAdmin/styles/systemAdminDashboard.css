@@ -1,155 +1,138 @@
 @import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
 
-:root{
-  --orange:#cd8c38;
-  --black:#2E2E2E;
-  --light-color:#D1D0D0;
-  --box-shadow:0 .5rem 1.5rem rgb(255, 255, 255);
+:root {
+  --orange: #cd8c38;
+  --black: #2E2E2E;
+  --light-color: #D1D0D0;
+  --box-shadow: 0 .5rem 1.5rem rgb(255, 255, 255);
 }
 
-*{
-  font-family: 'Joan', serif;
-  margin: 0; padding: 0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  outline: none; border: none;
   text-transform: capitalize;
-  transition: all .2s linear;
 }
-html{
+
+html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-padding-top: 5.5rem;
   scroll-behavior: smooth;
 }
 
-
-body{
+body {
   background-color: grey;
+  font-family: 'Joan', serif;
 }
 
 a.logo {
-    display: inline-block;
-    vertical-align: middle; /* Adjust vertical alignment as needed */
-    padding:0% !important;
-  }
-  
-a.logo img {
-    height: 50px; /* Adjust the height of the logo image */
-    /* Add any other necessary styling for the logo image */
-  }
-.topnav {
-  background-color: #333;
-  overflow: hidden;
-  height: 50px;
-  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0% !important;
 }
 
-/* Style for Header */
-header{
+a.logo img {
+  height: 50px;
+}
+
+header {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #2E2E2E;
   padding: 1rem 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
+  z-index: 2000;
   box-shadow: var(--box-shadow);
 }
-header .navbar a{
+
+header .navbar a {
   font-size: 1.7rem;
   border-radius: .5rem;
   padding: .5rem 1.5rem;
+  text-decoration: none;
   color: var(--light-color);
 }
+
 header .navbar a.active,
-header .navbar a:hover{
-  color:#cd8c38;
+header .navbar a:hover {
+  color: #cd8c38;
   background: var(--black);
 }
+
 header .icons i,
-header .icons a{
-    cursor: pointer;
-    margin-left: .5rem;
-    height: 4.5rem;
-    line-height: 4.5rem;
-    width: 3rem;
-    text-align: center;
-    font-size: 1.7rem;
-    color: var(--black);
-    border-radius: 50%;
-    background: var(--light-color);
+header .icons a {
+  cursor: pointer;
+  margin-left: .5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  width: 3rem;
+  text-align: center;
+  font-size: 1.7rem;
+  color: var(--black);
+  border-radius: 50%;
+  background: var(--light-color);
 }
+
 header .icons i:hover,
-header .icons a:hover{
-    color: var(--light-color);
-    background: var(--orange);
-    transform: rotate(360deg);
-}
-header .icons #menu-bars{
-    display: none;
+header .icons a:hover {
+  color: var(--light-color);
+  background: var(--orange);
+  transform: rotate(360deg);
 }
 
-/* for Search bar */
-  #myInput {
-    background-image: url('https://www.w3schools.com/css/searchicon.png');
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
-  }
-  
-  #myTable {
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #ddd;
-    font-size: 18px;
-  }
-  
-  #myTable th, #myTable td {
-    text-align: left;
-    padding: 12px;
-  }
-  
-  #myTable tr {
-    border-bottom: 1px solid #ddd;
-  }
-  
-  #myTable tr.header, #myTable tr:hover {
-    background-color: #f1f1f1;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* Responsive media queries */
-
-@media (max-width:991px){
-  html{
-      font-size: 55%;
-  }
-  header{
-      padding: 1rem 2rem;
-  }
-  section{
-    padding: 2rem;
+header .icons #menu-bars {
+  display: none;
 }
+
+#myInput {
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th,
+#myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header,
+#myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive media queries */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 1rem 2rem;
+  }
 }
 
 @media (max-width:768px){
