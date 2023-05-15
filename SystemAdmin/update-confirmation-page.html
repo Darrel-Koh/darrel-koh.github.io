@@ -20,7 +20,7 @@
         <!-- boxIcon cdn link -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="./styles/updateUserDetails.css">
+        <link rel="stylesheet" href="./styles/update-confirmation-page.css">
     </head>
     <body>
         <header>
@@ -42,22 +42,9 @@
         </header>
         
         <div class="form-container">
-            <h2>Update User Details</h2>
-            <form>
-              <label for="name">Name:</label>
-              <input type="text" id="name" readonly>
-          
-              <label for="role">Role:</label>
-              <input type="text" id="role" readonly>
-          
-              <label for="email">Email:</label>
-              <input type="email" id="email" readonly>
-          
-              <div class="buttons">
-                <a href="../SystemAdmin/update-user-details.html" ><button type="button" id="updateButton">Confirm</button></a>
-                <button type="button" id="suspendButton">Cancel</button>
-              </div>
-            </form>
+              <h2>Confirmation</h2>
+              <p>Your changes have been saved successfully!</p>
+              <a href="./systemAdminDashboard.html"><button type="button" id="backButton">Back</button></a>
           </div>
     </body>
 </html>
