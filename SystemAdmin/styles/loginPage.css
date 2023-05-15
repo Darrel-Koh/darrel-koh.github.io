@@ -1,18 +1,18 @@
 /* Bordered form */
   form {
-    border: 3px solid #f1f1f1;
-    max-width: 400px;
-    margin: 0 auto;
+  border: 3px solid #f1f1f1;
+  margin: 0 auto;
+  max-width: 400px;
   }
   
   /* Full-width inputs */
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+  input[type=password], input[type=text] {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 8px 0;
+  padding: 12px 20px;
+  width: 100%;
   }
   
   /* Set a style for all buttons */
