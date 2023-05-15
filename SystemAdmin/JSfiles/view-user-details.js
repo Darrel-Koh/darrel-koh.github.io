@@ -32,6 +32,31 @@ if (user) {
     document.getElementById('email').value = user.email;
 }
 
+// for buttons
+    const updateButton = document.getElementById('updateButton');
+  const suspendButton = document.getElementById('suspendButton');
+  const nameInput = document.getElementById('name');
+  const roleInput = document.getElementById('role');
+  const emailInput = document.getElementById('email');
+
+  updateButton.addEventListener('click', function() {
+    nameInput.readOnly = false;
+    roleInput.readOnly = false;
+    emailInput.readOnly = false;
+  });
+
+  suspendButton.addEventListener('click', function() {
+    const confirmation = confirm('Are you sure you want to suspend the user?');
+    if (confirmation) {
+      // Perform suspend action
+      // You can add your own logic here
+    }
+  });
+
+
+
+// for NavBar
+
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
 

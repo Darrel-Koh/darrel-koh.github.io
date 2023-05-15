@@ -131,9 +131,10 @@ header .icons #menu-bars {
   background-color: #f5f5f5;
 }
 
-.form-container input[type="submit"] {
-  display: block;
-  width: 100%;
+.form-container input[type="submit"],
+.form-container button {
+  display: inline-block;
+  width: 48%;
   padding: 0.8rem;
   margin-top: 1rem;
   border: none;
@@ -144,6 +145,15 @@ header .icons #menu-bars {
   text-align: center;
   cursor: pointer;
 }
+
+.form-container button {
+  background-color: #cd8c38;
+}
+
+.form-container button:hover {
+  background-color: #b57230;
+}
+
 
 
 /* Responsive media queries */
