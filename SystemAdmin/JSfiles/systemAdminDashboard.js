@@ -61,6 +61,7 @@ function myFunction() {
   }
 generateTable(); // Call the function to generate the table initially
 
+
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
 

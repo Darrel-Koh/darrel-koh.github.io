@@ -32,6 +32,37 @@ if (user) {
     document.getElementById('email').value = user.email;
 }
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    var userForm = document.getElementById("userForm");
+    var updateLink = document.getElementById("updateLink");
+
+    // Retrieve the user details from the query parameters
+    var urlParams = new URLSearchParams(window.location.search);
+    var userId = urlParams.get("userId");
+    var user = fetchUserDetails(userId); // Replace this with your own function to fetch user details
+
+    if (user) {
+      // Populate the form fields with the user details
+      document.getElementById("name").value = user.name;
+      document.getElementById("role").value = user.role;
+      document.getElementById("email").value = user.email;
+
+      // Update the "Update" button link with the user ID
+      updateLink.href = "../SystemAdmin/update-user-details.html?userId=" + user.id;
+    }
+  }
+)
+
+
+
+
+
+
+
+
+
+
 // for buttons
     const updateButton = document.getElementById('updateButton');
   const suspendButton = document.getElementById('suspendButton');
@@ -39,11 +70,11 @@ if (user) {
   const roleInput = document.getElementById('role');
   const emailInput = document.getElementById('email');
 
-  updateButton.addEventListener('click', function() {
-    nameInput.readOnly = false;
-    roleInput.readOnly = false;
-    emailInput.readOnly = false;
-  });
+  // updateButton.addEventListener('click', function() {
+  //   nameInput.readOnly = false;
+  //   roleInput.readOnly = false;
+  //   emailInput.readOnly = false;
+  // });
 
   suspendButton.addEventListener('click', function() {
     const confirmation = confirm('Are you sure you want to suspend the user?');
