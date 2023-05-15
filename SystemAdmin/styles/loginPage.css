@@ -1,5 +1,5 @@
 /* Bordered form */
-form {
+  form {
     border: 3px solid #f1f1f1;
     max-width: 400px;
     margin: 0 auto;
@@ -76,15 +76,3 @@ form {
   .message {
     color: #721c24;
   }
-
-  
-  /* Change styles for span and cancel button on extra small screens 
-  @media screen and (max-width: 300px) {
-    span.psw {
-      display: block;
-      float: none;
-    }
-    .cancelbtn {
-      width: 100%;
-    }
-  }*/
