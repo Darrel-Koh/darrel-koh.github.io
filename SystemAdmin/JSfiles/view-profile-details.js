@@ -3,12 +3,12 @@
  function fetchUserDetails(userId) {
     // Replace this code with your actual logic to fetch the user details
     var users = [
-        { id: 1, name: "Alfreds Futterkiste", role: "System Admin", email: "alfred@example.com" },
-        { id: 2, name: "Berglunds snabbkop", role: "Manager", email: "berglunds@example.com" },
-        { id: 3, name: "Jack neo", role: "Staff", email: "jack@example.com" },
-        { id: 4, name: "James Hemsworth", role: "Customer", email: "handsome@example.com" },
+        { id: 1, role: "System Admin" },
+        { id: 2, role: "Manager" },
+        { id: 3, role: "Staff" },
+        { id: 4, role: "Customer" },
         // Add more user objects as needed
-    ];
+      ];
 
     // Find the user with the matching userId
     var user = users.find(function (user) {
@@ -27,9 +27,7 @@ const user = fetchUserDetails(userId);
 
 // Populate the form-like view with the user details
 if (user) {
-    document.getElementById('name').value = user.name;
     document.getElementById('role').value = user.role;
-    document.getElementById('email').value = user.email;
 }
 
 
@@ -44,9 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (user) {
       // Populate the form fields with the user details
-      document.getElementById("name").value = user.name;
       document.getElementById("role").value = user.role;
-      document.getElementById("email").value = user.email;
 
       // Update the "Update" button link with the user ID
       updateLink.href = "../SystemAdmin/update-user-details.html?userId=" + user.id;
