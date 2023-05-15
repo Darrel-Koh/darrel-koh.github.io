@@ -132,7 +132,7 @@ header .icons #menu-bars{
 /* Movie list css starts */
 section{
     padding: 2rem 9%;
-    color: #adadad;
+    color: var(--light-color);
     grid-template-columns: 1fr 3fr;
 }
 section:nth-child(even){
