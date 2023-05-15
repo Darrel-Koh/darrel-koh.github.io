@@ -89,6 +89,18 @@ header .icons #menu-bars {
   display: none;
 }
 
+/* For the Search input and table */
+button.createUser{
+  padding: 12px 20px ;
+  border: 1px solid #ddd;
+  margin-top: 70px;
+}
+button:hover {
+  background-color: #45a049;
+}
+button:active {
+  background-color: #3e8e41;
+}
 #myInput {
   background-image: url('https://www.w3schools.com/css/searchicon.png');
   background-position: 10px 10px;
@@ -97,7 +109,7 @@ header .icons #menu-bars {
   font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
-  margin-top: 70px;
+  margin-top: 5px;
   margin-bottom: 20px;
 }
 
