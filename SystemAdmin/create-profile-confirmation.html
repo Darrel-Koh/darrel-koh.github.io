@@ -20,40 +20,31 @@
         <!-- boxIcon cdn link -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="./styles/create-profile.css">
+        <link rel="stylesheet" href="./styles/create-profile-confirmation.css">
     </head>
     <body>
         <header>
             <a class="logo" href="./systemAdminDashboard.html"><img src="./Images/5B2G_Logo.jpg" alt="Logo"></a>
       
             <nav class="navbar">
-              <a  href="./systemAdminDashboard.html">Home</a>
-              <a class="active" href="./profile-management.html">Profile Management</a>
-              <a href="./testing1.html">My Account</a>
-          </nav>
+                <a  href="./systemAdminDashboard.html">Home</a>
+                <a class="active" href="./profile-management.html">Profile Management</a>
+                <a href="./testing1.html">My Account</a>
+            </nav>
         
             <div class="icons">
               <i class="fas fa-bars" id="menu-bars"></i>
               <i class="fas fa-search" id="search-icon"></i> 
+              <a href="#" class="fas fa-shopping-cart"></a>
               <a href="../index.html" class="bx bx-lock-open"></a> <!--logout button-->
           </div>
         </header>
         
         <div class="form-container">
-          <h2>Profile Details</h2>
-          <form id="userForm" onsubmit="validateForm(event)">
-        
-            <label for="role">Name of Role:</label>
-            <input type="text" id="role" required>
-        
-            <div class="buttons">
-              <button type="submit" id="updateButton">Create</button>
-                <button type="button" id="suspendButton">Cancel</button>
-              </a>
-            </div>
-          </form>
-        </div>
-
+              <h2>Confirmation</h2>
+              <p>Your User account have been created successfully!</p>
+              <a href="./systemAdminDashboard.html"><button type="button" id="backButton">Back</button></a>
+          </div>
     </body>
 </html>
 
@@ -61,4 +52,4 @@
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
    <!-- js file link -->
-   <script src="../SystemAdmin/JSfiles/create-profile.js"></script>
+   <script src="../SystemAdmin/JSfiles/update-user-details.js"></script>

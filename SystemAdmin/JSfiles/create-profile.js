@@ -1,12 +1,11 @@
 function validateForm(event) {
     event.preventDefault(); // Prevent default form submission behavior
-    var nameInput = document.getElementById("name");
     var roleInput = document.getElementById("role");
-    var emailInput = document.getElementById("email");
 
-    if (nameInput.checkValidity() && roleInput.checkValidity() && emailInput.checkValidity()) {
+
+    if (roleInput.checkValidity()) {
       // Validation successful, navigate to the system admin dashboard page
-      window.location.href = "../SystemAdmin/create-confirmation.html";
+      window.location.href = "../SystemAdmin/create-profile-confirmation.html";
       return true;
     } else {
       // Validation failed, display error messages or handle as desired
