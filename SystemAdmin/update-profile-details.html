@@ -20,17 +20,17 @@
         <!-- boxIcon cdn link -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="./styles/create-confirmation.css">
+        <link rel="stylesheet" href="./styles/update-profile-details.css">
     </head>
     <body>
         <header>
             <a class="logo" href="./systemAdminDashboard.html"><img src="./Images/5B2G_Logo.jpg" alt="Logo"></a>
       
             <nav class="navbar">
-                <a class="active" href="./systemAdminDashboard.html">Home</a>
-                <a href="./profile-management.html">Profile Management</a>
-                <a href="./testing1.html">My Account</a>
-            </nav>
+              <a  href="./systemAdminDashboard.html">Home</a>
+              <a class="active" href="./profile-management">Profile Management</a>
+              <a href="./testing1.html">My Account</a>
+          </nav>
         
             <div class="icons">
               <i class="fas fa-bars" id="menu-bars"></i>
@@ -41,9 +41,17 @@
         </header>
         
         <div class="form-container">
-              <h2>Confirmation</h2>
-              <p>Your User account have been created successfully!</p>
-              <a href="./systemAdminDashboard.html"><button type="button" id="backButton">Back</button></a>
+            <h2>Update Profile Details</h2>
+            <form>
+          
+              <label for="role">Name of Role:</label>
+              <input type="text" id="role">
+          
+              <div class="buttons">
+                <a href="../SystemAdmin/update-profile-confirmation.html" ><button type="button">Confirm</button></a>
+                <a href="../SystemAdmin/profile-management.html"><button type="button" id="suspendButton">Cancel</button></a>
+              </div>
+            </form>
           </div>
     </body>
 </html>
@@ -52,4 +60,4 @@
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
    <!-- js file link -->
-   <script src="../SystemAdmin/JSfiles/update-user-details.js"></script>
+   <script src="../SystemAdmin/JSfiles/update-profile-details.js"></script>
