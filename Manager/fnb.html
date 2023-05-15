@@ -10,23 +10,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>ManagerFnbManagement</title>
 
-        <!-- swiper link -->
+        <!-- Swiper link -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-        <!-- font awesome cdn link -->
+        <!-- Font awesome cdn link -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        <!-- boxIcon cdn link -->
+        <!-- BoxIcon cdn link -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        <!-- css file link -->
+        <!-- Css file link -->
         <link rel="stylesheet" href="../Manager/styles/fnb.css">    
         
     </head>
 
     <body>
 
-        <!-- header section starts -->
+        <!-- Header section starts -->
         <header>
             <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
 
@@ -40,110 +40,117 @@
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
                 <i class="fas fa-search" id="search-icon"></i> 
-                <a href="../SystemAdmin/loginPage.html" class="bx bx-lock-open"></a>
-                <!-- <i class="fas fa-managerProfile" id="manager-icon"> -->
-                    <!-- <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
-                    <div id="list" style="display:none;">
-                        <select>
-                            <option value="logOut">Log Out</option>
-                        </select>
-                    </div> -->
-                <!-- </i>  -->
+                <a href="../index.html" class="bx bx-lock-open"></a>
             </div>
         </header>
-        <!-- header section ends -->
+        <!-- Header section ends -->
 
-        <!-- search form start -->
+        <!-- Search form start -->
         <form action="" id="search-form">
             <input type="search" placeholder="Search By Food Name..." name="" id="search-box">
             <label for="search-box" class="fas fa-search"></label>
             <i class="fas fa-times" id="close"></i>
         </form>
-        <!-- search form ends  --> 
+        <!-- Search form ends  --> 
 
-        <!-- Create movie starts -->
+        <!-- Create fnb starts -->
         <div id="createFnb">
-            <button class="btn"><a href="addFnb.html">&#43; Add New Food</a></button><br/><br/>
+            <a href="addFnb.html" class="btn">&#43; Add New Food</a>
         </div>
-        <!-- Create movie ends -->
+        <!-- Create fnb ends -->
 
+        <!-- Fnb list starts -->
         <section>
             <div id="fnbList">
-
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 1" class="fnbImg">
-                    <h2 class="fnbTitle">Item 1</h2>
-                    <button class="btn"><a href="fnbInfo.html">VIEW INFO</a></button>
+                    <img src="../staff/images/popcorn1.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Buttered Popcorn</h2>
+                    <span class="price">$10</span>
+                    <div class="viewInfoBtn">
+                        <a href="fnbInfo.html" class="btn">View Info</a>
+                    </div>
                 </div>
-
+        
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 2" class="fnbImg">
-                    <h2 class="fnbTitle">Item 2</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <img src="../staff/images/popcorn2.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Sweet Popcorn</h2>
+                    <span class="price">$10</span>
+                    <a href="staffBuy2.html" class="btn">View Info</a>
                 </div>
-
+        
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 3" class="fnbImg">
-                    <h2 class="fnbTitle">Item 3</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <img src="../staff/images/popcorn3.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Caramel Popcorn</h2>
+                    <span class="price">$10</span>
+                    <a href="staffBuy2.html" class="btn">View Info</a>
                 </div>
-
+        
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 4" class="fnbImg">
-                    <h2 class="fnbTitle">Item 4</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <img src="../staff/images/hotdog.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Hot dogs</h2>
+                    <span class="price">$3</span>
+                    <a href="staffBuy2.html" class="btn">View Info</a>
                 </div>
-
+        
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 5" class="fnbImg">
-                    <h2 class="fnbTitle">Item 5</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <img src="../staff/images/icecream.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Ice cream</h2>
+                    <span class="price">$3</span>
+                    <a href="staffBuy2.html" class="btn">View Info</a>
                 </div>
-
+        
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 6" class="fnbImg">
-                    <h2 class="fnbTitle">Item 6</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <img src="../staff/images/chips.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Potato chips</h2>
+                    <span class="price">$2</span>
+                    <a href="staffBuy2.html" class="btn">View Info</a>
                 </div>
-
+        
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 7" class="fnbImg">
-                    <h2 class="fnbTitle">Item 7</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <img src="../staff/images/cola.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Coca-Cola</h2>
+                    <span class="price">$1.2</span>
+                    <a href="staffBuy2.html" class="btn">View Info</a>
                 </div>
-
+        
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 8" class="fnbImg">
-                    <h2 class="fnbTitle">Item 8</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <img src="../staff/images/pepsi.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Pepsi</h2>
+                    <span class="price">$1.2</span>
+                    <a href="staffBuy2.html" class="btn">View Info</a>
                 </div>
-
+        
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 9" class="fnbImg">
-                    <h2 class="fnbTitle">Item 9</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <img src="../staff/images/sprite.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Sprite</h2>
+                    <span class="price">$1.2</span>
+                    <a href="staffBuy2.html" class="btn">View Info</a>
                 </div>
-
+        
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 10" class="fnbImg">
-                    <h2 class="fnbTitle">Item 10</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <img src="../staff/images/7up.jpg" alt="" class="product-img">
+                    <h2 class="product-title">7-Up</h2>
+                    <span class="price">$1.2</span>
+                    <a href="staffBuy2.html" class="btn">View Info</a>
                 </div>
-
+        
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 11" class="fnbImg">
-                    <h2 class="fnbTitle">Item 11</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <img src="../staff/images/orange.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Orange Juice</h2>
+                    <span class="price">$1.6</span>
+                    <a href="staffBuy2.html" class="btn">View Info</a>
                 </div>
-                
+        
                 <div class="fnbBox">
-                    <img src="./images/popcorn.jpg" alt="Item 12" class="fnbImg">
-                    <h2 class="fnbTitle">Item 12</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <img src="../staff/images/icelemontea.jpg" alt="" class="product-img">
+                    <h2 class="product-title">Ice Lemon Tea</h2>
+                    <span class="price">$2</span>
+                    <a href="staffBuy2.html" class="btn">View Info</a>
                 </div>
             </div>
         </section>
+        <!-- Fnb list ends -->
 
-        <script src="fnb.js"></script>
+        <script src="withSearchBar.js"></script>
     </body>
 </html>

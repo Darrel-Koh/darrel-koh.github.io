@@ -180,7 +180,7 @@ section:nth-child(even){
     height: 35rem;
 }
 .movieTitle {
-    color: #fff;
+    color: var(--light-color);
     margin-bottom: .8rem;
     font-size: 2rem;
     width: 25rem;

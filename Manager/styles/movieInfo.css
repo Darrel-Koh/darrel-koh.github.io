@@ -74,12 +74,6 @@ header .icons i:hover, header .icons a:hover{
 header .icons #menu-bars{
     display: none;
 }
-#managerPic{
-    width: 40px; 
-    border-radius: 50%; 
-    cursor: pointer; 
-    margin-left: 30px;
-}
 /* Header part css */
 
 /* Movie info css starts */
