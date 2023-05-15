@@ -20,7 +20,7 @@
         <!-- boxIcon cdn link -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="./styles/view-profile-details.css">
+        <link rel="stylesheet" href="./styles/update-profile-details.css">
     </head>
     <body>
         <header>
@@ -28,31 +28,31 @@
       
             <nav class="navbar">
               <a  href="./systemAdminDashboard.html">Home</a>
-              <a class="active" ref="./profile-management.html">Profile Management</a>
+              <a class="active" href="./profile-management">Profile Management</a>
               <a href="./testing1.html">My Account</a>
           </nav>
         
             <div class="icons">
               <i class="fas fa-bars" id="menu-bars"></i>
               <i class="fas fa-search" id="search-icon"></i> 
+              <a href="#" class="fas fa-shopping-cart"></a>
               <a href="../index.html" class="bx bx-lock-open"></a> <!--logout button-->
           </div>
         </header>
         
         <div class="form-container">
-          <h2>User Details</h2>
-          <form>
-            <label for="role">Name of Role:</label>
-            <input type="text" id="role" readonly>
-        
-            <div class="buttons">
-              <!-- <a href="../SystemAdmin/update-user-details.html" ><button type="button" id="updateButton">Update</button></a> -->
-              <a href="../SystemAdmin/update-profile-details.html" id="updateLink"><button type="button" id="updateButton">Update</button></a>
-             <a href="../SystemAdmin/suspend-confirmation.html"> <button type="button" id="suspendButton">Suspend</button></a>
-            </div>
-          </form>
-        </div>
-
+            <h2>Update Profile Details</h2>
+            <form>
+          
+              <label for="role">Name of Role:</label>
+              <input type="text" id="role">
+          
+              <div class="buttons">
+                <a href="../SystemAdmin/update-profile-confirmation.html" ><button type="button">Confirm</button></a>
+                <a href="../SystemAdmin/profile-management.html"><button type="button" id="suspendButton">Cancel</button></a>
+              </div>
+            </form>
+          </div>
     </body>
 </html>
 
@@ -60,4 +60,4 @@
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
    <!-- js file link -->
-   <script src="../SystemAdmin/JSfiles/view-profile-details.js"></script>
+   <script src="../SystemAdmin/JSfiles/update-profile-details.js"></script>

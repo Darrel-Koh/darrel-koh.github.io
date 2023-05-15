@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("role").value = user.role;
 
       // Update the "Update" button link with the user ID
-      updateLink.href = "../SystemAdmin/update-user-details.html?userId=" + user.id;
+      updateLink.href = "../SystemAdmin/update-profile-details.html?userId=" + user.id;
     }
   }
 )
