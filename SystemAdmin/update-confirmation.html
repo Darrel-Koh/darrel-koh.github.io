@@ -20,7 +20,7 @@
         <!-- boxIcon cdn link -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="./styles/viewUserDetails.css">
+        <link rel="stylesheet" href="./styles/update-confirmation.css">
     </head>
     <body>
         <header>
@@ -36,30 +36,16 @@
             <div class="icons">
               <i class="fas fa-bars" id="menu-bars"></i>
               <i class="fas fa-search" id="search-icon"></i> 
+              <a href="#" class="fas fa-shopping-cart"></a>
               <a href="../index.html" class="bx bx-lock-open"></a> <!--logout button-->
           </div>
         </header>
         
         <div class="form-container">
-          <h2>User Details</h2>
-          <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" readonly>
-        
-            <label for="role">Role:</label>
-            <input type="text" id="role" readonly>
-        
-            <label for="email">Email:</label>
-            <input type="email" id="email" readonly>
-        
-            <div class="buttons">
-              <!-- <a href="../SystemAdmin/update-user-details.html" ><button type="button" id="updateButton">Update</button></a> -->
-              <a href="../SystemAdmin/update-user-details.html" id="updateLink"><button type="button" id="updateButton">Update</button></a>
-             <a href="../SystemAdmin/suspend-confirmation.html"> <button type="button" id="suspendButton">Suspend</button></a>
-            </div>
-          </form>
-        </div>
-
+              <h2>Confirmation</h2>
+              <p>Your User account changes have been saved successfully!</p>
+              <a href="./systemAdminDashboard.html"><button type="button" id="backButton">Back</button></a>
+          </div>
     </body>
 </html>
 
@@ -67,4 +53,4 @@
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
    <!-- js file link -->
-   <script src="../SystemAdmin/JSfiles/view-user-details.js"></script>
+   <script src="../SystemAdmin/JSfiles/update-user-details.js"></script>

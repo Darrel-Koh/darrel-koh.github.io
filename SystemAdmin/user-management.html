@@ -20,7 +20,7 @@
         <!-- boxIcon cdn link -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="./styles/systemAdminDashboard.css">
+        <link rel="stylesheet" href="./styles/user-management.css">
     </head>
 
     <header>
@@ -28,8 +28,9 @@
 
       <nav class="navbar">
           <a class="active" href="./systemAdminDashboard.html">Home</a>
+          <a href="./systemAdminDashboard.html">User Management</a>
           <a href="./view-user-details.html">Profile Management</a>
-          <a href="./testing1.html">My account</a>
+          <a href="./testing1.html">Profile</a>
       </nav>
   
       <div class="icons">
@@ -41,8 +42,7 @@
     <body>
         
         <div class="userTable">
-           <a href="../SystemAdmin/create-user.html"> <button type="button" class="createUser">Create User</button></a>
-
+            <button type="button" class="createUser">Create User</button>
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
             <table id="myTable">
                 <thead>

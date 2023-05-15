@@ -20,7 +20,7 @@
         <!-- boxIcon cdn link -->
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="./styles/viewUserDetails.css">
+        <link rel="stylesheet" href="./styles/create-user.css">
     </head>
     <body>
         <header>
@@ -42,20 +42,21 @@
         
         <div class="form-container">
           <h2>User Details</h2>
-          <form>
+          <form id="userForm" onsubmit="validateForm(event)">
             <label for="name">Name:</label>
-            <input type="text" id="name" readonly>
+            <input type="text" id="name" required>
         
             <label for="role">Role:</label>
-            <input type="text" id="role" readonly>
+            <input type="text" id="role" required>
         
             <label for="email">Email:</label>
-            <input type="email" id="email" readonly>
+            <input type="email" id="email" required>
         
             <div class="buttons">
-              <!-- <a href="../SystemAdmin/update-user-details.html" ><button type="button" id="updateButton">Update</button></a> -->
-              <a href="../SystemAdmin/update-user-details.html" id="updateLink"><button type="button" id="updateButton">Update</button></a>
-             <a href="../SystemAdmin/suspend-confirmation.html"> <button type="button" id="suspendButton">Suspend</button></a>
+              <button type="submit" id="updateButton">Create</button>
+              <a href="../SystemAdmin/systemAdminDashboard.html">
+                <button type="button" id="suspendButton">Cancel</button>
+              </a>
             </div>
           </form>
         </div>
@@ -67,4 +68,4 @@
    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
    <!-- js file link -->
-   <script src="../SystemAdmin/JSfiles/view-user-details.js"></script>
+   <script src="../SystemAdmin/JSfiles/create-user.js"></script>
