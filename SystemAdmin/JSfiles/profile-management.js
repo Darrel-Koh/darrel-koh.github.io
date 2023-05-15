@@ -45,7 +45,7 @@ var users = [
       // Create the role cell with hyperlink
       var roleCell = document.createElement("td");
       var roleLink = document.createElement("a");
-      roleLink.href = "./view-user-details.html?userId=" + user.id; // Modify the href value with the appropriate link destination
+      roleLink.href = "./view-profile-details.html?userId=" + user.id; // Modify the href value with the appropriate link destination
       roleLink.textContent = user.role; // Set the text content of the link
   
       roleCell.appendChild(roleLink);
