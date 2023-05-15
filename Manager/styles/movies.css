@@ -118,7 +118,16 @@ header .icons #menu-bars{
     top: 2rem; right: 3rem;
     font-size: 5rem;
 }
-/* Header part css */
+/* Header part css ends*/
+
+/* Create movie starts */
+#createMovie{
+    margin: auto; 
+    width: 50%; 
+    text-align: center; 
+    padding-top: 80px;
+}
+/* Create movie ends */
 
 /* Movie list css starts */
 section{
@@ -144,12 +153,6 @@ section:nth-child(even){
     background: var(--orange);
     letter-spacing: .1rem;
 }
-#createMovie{
-    margin: auto; 
-    width: 50%; 
-    text-align: center; 
-    padding-top: 80px;
-}
 #movieList {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(220px, auto)); 
@@ -174,7 +177,7 @@ section:nth-child(even){
 }
 .movieImg{
     width: 25rem; 
-    height: 30rem;
+    height: 35rem;
 }
 .movieTitle {
     color: #fff;
