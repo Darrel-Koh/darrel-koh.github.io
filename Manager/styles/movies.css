@@ -153,7 +153,7 @@ section:nth-child(even){
 #movieList {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(220px, auto)); 
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
 .movieBox {
     background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
@@ -188,7 +188,7 @@ section:nth-child(even){
     margin-top: 1rem;
     position: absolute;
     bottom: 3%;
-    right: 3%;
+    right: 4%;
 }
 /* Movie list css ends */
 
