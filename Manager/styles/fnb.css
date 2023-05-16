@@ -164,7 +164,7 @@ section:nth-child(even){
     border-radius: .5rem;
     font-size: 1.5rem;
     width: fit-content;
-    height: 58rem;
+    height: 43rem;
     position: relative;
 }
 .product-title{
@@ -172,8 +172,8 @@ section:nth-child(even){
     font-size: medium;
 }
 .product-img{
-    width: 200px; 
-    height: 270px; 
+    width: 30rem; 
+    height: 30rem; 
     margin-bottom: 0rem;
 } 
 .viewInfoBtn {

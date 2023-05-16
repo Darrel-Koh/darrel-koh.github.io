@@ -11,34 +11,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>ManagerAddMovies</title>
 
-        <!-- swiper link -->
+        <!-- Swiper link -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-        <!-- font awesome cdn link -->
+        <!-- Font awesome cdn link -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        <!-- boxIcon cdn link -->
+        <!-- BoxIcon cdn link -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        <!-- css file link -->
+        <!-- Css file link -->
         <link rel="stylesheet" href="../Manager/styles/addFnb.css">
-
-        <!-- <script>
-            function showLogOut() {
-                var list = document.getElementById("list");
-                if (list.style.display === "none") {
-                    list.style.display = "block";
-                } else {
-                    list.style.display = "none";
-                }
-            }
-        </script> -->
 
     </head>
 
     <body>
 
-        <!-- header section starts -->
+        <!-- Header section starts -->
         <header>
             <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
 
@@ -51,61 +40,56 @@
 
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
-                <a href="../SystemAdmin/loginPage.html" class="bx bx-lock-open"></a>
-
-                <!-- <i class="fas fa-managerProfile" id="manager-icon"> -->
-                    <!-- <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
-                    <div id="list" style="display:none;">
-                        <select>
-                            <option value="logOut">Log Out</option>
-                        </select>
-                    </div> -->
-                <!-- </i>  -->
+                <a href="../index.html" class="bx bx-lock-open"></a>
             </div>
         </header>
-        <!-- header section ends -->
+        <!-- Header section ends -->
 
+        <!-- Fnb info starts -->
         <section>
 
             <h1 id="addFnbTitle">New Food</h1><hr/>
 
-            <table>
-                <tr>
-                    <th><label for="picture">Upload Picture:</label></th>
-                    <th><input type="file" id="picture" name="picture" accept="image/*"></th>
-                </tr>
-                
-                <tr>
-                    <th><label for="id">Food ID:</label></th>
-                    <th><input type="text" id="id" name="id"></th>
-                </tr>
-                
-                <tr>
-                    <th><label for="name">Food Name:</label></th>
-                    <th><input type="text" id="name" name="name"></th>
-                </tr>
+            <div id="tablediv">
+                <table id="infoTable">
+                    <tr>
+                        <th><label for="picture">Upload Picture:</label></th>
+                        <th><input type="file" id="picture" name="picture" accept="image/*"></th>
+                    </tr>
+                    
+                    <tr>
+                        <th><label for="id">Food ID:</label></th>
+                        <th><input type="text" id="id" name="id"></th>
+                    </tr>
+                    
+                    <tr>
+                        <th><label for="name">Food Name:</label></th>
+                        <th><input type="text" id="name" name="name"></th>
+                    </tr>
 
-                <tr>
-                    <th><label for="price">Price:</label></th>
-                    <th><input type="text" id="price" name="price"></th>
-                </tr>
+                    <tr>
+                        <th><label for="price">Price:</label></th>
+                        <th><input type="text" id="price" name="price"></th>
+                    </tr>
 
-                <tr>
-                    <th><label for="size">Size:</label></th>
-                    <th><input type="text" id="size" name="size"></th>
-                </tr>
+                    <tr>
+                        <th><label for="size">Size:</label></th>
+                        <th><input type="text" id="size" name="size"></th>
+                    </tr>
 
-                <tr>
-                    <th><label for="desc">Description:</label></th>
-                    <th><input type="text" id="desc" name="desc"></th>
-                </tr>
-            </table>
+                    <tr>
+                        <th><label for="desc">Description:</label></th>
+                        <th><input type="text" id="desc" name="desc"></th>
+                    </tr>
+                </table>
+            </div>
 
             <div class="btn">
                 <button id="confirmBtn">Confirm</button>
                 <button id="cancelBtn">Cancel</button>
             </div>
         </section>
+        <!-- Fnb info starts -->
 
         <script src="noSearchBar.js"></script>
     </body>
