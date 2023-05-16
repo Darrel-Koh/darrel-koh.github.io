@@ -215,7 +215,16 @@ p{
     background: var(--orange);
     letter-spacing: .1rem;
 }
-
+.btn1:hover{
+    color: var(--light-color);
+    background: var(--orange);
+    letter-spacing: .1rem;
+}
+.btn1{
+    cursor: pointer;
+    background: var(--text-color);
+    color: var(--black);
+}
 
 
 

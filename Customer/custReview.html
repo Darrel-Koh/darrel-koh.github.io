@@ -52,15 +52,40 @@
 
 <!-- review and comments section starts -->
 <div class="wrapper">
+    <form action="">
+        <div class="inputBox">
+            <div class="input">
+                <span>Your Account ID</span>
+                <input type="text" placeholder="Enter Your AccID">
+            </div>
+
+            <div class="input">
+                <label> Select a movie:</label>
+                <select id="movie">
+                    <option value="15">Avengers: Endgame</option>
+                    <option value="15">F9: The Fast Saga</option>
+                    <option value="15">Mission: Impossible - Fallout</option>
+                    <option value="15">Guardians of the Galaxy Vol. 3</option>
+                    <option value="10">Vikram</option>
+                    <option value="15">Avatar: The Way of Water</option>
+                    <option value="10">The Wandering Earth</option>
+                    <option value="10">Sword Art Online the Movie: Progressive - Scherzo of Deep Night</option>
+                    <option value="15">John Wick: Chapter 4</option>
+                    <option value="10">From Vegas to Macau III</option>
+                    <option value="10">Doctor Strange in the Multiverse of Madness</option>
+                    <option value="15">Top Gun: Maverick</option>
+                </select>
+            </div>
+        </div>
+
     <h3>Give Us Your Comments and Ratings About This Movie</h3>
-    <form action="#">
         <div class="rating">
-            <input type="number" name="rating" hidden>
-            <i class='bx bx-star star' style="--i: 0;"></i>
-            <i class='bx bx-star star' style="--i: 1;"></i>
-            <i class='bx bx-star star' style="--i: 2;"></i>
-            <i class='bx bx-star star' style="--i: 3;"></i>
-            <i class='bx bx-star star' style="--i: 4;"></i>
+            <input type="radio" name="rating" value="0" hidden>
+            <label><input type="radio" name="rating" value="1">1</label>
+            <label><input type="radio" name="rating" value="2">2</label>
+            <label><input type="radio" name="rating" value="3">3</label>
+            <label><input type="radio" name="rating" value="4">4</label>
+            <label><input type="radio" name="rating" value="5">5</label>
         </div>
         <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
         <div class="btn-group">

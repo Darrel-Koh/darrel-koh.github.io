@@ -180,6 +180,16 @@ header .icons #menu-bars{
     background: var(--orange);
     letter-spacing: .1rem;
 }
+.btn1:hover{
+    color: var(--light-color);
+    background: var(--orange);
+    letter-spacing: .1rem;
+}
+.btn1{
+    cursor: pointer;
+    background: var(--light-color);
+    color: var(--black);
+}
   
 
 
