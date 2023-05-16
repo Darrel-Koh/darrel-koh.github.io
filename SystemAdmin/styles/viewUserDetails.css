@@ -134,7 +134,7 @@ header .icons #menu-bars {
 .form-container input[type="submit"],
 .form-container button {
   display: inline-block;
-  width: 49%;
+  width: 48%;
   padding: 0.8rem;
   margin-top: 1rem;
   border: none;
