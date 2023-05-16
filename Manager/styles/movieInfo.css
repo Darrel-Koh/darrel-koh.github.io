@@ -74,33 +74,11 @@ header .icons i:hover, header .icons a:hover{
 header .icons #menu-bars{
     display: none;
 }
-#managerPic{
-    width: 40px; 
-    border-radius: 50%; 
-    cursor: pointer; 
-    margin-left: 30px;
-}
 /* Header part css */
 
 /* Movie info css starts */
-section{
-    padding: 2rem 9%;
-}
-section:nth-child(even){
-    background: var(--black);
-}
-label {
-    color: var(--light-color);
-    font-size: 1.8rem;
-}
-th{
-    text-align: left;  
-    vertical-align: top;
-    padding-bottom: .5rem;
-}
 #movieName{
-    color: var(--light-color);  
-    padding-top: 60px; 
+    padding-top: 70px; 
     padding-bottom: 15px;
     font-size: 3rem;
     margin-left: 3rem;
@@ -110,25 +88,47 @@ hr{
     border-top: 1px solid white;
     padding-bottom: 2rem;
 }
+section{
+    padding: 2rem 9%;
+    color: var(--light-color);
+    grid-template-columns: 1fr 3fr;
+}
+section:nth-child(even){
+    background: var(--black);
+}
 #movieImg{
-    height: 50rem;; 
+    height: 50rem;
     margin-right: 3rem; 
-    border: 0.5px solid white; 
-    box-shadow: 2px 2px 4px white; 
-    padding: 0px; 
+    padding: 3px; 
     width: fit-content; 
 }
 #movieDetails{
-    color: var(--light-color);
     display: flex;
+    background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
+    padding: 2.3rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+th{
+    text-align: left;  
+    vertical-align: top;
+    padding-bottom: .5rem;
+    padding-right: .5rem;
+    font-size: 1.7rem;
 }
 .detailTitle{
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 .details{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: normal;
+}
+#detailsTable{
+    padding-bottom: 2.5rem;
 }
 #editBtn{
     margin-top: 1rem;
@@ -177,7 +177,7 @@ hr{
         padding: 1rem 2rem;
     }
     section{
-    padding: 2rem;
+        padding: 2rem;
     }
 }
 @media (max-width:768px){
@@ -202,10 +202,6 @@ hr{
         margin: 1rem;
         font-size: 2rem;
         background: #2E2E2E;
-    }
-    #search-form #search-box{
-        width: 90%;
-        margin: 0 1rem;
     }
 }
 @media (max-width:991px){

@@ -118,17 +118,22 @@ header .icons #menu-bars{
     top: 2rem; right: 3rem;
     font-size: 5rem;
 }
-#managerPic{
-    width: 40px; 
-    border-radius: 50%; 
-    cursor: pointer; 
-    margin-left: 30px;
+/* Header part css ends*/
+
+/* Create movie starts */
+#createMovie{
+    margin: auto; 
+    width: 50%; 
+    text-align: center; 
+    padding-top: 80px;
 }
-/* Header part css */
+/* Create movie ends */
 
 /* Movie list css starts */
 section{
     padding: 2rem 9%;
+    color: var(--light-color);
+    grid-template-columns: 1fr 3fr;
 }
 section:nth-child(even){
     background: var(--black);
@@ -144,34 +149,50 @@ section:nth-child(even){
     padding: .8rem 3rem;
 }
 .btn:hover{
-color: var(--light-color);
-background: var(--orange);
-letter-spacing: .1rem;
+    color: var(--light-color);
+    background: var(--orange);
+    letter-spacing: .1rem;
 }
-#createMovie{margin: auto; 
-    width: 50%; 
-    text-align: center; 
-    padding-top: 70px;
-}
-#movieList{display: grid; 
+#movieList {
+    display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(220px, auto)); 
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
-.movieBox{
-    border: 0.5px solid white; 
-    box-shadow: 2px 2px 4px white; 
-    padding: 20px; width: fit-content; 
-    text-align: center;
+.movieBox {
+    background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: 58rem;
+    position: relative;
 }
-.movieTitle{
-    color: white; 
-    font-size: medium;
+.cm-img-box {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    overflow: hidden;
 }
 .movieImg{
-    width: 200px; 
-    height: 270px; 
-    margin-bottom: 0rem;
-} 
+    width: 25rem; 
+    height: 35rem;
+}
+.movieTitle {
+    color: var(--light-color);
+    margin-bottom: .8rem;
+    font-size: 2rem;
+    width: 25rem;
+}
+.viewInfoBtn {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 3%;
+    right: 4%;
+}
 /* Movie list css ends */
 
 /* Media queries starts */

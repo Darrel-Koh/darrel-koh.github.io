@@ -2,7 +2,7 @@
 
 <!-- Specify the language of the content as English -->
 <html lang="en">
-
+    
     <head>
 
         <!-- Specify the character encoding by using the charset attribute -->
@@ -11,34 +11,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>ManagerAddMovies</title>
 
-        <!-- swiper link -->
+        <!-- Swiper link -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-        <!-- font awesome cdn link -->
+        <!-- Font awesome cdn link -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-         <!-- boxIcon cdn link -->
-         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- BoxIcon cdn link -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        <!-- css file link -->
+        <!-- Css file link -->
         <link rel="stylesheet" href="../Manager/styles/movieInfo.css">
-
-        <!-- <script>
-            function showLogOut() {
-                var list = document.getElementById("list");
-                if (list.style.display === "none") {
-                    list.style.display = "block";
-                } else {
-                    list.style.display = "none";
-                }
-            }
-        </script> -->
 
     </head>
     
     <body>
 
-        <!-- header section starts -->
+        <!-- Header section starts -->
         <header>
             <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
 
@@ -52,19 +41,11 @@
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
                 <a href="../index.html" class="bx bx-lock-open"></a>
-
-                <!-- <i class="fas fa-managerProfile" id="manager-icon"> -->
-                    <!-- <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
-                    <div id="list" style="display:none;">
-                        <select>
-                            <option value="logOut">Log Out</option>
-                        </select>
-                    </div> -->
-                <!-- </i>  -->
             </div>
         </header>
-        <!-- header section ends -->
+        <!-- Header section ends -->
 
+        <!-- Movie info starts -->
         <section>
 
             <h1 id="movieName">Joker</h1><hr/>
@@ -76,66 +57,65 @@
                     <h3 class="detailTitle">Details</h3>
                     <div id="detailsTable">
                         <table border="0" class="details">
-                            <tr id="cast">
+                            <tr>
                                 <th>Cast:</th>
-                                <th class="desc">Joaquin Phoenix · Arthur Fleck ; Robert De Niro · 
+                                <th class="details">Joaquin Phoenix · Arthur Fleck ; Robert De Niro · 
                                     Murray Franklin ; Zazie Beetz · Sophie Dumond ; Frances Conroy · 
                                     Penny Fleck
                                 </th>
                             </tr>
-                            <tr id="director">
+                            <tr>
                                 <th>Director:</th>
-                                <th class="desc">Todd Phillips</th>
+                                <th class="details">Todd Phillips</th>
                             </tr>
-                            <tr id="Genre">
+                            <tr>
                                 <th>Genre:</th>
-                                <th class="desc">Thriller</th>
+                                <th class="details">Thriller</th>
                             </tr>
 
-                            <tr id="rating">
+                            <tr>
                                 <th>Rating:</th>
-                                <th class="desc">4.5</th>
+                                <th class="details">4.5</th>
                             </tr>
-                            <tr id="release">
+                            <tr>
                                 <th>Release:</th>
-                                <th>03-10-2019</th>
+                                <th class="details">03-10-2019</th>
                             </tr>
-                            <tr id="runningTime">
+                            <tr>
                                 <th>Running Time:</th>
-                                <th>122 minutes</th>
+                                <th class="details">122 minutes</th>
                             </tr>
-                            <tr id="language">
+                            <tr>
                                 <th>Language:</th>
-                                <th>English</th>
+                                <th class="details">English</th>
                             </tr>
-                            <tr id="pg">
+                            <tr>
                                 <th>Parental Guidance Rating:</th>
-                                <th>pg-13</th>
+                                <th class="details">pg-13</th>
                             </tr>
                         </table>
                     </div>
-
-                    <div>
-                        <h3 class="detailTitle">Synopsis</h3>
-                        <p class="details">
-                            Forever alone in a crowd, failed comedian Arthur Fleck seeks connection 
-                            as he walks the streets of Gotham City. Arthur wears two masks -- the one 
-                            he paints for his day job as a clown, and the guise he projects in a 
-                            futile attempt to feel like he's part of the world around him. Isolated, 
-                            bullied and disregarded by society, Fleck begins a slow descent into 
-                            madness as he transforms into the criminal mastermind known as the Joker.
-                        </p>
-                    </div>
+                    <h3 class="detailTitle">Synopsis</h3>
+                    <p class="details">
+                        Forever alone in a crowd, failed comedian Arthur Fleck seeks connection 
+                        as he walks the streets of Gotham City. Arthur wears two masks -- the one 
+                        he paints for his day job as a clown, and the guise he projects in a 
+                        futile attempt to feel like he's part of the world around him. Isolated, 
+                        bullied and disregarded by society, Fleck begins a slow descent into 
+                        madness as he transforms into the criminal mastermind known as the Joker.
+                    </p>
                 </div>
             </div>
-
         </section>
+        <!-- Movie info ends -->
 
+        <!-- Buttons starts -->
         <div id="btn">
             <button id="editBtn">Edit Movie</button>
             <button id="deleteBtn">Delete Movie</button>
         </div>
+        <!-- Button ends -->
 
-        <script src="addMovie.js"></script>
+        <script src="noSearchBar.js"></script>
     </body>
 </html>
