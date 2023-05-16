@@ -149,17 +149,6 @@ header .icons #menu-bars{
 .barcode img {
     height: 50px;
 }
-.submit-comments {
-    display: block;
-    margin: 20px;
-    padding: 10px 20px;
-    background-color: var(--light-color);
-    color: var(--black);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
 .no-comments {
     display: block;
     margin: 20px;
@@ -170,22 +159,6 @@ header .icons #menu-bars{
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-}
-.btn1:hover{
-    color: var(--light-color);
-    background: var(--orange);
-    letter-spacing: .1rem;
-}
-.btn1{
-    cursor: pointer;
-    background: var(--text-color);
-    color: var(--black);
-}
-
-.submit-comments:hover {
-    color: var(--light-color);
-    background: var(--orange);
-    letter-spacing: .1rem;
 }
 .no-comments:hover {
     color: var(--light-color);
