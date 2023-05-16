@@ -143,9 +143,11 @@ header .icons #menu-bars {
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
+  border-radius: 5px;
 }
 #suspendButton{
   float: right;
+  background-color: red;
 }
 
 .form-container button {
