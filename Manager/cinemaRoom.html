@@ -3,41 +3,31 @@
 <!-- Specify the language of the content as English -->
 <html lang="en">
 
-<head>
-    <!-- Specify the character encoding by using the charset attribute -->
-    <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ManagerMoviesCRManagement</title>
+    <head>
 
-    <!-- swiper link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <!-- Specify the character encoding by using the charset attribute -->
+        <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ManagerCRManagement</title>
 
-    <!-- font awesome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Swiper link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-    <!-- boxIcon cdn link -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- Font awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- css file link -->
-    <link rel="stylesheet" href="../Manager/styles/cinemaRoom.css">
+        <!-- BoxIcon cdn link -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- <script>
-        function showLogOut() {
-            var list = document.getElementById("list");
-            if (list.style.display === "none") {
-                list.style.display = "block";
-            } else {
-                list.style.display = "none";
-            }
-        }
-    </script> -->
+        <!-- Css file link -->
+        <link rel="stylesheet" href="../Manager/styles/cinemaRoom.css">
 
-</head>
+    </head>
 
     <body>
 
-        <!-- header section starts -->
+        <!-- Header section starts -->
         <header>
             <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
 
@@ -52,83 +42,119 @@
                 <i class="fas fa-bars" id="menu-bars"></i>
                 <i class="fas fa-search" id="search-icon"></i> 
                 <a href="../index.html" class="bx bx-lock-open"></a>
-                <!-- <i class="fas fa-managerProfile" id="manager-icon"> -->
-                    <!-- <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
-                    <div id="list" style="display:none;">
-                        <select>
-                            <option value="logOut">Log Out</option>
-                        </select>
-                    </div> -->
-                <!-- </i>  -->
             </div>
         </header>
-        <!-- header section ends -->
+        <!-- Header section ends -->
 
-        <!-- search form start -->
+        <!-- Search form start -->
         <form action="" id="search-form">
             <input type="search" placeholder="Search By Room Number..." name="" id="search-box">
             <label for="search-box" class="fas fa-search"></label>
             <i class="fas fa-times" id="close"></i>
         </form>
-        <!-- search form ends  --> 
+        <!-- Search form ends  --> 
 
-        <!-- Create movie starts -->
+        <!-- Create CR starts -->
         <div id="createCR">
-            <button class="btn"><a href="addCinemaRoom.html">&#43; Add New Room</a></button><br/><br/>
+            <a href="addCinemaRoom.html" class="btn">&#43; Add New Room</a>
         </div>
-        <!-- Create movie ends -->
+        <!-- Create CR ends -->
 
+        <!-- CR List starts -->
         <section>
             <div id="CRList">
 
                 <div class="CRBox">
-                    <h2 class="CRTitle">CR 1</h2>
-                    <button class="btn"><a href="cinemaRoomInfo.html">VIEW INFO</a></button>
+                    <div class="cm-img-box">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.AtBvka4DaInf0jhYXOGRSwHaFk&pid=Api&P=0&h=180" alt="Movie 1" class="CRImg">
+                    </div>
+                    <h3 class="CRTitle">CR 1</h3>
+                    <p>Room Type: Standard</p><br>
+                    <div class="viewInfoBtn">
+                        <a href="cinemaRoomInfo.html" class="btn">View Info</a>
+                    </div>
                 </div>
 
                 <div class="CRBox">
-                    <h2 class="CRTitle">CR 2</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <div class="cm-img-box">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.AtBvka4DaInf0jhYXOGRSwHaFk&pid=Api&P=0&h=180" alt="Movie 1" class="CRImg">
+                    </div>
+                    <h3 class="CRTitle">CR 2</h3>
+                    <p>Room Type: Standard</p><br>
+                    <div class="viewInfoBtn">
+                        <a href="cinemaRoomInfo.html" class="btn">View Info</a>
+                    </div>
                 </div>
 
                 <div class="CRBox">
-                    <h2 class="CRTitle">CR 3</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <div class="cm-img-box">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.AtBvka4DaInf0jhYXOGRSwHaFk&pid=Api&P=0&h=180" alt="Movie 1" class="CRImg">
+                    </div>
+                    <h3 class="CRTitle">CR 3</h3>
+                    <p>Room Type: Standard</p><br>
+                    <div class="viewInfoBtn">
+                        <a href="cinemaRoomInfo.html" class="btn">View Info</a>
+                    </div>
                 </div>
 
                 <div class="CRBox">
-                    <h2 class="CRTitle">CR 4</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <div class="cm-img-box">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.AtBvka4DaInf0jhYXOGRSwHaFk&pid=Api&P=0&h=180" alt="Movie 1" class="CRImg">
+                    </div>
+                    <h3 class="CRTitle">CR 4</h3>
+                    <p>Room Type: Standard</p><br>
+                    <div class="viewInfoBtn">
+                        <a href="cinemaRoomInfo.html" class="btn">View Info</a>
+                    </div>
                 </div>
 
                 <div class="CRBox">
-                    <h2 class="CRTitle">CR 5</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <div class="cm-img-box">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.AtBvka4DaInf0jhYXOGRSwHaFk&pid=Api&P=0&h=180" alt="Movie 1" class="CRImg">
+                    </div>
+                    <h3 class="CRTitle">CR 5</h3>
+                    <p>Room Type: Standard</p><br>
+                    <div class="viewInfoBtn">
+                        <a href="cinemaRoomInfo.html" class="btn">View Info</a>
+                    </div>
                 </div>
 
                 <div class="CRBox">
-                    <h2 class="CRTitle">CR 6</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <div class="cm-img-box">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.AtBvka4DaInf0jhYXOGRSwHaFk&pid=Api&P=0&h=180" alt="Movie 1" class="CRImg">
+                    </div>
+                    <h3 class="CRTitle">CR 6</h3>
+                    <p>Room Type: Standard</p><br>
+                    <div class="viewInfoBtn">
+                        <a href="cinemaRoomInfo.html" class="btn">View Info</a>
+                    </div>
                 </div>
 
                 <div class="CRBox">
-                    <h2 class="CRTitle">CR 7</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <div class="cm-img-box">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.AtBvka4DaInf0jhYXOGRSwHaFk&pid=Api&P=0&h=180" alt="Movie 1" class="CRImg">
+                    </div>
+                    <h3 class="CRTitle">CR 7</h3>
+                    <p>Room Type: Standard</p><br>
+                    <div class="viewInfoBtn">
+                        <a href="cinemaRoomInfo.html" class="btn">View Info</a>
+                    </div>
                 </div>
 
                 <div class="CRBox">
-                    <h2 class="CRTitle">CR 8</h2>
-                    <button class="btn">VIEW INFO</button>
+                    <div class="cm-img-box">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.AtBvka4DaInf0jhYXOGRSwHaFk&pid=Api&P=0&h=180" alt="Movie 1" class="CRImg">
+                    </div>
+                    <h3 class="CRTitle">CR 8</h3>
+                    <p>Room Type: Standard</p><br>
+                    <div class="viewInfoBtn">
+                        <a href="cinemaRoomInfo.html" class="btn">View Info</a>
+                    </div>
                 </div>
-
-                <div class="CRBox">
-                    <h2 class="CRTitle">CR 9</h2>
-                    <button class="btn">VIEW INFO</button>
-                </div>
-
             </div>
         </section>
+        <!-- CR List ends -->
         
-        <script src="cinemaRoom.js"></script>
+        <script src="withSearchBar.js"></script>
     </body>
 </html>

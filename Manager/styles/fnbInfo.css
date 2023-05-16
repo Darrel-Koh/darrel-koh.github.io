@@ -74,29 +74,19 @@ header .icons i:hover, header .icons a:hover{
 header .icons #menu-bars{
     display: none;
 }
-#managerPic{
-    width: 40px; 
-    border-radius: 50%; 
-    cursor: pointer; 
-    margin-left: 30px;
-}
 /* Header part css */
 
-/* Movie info css starts */
+/* Fnb info css starts */
 section{
     padding: 2rem 9%;
+    color: var(--light-color);
+    grid-template-columns: 1fr 3fr;
 }
 section:nth-child(even){
     background: var(--black);
 }
-th{
-    text-align: left;  
-    vertical-align: top;
-    padding-bottom: .5rem;
-}
 #fnbName{
-    color: var(--light-color);  
-    padding-top: 60px; 
+    padding-top: 70px; 
     padding-bottom: 15px;
     font-size: 3rem;
     margin-left: 3rem;
@@ -106,25 +96,40 @@ hr{
     border-top: 1px solid white;
     padding-bottom: 2rem;
 }
-#fnbImg{
-    height: 50rem;; 
-    margin-right: 3rem; 
-    border: 0.5px solid white; 
-    box-shadow: 2px 2px 4px white; 
-    padding: 0px; 
-    width: 40rem; 
-}
 #fnbDetails{
-    color: var(--light-color);
     display: flex;
+    background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
+    padding: 2.3rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+#fnbImg{
+    height: 45rem;
+    margin-right: 3rem; 
+    padding: 3px; 
+    width: fit-content; 
+}
+#detailsTable{
+    padding-bottom: 2.5rem;
+}
+th{
+    text-align: left;  
+    vertical-align: top;
+    padding-bottom: .5rem;
+    padding-right: .5rem;
+    font-size: 1.7rem;
 }
 .detailTitle{
     font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
 .details{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: normal;
 }
 #editBtn{
     margin-top: 1rem;
@@ -162,7 +167,7 @@ hr{
     width: 50%; 
     text-align: center;
 }
-/* Movie info css ends */
+/* Fnb info css ends */
 
 /* Media queries starts */
 @media (max-width:991px){
@@ -198,10 +203,6 @@ hr{
         margin: 1rem;
         font-size: 2rem;
         background: #2E2E2E;
-    }
-    #search-form #search-box{
-        width: 90%;
-        margin: 0 1rem;
     }
 }
 @media (max-width:991px){
