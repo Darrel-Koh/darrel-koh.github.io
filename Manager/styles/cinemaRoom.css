@@ -118,20 +118,65 @@ header .icons #menu-bars{
     top: 2rem; right: 3rem;
     font-size: 5rem;
 }
-#managerPic{
-    width: 40px; 
-    border-radius: 50%; 
-    cursor: pointer; 
-    margin-left: 30px;
-}
 /* Header part css */
+
+/* Create CR starts */
+#createCR{
+    margin: auto; 
+    width: 50%; 
+    text-align: center; 
+    padding-top: 80px;
+}
+/* Create CR ends */
 
 /* Cinema room list css starts */
 section{
     padding: 2rem 9%;
+    color: var(--light-color);
+    grid-template-columns: 1fr 3fr;
 }
 section:nth-child(even){
     background: var(--black);
+}
+#CRList{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(420px, auto)); 
+    gap: 1.5rem;
+}
+.CRBox{
+    background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
+    padding: 1rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: 41rem;
+    position: relative;
+}
+.cm-img-box {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.CRImg{
+    width: 35rem; 
+    height: 25rem;
+}
+.CRTitle{
+    color: var(--light-color);
+    margin-bottom: .8rem;
+    font-size: 2rem;
+    width: 25rem;
+}
+.viewInfoBtn {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 3%;
+    right: 4%;
 }
 .btn{
     margin-top: 1rem;
@@ -147,27 +192,6 @@ section:nth-child(even){
     color: var(--light-color);
     background: var(--orange);
     letter-spacing: .1rem;
-}
-#createCR{
-    margin: auto; 
-    width: 50%; 
-    text-align: center; 
-    padding-top: 70px;
-}
-#CRList{
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto)); 
-    gap: 1.5rem;
-}
-.CRBox{
-    border: 0.5px solid white; 
-    box-shadow: 2px 2px 4px white; 
-    padding: 20px; width: fit-content; 
-    text-align: center;
-}
-.CRTitle{
-    color: white; 
-    font-size: medium;
 }
 /* Movie list css ends */
 

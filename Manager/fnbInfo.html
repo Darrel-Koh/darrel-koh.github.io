@@ -3,46 +3,31 @@
 <!-- Specify the language of the content as English -->
 <html lang="en">
 
-    <!-- Specify the character encoding by using the charset attribute -->
-    <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
-    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-    
     <head>
 
         <!-- Specify the character encoding by using the charset attribute -->
         <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>ManagerAddMovies</title>
+        <title>ManagerAddFnb</title>
 
-        <!-- swiper link -->
+        <!-- Swiper link -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-        <!-- font awesome cdn link -->
+        <!-- Font awesome cdn link -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        <!-- boxIcon cdn link -->
+        <!-- BoxIcon cdn link -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        <!-- css file link -->
+        <!-- Css file link -->
         <link rel="stylesheet" href="../Manager/styles/fnbInfo.css">
-
-        <!-- <script>
-            function showLogOut() {
-                var list = document.getElementById("list");
-                if (list.style.display === "none") {
-                    list.style.display = "block";
-                } else {
-                    list.style.display = "none";
-                }
-            }
-        </script> -->
 
     </head>
 
     <body>
 
-         <!-- header section starts -->
+         <!-- Header section starts -->
          <header>
             <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
 
@@ -55,62 +40,57 @@
 
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
-                <a href="../SystemAdmin/loginPage.html" class="bx bx-lock-open"></a>
-
-                <!-- <i class="fas fa-managerProfile" id="manager-icon"> -->
-                    <!-- <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
-                    <div id="list" style="display:none;">
-                        <select>
-                            <option value="logOut">Log Out</option>
-                        </select>
-                    </div> -->
-                <!-- </i>  -->
+                <a href="../index.html" class="bx bx-lock-open"></a>
             </div>
-        </header>
-        <!-- header section ends -->
 
+        </header>
+        <!-- Header section ends -->
+
+        <!-- Fnb info starts -->
         <section>
-            <h1 id="fnbName">Combo 1</h1><hr/>
+
+            <h1 id="fnbName">Buttered Popcorn</h1><hr/>
 
             <div id="fnbDetails">
-                <img src="./images/popcorn.jpg" id="fnbImg" alt="fnb-pic">
+                <img src="../staff/images/popcorn1.jpg" alt="" id="fnbImg">
 
                 <div>            
                     <h3 class="detailTitle">Details</h3>
                     <div id="detailsTable">
                         <table border="0" class="details">
-                            <tr id="price">
+                            <tr>
                                 <th>Price:</th>
-                                <th class="desc">$ 12.90</th>
+                                <th class="details">$ 12.90</th>
                             </tr>
-                            <tr id="size">
+                            <tr>
                                 <th>Size:</th>
-                                <th class="desc">Medium</th>
+                                <th class="details">Medium</th>
                             </tr>
                         </table>
                     </div>
-
-                    <div>
-                        <h3 class="detailTitle">Description</h3>
-                        <p class="details">
-                            Caramel popcorn is a delicious treat made by coating popped popcorn 
-                            with a sweet and buttery caramel sauce. The popcorn is typically 
-                            air-popped or popped in oil, and then coated with a mixture of caramel 
-                            sauce and butter, often with a hint of vanilla for flavor. The caramel 
-                            sauce creates a crispy, sweet coating on the popcorn that is crunchy 
-                            and satisfying. Caramel popcorn is a popular snack that is enjoyed by 
-                            people of all ages, and is often served at movie theaters, carnivals, 
-                            and fairs.
-                        </p>
-                    </div>
+                    <h3 class="detailTitle">Description</h3>
+                    <p class="details">
+                        Buttered popcorn is a popular snack known for its distinct 
+                        and savory taste. It is made by coating freshly popped 
+                        popcorn with melted butter, which adds a rich and buttery 
+                        flavor to the light and fluffy popcorn kernels.The aroma of 
+                        buttered popcorn is often enticing, with the buttery scent 
+                        wafting through the air. When you take a bite, you'll 
+                        experience a delightful combination of textures. The popcorn 
+                        itself is crisp and crunchy, while the buttery coating adds 
+                        a smooth and slightly greasy feel.
+                    </p>
                 </div>
             </div>
         </section>
+        <!-- Fnb info ends -->
 
+        <!-- Buttons starts -->
         <div id="btn">
             <button id="editBtn">Edit Food</button>
             <button id="deleteBtn">Delete Food</button>
         </div>
+        <!-- Button ends -->
 
         <script src="noSearchBar.js"></script>
     </body>

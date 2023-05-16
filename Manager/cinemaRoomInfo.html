@@ -9,36 +9,25 @@
         <!-- Set the viewport to scale the website on all devices with fitting dimensions -->
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>ManagerAddMovies</title>
+        <title>ManagerAddCR</title>
 
-        <!-- swiper link -->
+        <!-- Swiper link -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-        <!-- font awesome cdn link -->
+        <!-- Font awesome cdn link -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        <!-- boxIcon cdn link -->
+        <!-- BoxIcon cdn link -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        <!-- css file link -->
+        <!-- Css file link -->
         <link rel="stylesheet" href="../Manager/styles/cinemaRoomInfo.css">
-
-        <!-- <script>
-            function showLogOut() {
-                var list = document.getElementById("list");
-                if (list.style.display === "none") {
-                    list.style.display = "block";
-                } else {
-                    list.style.display = "none";
-                }
-            }
-        </script> -->
 
     </head>
 
     <body>
 
-        <!-- header section starts -->
+        <!-- Header section starts -->
         <header>
             <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
 
@@ -51,45 +40,57 @@
 
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
-                <a href="../SystemAdmin/loginPage.html" class="bx bx-lock-open"></a>
-
-                <!-- <i class="fas fa-managerProfile" id="manager-icon"> -->
-                    <!-- <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
-                    <div id="list" style="display:none;">
-                        <select>
-                            <option value="logOut">Log Out</option>
-                        </select>
-                    </div> -->
-                <!-- </i>  -->
+                <a href="../index.html" class="bx bx-lock-open"></a>
             </div>
         </header>
-        <!-- header section ends -->
+        <!-- Header section ends -->
 
-        <h1 id="CRName">CR-1</h1><hr/>
+        <!-- CR info starts -->
+        <section>
+            <h1 id="CRName">CR 1</h1><hr/>
 
-        <div id="CRDetails">
+            <div id="CRDetails">
+                <div id="seatMap"></div>
 
-            <div id="seatMap"></div>
-
-            <div>            
-                <h3 class="detailTitle">Details</h3>
-                <table border="0" class="details">
-                    <tr id="seatsAv">
-                        <th>Seats available:</th>
-                        <th class="desc">100 pax</th>
-                    </tr>
-                    <tr>
-                        <th>Rows:</th>
-                        <th class="desc">30</th>
-                    </tr>
-                    <tr>
-                        <th>Columns:</th>
-                        <th class="desc">20</th>
-                    </tr>
-                </table>
+                <div>            
+                    <h3 class="detailTitle">Details</h3>
+                    <div id="detailsTable"></div>
+                        <table border="0" class="details">
+                            <tr>
+                                <th>Room Number:</th>
+                                <th class="details">1</th>
+                            </tr>
+                            <tr>
+                                <th>Room Type:</th>
+                                <th class="details">Standard</th>
+                            </tr>
+                            <tr>
+                                <th>Seats available:</th>
+                                <th class="details">100 pax</th>
+                            </tr>
+                            <tr>
+                                <th>Seats type:</th>
+                                <th class="details">single seat</th>
+                            </tr>
+                            <tr>
+                                <th>Seats Map ID:</th>
+                                <th class="details">1</th>
+                            </tr>
+                            <tr>
+                                <th>Rows:</th>
+                                <th class="details">30</th>
+                            </tr>
+                            <tr>
+                                <th>Columns:</th>
+                                <th class="details">20</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
             </div>
-            
-        </div>
+        </section>
+        <!-- CR info ends -->
 
         <div id="btn">
             <button id="editBtn">Edit Details</button>

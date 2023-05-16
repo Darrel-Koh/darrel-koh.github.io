@@ -13,20 +13,20 @@
         <!-- swiper link -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-        <!-- font awesome cdn link -->
+        <!-- Font awesome cdn link -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        <!-- boxIcon cdn link -->
+        <!-- BoxIcon cdn link -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        <!-- css file link -->
+        <!-- Css file link -->
         <link rel="stylesheet" href="../Manager/styles/report.css">    
         
     </head>
 
     <body>
 
-        <!-- header section starts -->
+        <!-- Header section starts -->
         <header>
             <a href="#" class="logo"><i class="fas-fa-untensils"></i>5B2G Cinema</a>
 
@@ -40,19 +40,12 @@
             <div class="icons">
                 <i class="fas fa-bars" id="menu-bars"></i>
                 <i class="fas fa-search" id="search-icon"></i> 
-                <a href="../SystemAdmin/loginPage.html" class="bx bx-lock-open"></a>
-                <!-- <i class="fas fa-managerProfile" id="manager-icon"> -->
-                    <!-- <img src="./images/profilePicture.png" alt="pic" id="managerPic" onclick="showLogOut()">
-                    <div id="list" style="display:none;">
-                        <select>
-                            <option value="logOut">Log Out</option>
-                        </select>
-                    </div> -->
-                <!-- </i>  -->
+                <a href="../index.html" class="bx bx-lock-open"></a>
             </div>
         </header>
-        <!-- header section ends --> 
+        <!-- Header section ends --> 
 
+        <!-- Generate report starts -->
         <div id="reportdiv">
             <select id="month">
                 <option value="01">January</option>
@@ -70,6 +63,7 @@
               </select>
             <button class="btn">Generate Reports</button>
         </div>
+        <!-- Generate report starts -->
 
         <div id="generatedReport"></div>
         <script src="noSearchBar.js"></script>

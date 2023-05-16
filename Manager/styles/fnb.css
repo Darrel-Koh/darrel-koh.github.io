@@ -155,12 +155,12 @@ section:nth-child(even){
 }
 #fnbList{
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto)); 
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto)); 
+    gap: 1.8rem;
 }
 .fnbBox{
     background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: .5rem;
     font-size: 1.5rem;
     width: fit-content;
