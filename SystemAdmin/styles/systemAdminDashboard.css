@@ -90,8 +90,34 @@ header .icons #menu-bars {
 }
 
 /* For the Search input and table */
-button.createUser{
-  padding: 12px 20px ;
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+
+#myInput {
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  flex-grow: 1; /* Allow the input to fill up the remaining space */
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+}
+
+button.createUser {
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  background-color: #45a049;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  flex-grow: 1; /* Allow the button to fill up the remaining space */
+}
+
+/* button.createUser{
+  padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-top: 70px;
 }
@@ -105,13 +131,13 @@ button:active {
   background-image: url('https://www.w3schools.com/css/searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 70%;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-top: 5px;
   margin-bottom: 20px;
-}
+} */
 
 #myTable {
   border-collapse: collapse;
