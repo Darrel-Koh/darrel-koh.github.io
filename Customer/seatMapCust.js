@@ -90,3 +90,31 @@ container.addEventListener("click", (e) => {
 
 // Initial count and total set
 updateSelectedCount();
+
+function continueBooking() {
+  const selectedSeat = document.querySelectorAll(".row .seat.selected");
+  const selectedSeatIds = Array.from(selectedSeat).map(seat => seat.id);
+  const payload = { selectedSeat: selectedSeatIds };
+  console.log("Selected Seat IDs:", selectedSeatIds);
+
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  })
+    .then(response => {
+      if (response.ok) {
+        // Seat booking successful, redirect to another page
+        window.location.href = "makePaymentCust.html";
+        console.log("Selected Seat IDs:", selectedSeatIds);
+      } else {
+        // Seat booking failed, handle the error
+      }
+    })
+    .catch(error => {
+      // Handle any errors
+      console.log("Error occurred:", error);
+    });
+}
