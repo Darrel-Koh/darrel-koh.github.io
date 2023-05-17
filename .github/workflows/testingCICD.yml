@@ -23,7 +23,7 @@ jobs:
         run: npm install -g htmlhint
 
       - name: Run HTMLHint on HTML files
-        run: htmlhint SystemAdmin/*.html
+        run: htmlhint Manager/*.html
 
       - name: Install CSSlint
         run: npm install -g csslint
