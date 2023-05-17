@@ -1,0 +1,8 @@
+A001	Guardians of the Galaxy Vol.3	Action Adventure	8.3	15	https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg
+A002	Vikram	Action Crime Drama	7.1	10	https://m.media-amazon.com/images/M/MV5BYTEyYjgzNmUtM2QyYi00MWMwLWExMDctZmY1NmZhNGY5MWNiXkEyXkFqcGdeQXVyOTcwMTQxMTM@._V1_.jpg
+A003	Avatar: The Way of Water	Action Adventure Fantasy	7.7	15	https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_FMjpg_UX1000_.jpg
+A004	The Wandering Earth	Action Adventure Sci-Fi	5.9	10	https://m.media-amazon.com/images/M/MV5BMjE2NzZlMGItMzA4OS00ZjRiLTk3NzItMDRkOGFlZmNhYzJkXkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_.jpg
+A005	Sword Art Online the Movie: Progressive - Scherzo of Deep Night	Action Adventure Animation	6.7	10	https://m.media-amazon.com/images/M/MV5BNzA4YWVkMmEtMGEwOS00ZGYxLTljODAtNzk4ZDA1MmQxN2Y5XkEyXkFqcGdeQXVyMTEwMjgyMzIz._V1_FMjpg_UX1000_.jpg
+A006	The House of No Man	Comedy, Drama	6.2	12	https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQcs9IcBXobR22w5hzUJOVQMG_tWVffocao5VWZVF4LivIKmxF5
+A007	The Super Mario Bros. Movie	Animation, Adventure, Comedy	7.3	12	https://upload.wikimedia.org/wikipedia/en/4/44/The_Super_Mario_Bros._Movie_poster.jpg
+A007	Ant-Man and the Wasp: Quantumania	Action, Adventure, Comedy	6.2	10	https://upload.wikimedia.org/wikipedia/en/3/30/Ant-Man_and_the_Wasp_Quantumania_poster.jpg
