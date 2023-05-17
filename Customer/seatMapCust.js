@@ -107,7 +107,8 @@ function continueBooking() {
     .then(response => {
       if (response.ok) {
         // Seat booking successful, redirect to another page
-        window.location.href = "makePaymentCust.html";
+        // window.location.href = "makePaymentCust.html$" + selectedSeatIds;
+        window.location.href = "makePaymentCust.html?" + selectedSeatIds.join("&")
         console.log("Selected Seat IDs:", selectedSeatIds);
       } else {
         // Seat booking failed, handle the error
@@ -118,3 +119,4 @@ function continueBooking() {
       console.log("Error occurred:", error);
     });
 }
+
