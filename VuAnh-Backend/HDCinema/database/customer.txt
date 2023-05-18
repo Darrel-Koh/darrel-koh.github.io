@@ -1,0 +1,10 @@
+A000,John Doe,SystemAdmin,johndoe,password123,Available
+A001,Jane Smith,Customer,janesmith,password456,Available
+A002,Michael Johnson,Customer,michaeljohnson,password789,Available
+A003,Emily Brown,Manager,emilybrown,passwordabc,Available
+A004,Robert Davis,Staff,robertdavis,passworddef,Available
+A005,Sarah Wilson,Customer,sarahwilson,passwordghi,Available
+A006,David Lee,Customer,davidlee,passwordjkl,Available
+A007,Lisa Taylor,Manager,lisataylor,passwordmno,Available
+A008,Steven Clark,Customer,stevenclark,passwordpqr,Available
+A009,Amy Anderson,Staff,amyanderson,passwordstu,Available

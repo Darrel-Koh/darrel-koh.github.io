@@ -1,4 +1,3 @@
-// Navigating
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
 
@@ -19,33 +18,16 @@ document.querySelector('#close').onclick = () =>{
 
 const container = document.querySelector(".container");
 const seats = document.querySelectorAll(".row .seat:not(.sold)");
+const count = document.getElementById("count");
+const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
 
 populateUI();
 
 let ticketPrice = +movieSelect.value;
 
-// Save selected movie index and price
-function setMovieData(movieIndex, moviePrice) {
-  localStorage.setItem("selectedMovieIndex", movieIndex);
-  localStorage.setItem("selectedMoviePrice", moviePrice);
-}
 
-// Update total and count
-const count = document.getElementById("count");
-const total = document.getElementById("total");
 
-// Update seat count and total price
-function updateSelectedCount() {
-  const selectedSeats = document.querySelectorAll(".row .seat.selected");
-  const selectedSeatsCount = selectedSeats.length;
-
-  count.textContent = selectedSeatsCount;
-  total.textContent = selectedSeatsCount * ticketPrice;
-}
-
-// Initial count and total set
-updateSelectedCount();
 
 
 // Get data from localstorage and populate UI
@@ -87,10 +69,7 @@ container.addEventListener("click", (e) => {
   }
 });
 
-// Initial count and total set
-updateSelectedCount();
 
-// Codes meant for href
 function continueBooking() {
   const selectedSeat = document.querySelectorAll(".row .seat.selected");
   const selectedSeatIds = Array.from(selectedSeat).map(seat => seat.id);
@@ -119,4 +98,95 @@ function continueBooking() {
       console.log("Error occurred:", error);
     });
 }
+
+function getUrlParameter(parameterName) {
+  var urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(parameterName);
+}
+
+
+
+function displayPrice(){
+	
+	var idValue = getUrlParameter('idvalue');
+	console.log("idValue:", idValue);
+	
+	var selectedSeats = $('.seat.selected');
+	
+	 
+	var price = getUrlParameter('price'); 
+	
+	var totalPrice = price * (selectedSeats.length - 1); 
+	
+	document.getElementById('count').textContent = (selectedSeats.length - 1) ;
+	document.getElementById('total').textContent = totalPrice ;
+
+		
+	
+	 
+  	
+  	
+	
+}
+
+
+
+function showSeat(){
+	
+	$.ajax({
+		url: 'SystemShowSeat',
+		method: 'POST',
+		success: function(result) {
+			console.log(result); 
+			
+			var seatArr = JSON.parse(result);
+			var seatContainer = $('#seat-container');
+			
+			
+			var div = $('<div></div>');
+			var status = "seat";
+			var id = 0;
+			
+			// Access each value in the 2D array
+			for (var i = 0; i < seatArr.length; i++) {
+			    var row = $('<div class="row"></div>');
+			    
+			    for (var j = 0; j < seatArr[i].length; j++) {
+			        var value = seatArr[i][j];
+			        
+			        if (value == 1) {
+			            status = "seat sold";
+			        } else {
+			            status = "seat";
+			        }
+			        
+			        // var seatDiv = $('<div>').addClass(status).attr('id', id++);
+			        var seatDiv = $('<div>')
+				    .addClass(status)
+				    .attr('id', id++)
+				    .click(function() {
+				        $(this).toggleClass('selected');
+				        displayPrice(); // Call the displayPrice() function
+				    });
+			        row.append(seatDiv);
+			        
+			        console.log(value);
+			        // Perform any desired operations with the value
+			    }
+			    
+			    div.append(row);
+			}
+			
+			seatContainer.append(div);
+			
+			
+		},
+		error: function(jqXHR, exception) {
+			console.log('Error occurred!!');
+		}
+	});
+	
+}
+
+
 

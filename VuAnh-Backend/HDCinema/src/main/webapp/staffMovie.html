@@ -1,0 +1,141 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="staff/css/staffMovie.css">
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- boxIcon cdn link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>5B2G Cinema | Ticket Management</title>
+</head>
+<body onload="getMovieList()">
+
+	<!--  Linking to JS  -->
+	<script src="staff/js/staffMovie.js"></script>
+
+	<header>
+        <a href="#" class="logo">5B2G Cinema</a>
+    
+        <nav class="navbar">
+            <a class="#home" href="staff.html">Home</a>
+            <a class="active" id="#ticket" href="staffMovie.html">Ticket Management</a>
+            <a class="#order" href="staffOrder.html">Order Management</a>
+            <a class="#redeem" href="staffRedeem.html">Redeem Rewards</a>
+        </nav>
+    
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i> 
+            <a href="index.html" class="bx bx-lock-open"></a> <!--logout button-->
+        </div>
+    </header>
+    
+    
+    <!-- header section ends -->
+    
+    <!-- search form start -->
+    <form action="" id="search-form">
+        <input type="search" placeholder="Search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+    
+    <!-- search form ends  -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section class="main-container">
+        <div class="sidebar">
+            <form action="#">
+                <div class="sidebar-groups">
+                    <h3 class="sg-title">Categories</h3>
+                    <input type="checkbox" id="adventure" name="adventure" value="adventure">
+                    <label for="adventure">Adventure</label><br>
+                    <input type="checkbox" id="action" name="action" value="action">
+                    <label for="action">Action</label><br>
+                    <input type="checkbox" id="animation" name="animation" value="animation">
+                    <label for="animation">Animation</label><br>
+                    <input type="checkbox" id="comedy" name="comedy" value="comedy">
+                    <label for="comedy">Comedy</label><br>
+                    <input type="checkbox" id="science" name="science" value="science">
+                    <label for="science">Sci-Fi</label><br>
+                    <input type="checkbox" id="thriller" name="thriller" value="thriller">
+                    <label for="thriller">Thriller</label><br>
+                    <input type="checkbox" id="history" name="history" value="history">
+                    <label for="history">History</label><br>
+                    <input type="checkbox" id="documentary" name="documentary" value="documentary">
+                    <label for="documentary">Documentary</label><br>
+                    <input type="checkbox" id="fantasy" name="fantasy" value="fantasy">
+                    <label for="fantasy">Fantasy</label><br>
+                    <input type="checkbox" id="drama" name="drama" value="drama">
+                    <label for="drama">Drama</label><br>
+                    <input type="checkbox" id="crime" name="crime" value="crime">
+                    <label for="crime">Crime</label><br>
+                </div>
+
+                <div class="sidebar-groups">
+                    <h3 class="sg-title">Language</h3>
+                    <input type="checkbox" id="english" name="english" value="english">
+                    <label for="english">English</label><br>
+                    <input type="checkbox" id="chinese" name="chinese" value="chinese">
+                    <label for="chinese">Chinese</label><br>
+                    <input type="checkbox" id="hindi" name="hindi" value="hindi">
+                    <label for="hindi">Hindi</label><br>
+                </div>
+                
+                <div class="sidebar-groups">
+                    <h3 class="sg-title">Rating <i class="fas fa-star"></i></h3>
+                    <input type="radio" id="star" name="Rating" value="star">
+                    <label for="star">0 - 2</label><br>
+                    <input type="radio" id="star" name="Rating" value="star">
+                    <label for="star">2.1 -4</label><br>
+                    <input type="radio" id="star" name="Rating" value="star">
+                    <label for="star">4.1 -6</label><br>
+                    <input type="radio" id="star" name="Rating" value="star">
+                    <label for="star">6.1 -8</label><br>
+                    <input type="radio" id="star" name="Rating" value="star">
+                    <label for="star">8.1 -10</label><br>
+                </div>
+
+                <div class="sidebar-groups">
+                    <a href="#" class="btn-l btn">Apply Filters</a>
+                </div>
+                
+                <div class="sidebar">
+                    <form action="#">
+                        <div class="sidebar-groups">
+                            <span>Your Account ID</span>
+                            <input type="text" placeholder="Enter Your AccID">
+                            <a href="viewTicket.html"><button type="button" class="btn1">View Ticket</button></a>
+                            <a href="updateTicket.html"><button type="button" class="btn1">Update Ticket</button></a>
+                        </div>
+                    </form>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Movie listing part -->
+       
+        <div class="current-movies" id="movie-list"></div>
+
+    </section>
+
+
+</body>
+
+
+</html>

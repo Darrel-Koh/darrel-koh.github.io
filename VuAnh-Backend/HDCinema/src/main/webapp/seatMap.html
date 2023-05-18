@@ -1,0 +1,110 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5B2G Cinema | Order Management</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- boxIcon cdn link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="staff/css/seatMap.css">
+</head>
+<body onload="showSeat()">
+
+
+<!-- header section starts -->
+<header>
+    <a href="#" class="logo">5B2G Cinema</a>
+
+    <nav class="navbar">
+      <a class="#home" href="staff.html">Home</a>
+      <a class="active" id="#ticket" href="staffMovie.html">Ticket Management</a>
+      <a class="#order" href="staffOrder.html">Order Management</a>
+      <a class="#redeem" href="staffRedeem.html">Redeem Rewards</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i> 
+        <a href="index.html" class="bx bx-lock-open"></a> <!--logout button-->
+    </div>
+</header>
+
+<!-- header section ends -->
+
+<!-- search form start -->
+<form action="" id="search-form">
+    <input type="search" placeholder="Search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- search form ends  -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- seatmap section starts -->
+<div class="movie-container">
+    <h3 id="seat_movieName"></h3>
+  </div>
+
+  <ul class="showcase">
+    <li>
+      <div class="seat"></div>
+      <small>Available</small>
+    </li>
+    <li>
+      <div class="seat selected"></div>
+      <small>Selected</small>
+    </li>
+    <li>
+      <div class="seat sold"></div>
+      <small>Sold</small>
+    </li>
+  </ul>
+  <div class="container" > <!--  Use this id to laod seat -->
+    <div class="screen"></div>
+    
+    
+    <div id="seat-container">
+    	<!--  The seat map will be displayed here -->
+    
+    </div>
+
+	
+    
+  </div>
+
+  <p class="text">
+    You have selected <span id="count">0</span> seat.
+  </p>
+
+  <p class="text">
+    price (sGD): <span id="total">0</span>
+  </p>
+  
+  <p id="testRun"></p>
+
+  <a href="#" onclick="continueBooking()" class="btn">Continue</a>
+
+  <!-- seatmap section ends -->
+
+
+<!-- js file link -->
+<script src="staff/js/seatMap.js"></script>
+
+</body>
+</html>

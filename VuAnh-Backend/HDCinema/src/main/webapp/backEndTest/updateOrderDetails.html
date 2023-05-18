@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Update order</title>
+</head>
+
+<script>
+function toggleValueField(checkbox) {
+  var quantityField = checkbox.parentNode.querySelector("input[type='number']");
+  quantityField.disabled = !checkbox.checked;
+}
+</script>
+
+<body>
+
+<form action="updateCustomerOrder">
+
+Enter order ID <input type="text" name="orderId">
+<br>
+
+<h2>Food and Drink</h2>
+  <div class="fooddrink-item">
+    <div>
+      <input type="checkbox" name="FoodDrink" value="popcorn" onclick="toggleValueField(this)">
+      <label for="FoodDrink">Popcorn</label>
+      <input type="number" name="quantity" min="1" max="10" value="1" disabled>
+    </div>
+  </div>
+  <div class="fooddrink-item">
+    <div>
+      <input type="checkbox" name="FoodDrink" value="hotdog" onclick="toggleValueField(this)">
+      <label for="FoodDrink">Hot Dog</label>
+      <input type="number" name="quantity" min="1" max="10" value="1" disabled>
+    </div>
+  </div>
+  <div class="fooddrink-item">
+    <div>
+      <input type="checkbox" name="FoodDrink" value="nachos" onclick="toggleValueField(this)">
+      <label for="FoodDrink">Nachos</label>
+      <input type="number" name="quantity" min="1" max="10" value="1" disabled>
+    </div>
+  </div>
+  <div class="fooddrink-item">
+    <div>
+      <input type="checkbox" name="FoodDrink" value="soda" onclick="toggleValueField(this)">
+      <label for="FoodDrink">Soda</label>
+      <input type="number" name="quantity" min="1" max="10" value="1" disabled>
+    </div>
+  </div>
+  <div class="fooddrink-item">
+    <div>
+      <input type="checkbox" name="FoodDrink" value="water" onclick="toggleValueField(this)">
+      <label for="FoodDrink">Water</label>
+      <input type="number" name="quantity" min="1" max="10" value="1" disabled>
+    </div>
+  </div>
+  <div class="fooddrink-item">
+    <div>
+      <input type="checkbox" name="FoodDrink" value="juice" onclick="toggleValueField(this)">
+      <label for="FoodDrink">Juice</label>
+      <input type="number" name="quantity" min="1" max="10" value="1" disabled>
+    </div>
+  </div>
+
+<input type="submit"> <input type="reset">
+
+</form>
+
+</body>
+</html>

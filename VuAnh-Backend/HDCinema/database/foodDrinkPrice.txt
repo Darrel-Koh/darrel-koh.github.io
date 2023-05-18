@@ -1,0 +1,9 @@
+BUTTERED POPCORN	10	staff/images/popcorn1.jpg
+SWEET POPCORN	10	staff/images/popcorn2.jpg
+CARAMEL POPCORN	10	staff/images/popcorn3.jpg
+HOTDOG	2	staff/images/hotdog.jpg
+ICECREAM	3	staff/images/icecream.jpg
+SPRITE	2	staff/images/sprite.jpg
+LEMON TEA	1.5	staff/images/icelemontea.jpg
+ORANGE JUICE	10	staff/images/orange.jpg
+POTATO CHIPS	1	staff/images/chips.jpg
