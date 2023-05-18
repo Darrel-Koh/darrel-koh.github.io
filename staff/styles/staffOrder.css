@@ -172,6 +172,57 @@ section{
     background: var(--orange);
     letter-spacing: .1rem;
 }
+.buy form{
+    max-width: 90rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: 1rem solid rgb(254, 254, 254);
+    background: #fff;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+.buy form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.buy form .inputBox .input{
+    width: 49%;
+}
+.buy form .inputBox .input span{
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+.buy form .inputBox .input input{
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.buy form .inputBox .input input:focus{
+    border: .1rem solid var(--orange);
+}
+.btn1{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: var(--black);
+    background: var(--light-color);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+.btn1:hover{
+    color: var(--light-color);
+    background: var(--orange);
+    letter-spacing: .1rem;
+}
 /* footer css */
 .footer .box-container{
     display: grid;
