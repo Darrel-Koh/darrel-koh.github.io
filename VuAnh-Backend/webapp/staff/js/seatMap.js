@@ -18,11 +18,7 @@ document.querySelector('#close').onclick = () =>{
     document.querySelector('#search-form').classList.remove('active');
 }
 
-const container = document.querySelector(".container");
-const seats = document.querySelectorAll(".row .seat:not(.sold)");
-const count = document.getElementById("count");
-const total = document.getElementById("total");
-const movieSelect = document.getElementById("movie");
+
 
 populateUI();
 
@@ -36,21 +32,6 @@ function setMovieData(movieIndex, moviePrice) {
 }
 */
 
-// Update total and count
-function updateSelectedCount() {
-  const selectedSeats = document.querySelectorAll(".row .seat.selected");
-
-  const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
-
-  localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
-
-  const selectedSeatsCount = selectedSeats.length;
-
-  count.innerText = selectedSeatsCount;
-  total.innerText = selectedSeatsCount * ticketPrice;
-
-  setMovieData(movieSelect.selectedIndex, movieSelect.value);
-}
 
 
 // Get data from localstorage and populate UI

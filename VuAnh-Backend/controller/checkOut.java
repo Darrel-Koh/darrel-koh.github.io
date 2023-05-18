@@ -66,12 +66,14 @@ public class checkOut extends HttpServlet {
 		
 		// Get date order created 
 		LocalTime time = LocalTime.now();
-	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HHmm");
-	    String formattedTime = time.format(formatter);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+        String formattedTime = time.format(formatter);
+		
+	   
 	    
 	    LocalDate date = LocalDate.now();
-	    DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("ddMMyyyy");
-	    String formattedDate = date.format(dateFormatter);
+	    String formattedDate = date.toString();
+	    
 		
 		// Create list of food and drink
 		ArrayList<FoodAndDrink> FDList = new ArrayList<>(); 
@@ -89,8 +91,11 @@ public class checkOut extends HttpServlet {
 		// Generate the order 
 		FoodDrinkOrder order = new FoodDrinkOrder(getNextId(), "preparing", FDList, final_price, formattedDate, formattedTime);
 		
+		// Return this object back to JS 
+		 response.getWriter().print(order.getOrderId());
+		
 		// Display the order details 
-		out.println(order.toString());
+		//out.println(order.toString());
 		
 		// Save order to database 
 		orderSave(order, final_price ); 

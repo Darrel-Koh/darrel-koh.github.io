@@ -6,3 +6,4 @@ A005	Sword Art Online the Movie: Progressive - Scherzo of Deep Night	Action Adve
 A006	The House of No Man	Comedy, Drama	6.2	12	https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQcs9IcBXobR22w5hzUJOVQMG_tWVffocao5VWZVF4LivIKmxF5
 A007	The Super Mario Bros. Movie	Animation, Adventure, Comedy	7.3	12	https://upload.wikimedia.org/wikipedia/en/4/44/The_Super_Mario_Bros._Movie_poster.jpg
 A007	Ant-Man and the Wasp: Quantumania	Action, Adventure, Comedy	6.2	10	https://upload.wikimedia.org/wikipedia/en/3/30/Ant-Man_and_the_Wasp_Quantumania_poster.jpg
+A008	Fast X	Action, Adventure, Crime	6.0	10	https://media.gv.com.sg/imagesresize/img4375.jpg

@@ -1,3 +1,6 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +18,7 @@
     <!-- css file link -->
     <link rel="stylesheet" href="staff/css/makePayment2.css">
 </head>
-<body>
+<body onload="loadOrder()">
 
 
 <!-- header section starts -->
@@ -47,43 +50,56 @@
 
 <!-- search form ends  -->
 
-<div class="container">
-    <h6>Checkout</h6>
+<div class="container" style="font-size: 12px;">
     <a href="staff.html" class="cancel">x</a>
-    <h1>Payment</h1>
-    <form action="">
-        <label for="paymethod">Payment Method
-            <select name="paymethod" id="paymethod">
-                <option value="cash">Cash</option>
-                <option value="debit-card">Debit Card</option>
-                <option value="credit-card">Credit Card</option>
-            </select>
-        </label>
-        <label for="cardnum">Card Number
-            <input type="text" name="cardnum" id="cardnum" maxlength="16" onkeypress="cardspace()"/>
-        </label>
+    <h1>Order Details</h1>
+		<span class="label" style="font-size: 16px;">Order ID</span>
+        	<br>
+            <span id="order-id"  ></span>
+            <br>
+            <br>
+        <span class="label" style="font-size: 16px;">Order status</span>
+        	<br>
+            <span style="font-size: 12px;" id="order-status"></span>
+            <br>
+            <br>
+            
+            <span class="label"  style="font-size: 16px;">Order Items</span>
+   			<div id="order_items" ><!-- order items will be displayed here --></div>
+   			<br>
+   			<br>
+            
         <div class="float">
-            <label for="validtill">Valid Till
-                <input type="text" name="validtill" id="validtill" maxlength="6" onkeypress="addSlashes()"/>
-            </label>
-            <label for="cvv">CVV
-                <input type="text" name="cvv" id="cvv" maxlength="3"/>
-            </label>
+   			<span class="label" style="font-size: 16px;">Order Date:</span>
+   			<span>&nbsp;&nbsp;&nbsp;</span>
+   			<div id="order-date"></div>
         </div>
-            <label for="checkbox">
-                <input type="checkbox" name="checkbox" id="checkbox"/>
-                <p>Terms and Conditions Apply</p>
-            </label>
-		<a href="#" class="btn" onclick="viewOrder()">Buy Now</a> <!-- display successful msg -->
-    </form>
+        <div class="float">
+   			<span class="label" style="font-size: 16px;">Order time:</span>
+   			<span>&nbsp;&nbsp;&nbsp;</span>
+   			<div id="order-time"></div>
+        </div>
+        
+        <br>
+        <span class="label" style="font-size: 16px;">Total Price:</span>
+        <br>
+        <span id="final-price"></span><span>$</span>
+        <br>
+        <br>
+        
+        <a href="staff.html" class="btn">Return Home</a> <!-- display successful msg -->
 </div>
 
 
 
 
-<!-- js file link -->
-<script src="staff/js/makePayment2.js"></script>
 
+
+
+
+
+<!-- js file link -->
+<script src="staff/js/viewOrder.js"></script>
 
 </body>
 </html>

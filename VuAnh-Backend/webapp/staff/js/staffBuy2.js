@@ -30,8 +30,6 @@ function checkOut(){
 	}).get();
 	
 	
-	
-	var name = "vu anh"; 
 	namesString = JSON.stringify(names);
 	quantitiesString = JSON.stringify(quantities);
 
@@ -44,10 +42,10 @@ function checkOut(){
         data: {
            names: namesString,
            quantities: quantitiesString,
-           name:name
         },
         success: function (resultText) {
-			window.location.href = 'makePayment2.html';
+  			const encodedResultText = encodeURIComponent(resultText);
+  			window.location.href = `makePayment2.html?result=${encodedResultText}`;
         },
         error: function (jqXHR, exception) {
            console.log('Error occured!!');
