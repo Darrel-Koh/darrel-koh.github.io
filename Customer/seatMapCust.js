@@ -1,3 +1,4 @@
+// Navigating
 let menu = document.querySelector('#menu-bars');
 let navbar = document.querySelector('.navbar');
 
@@ -18,8 +19,6 @@ document.querySelector('#close').onclick = () =>{
 
 const container = document.querySelector(".container");
 const seats = document.querySelectorAll(".row .seat:not(.sold)");
-const count = document.getElementById("count");
-const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
 
 populateUI();
@@ -33,20 +32,20 @@ function setMovieData(movieIndex, moviePrice) {
 }
 
 // Update total and count
+const count = document.getElementById("count");
+const total = document.getElementById("total");
+
+// Update seat count and total price
 function updateSelectedCount() {
   const selectedSeats = document.querySelectorAll(".row .seat.selected");
-
-  const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
-
-  localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
-
   const selectedSeatsCount = selectedSeats.length;
 
-  count.innerText = selectedSeatsCount;
-  total.innerText = selectedSeatsCount * ticketPrice;
-
-  setMovieData(movieSelect.selectedIndex, movieSelect.value);
+  count.textContent = selectedSeatsCount;
+  total.textContent = selectedSeatsCount * ticketPrice;
 }
+
+// Initial count and total set
+updateSelectedCount();
 
 
 // Get data from localstorage and populate UI
@@ -91,6 +90,7 @@ container.addEventListener("click", (e) => {
 // Initial count and total set
 updateSelectedCount();
 
+// Codes meant for href
 function continueBooking() {
   const selectedSeat = document.querySelectorAll(".row .seat.selected");
   const selectedSeatIds = Array.from(selectedSeat).map(seat => seat.id);
