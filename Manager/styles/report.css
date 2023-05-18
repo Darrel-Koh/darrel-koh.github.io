@@ -105,12 +105,41 @@ header .icons #menu-bars{
 }
 #generatedReport{
     width: 80%; 
-    height: 60rem;
+    height: fit-content;
     margin: auto; 
     text-align: center;
     margin-top: 2rem;
     background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
     border-radius: .5rem;
+    color: var(--light-color);
+    justify-content: center;
+    display: grid;
+}
+#reportTable{
+    padding-bottom: 2.5rem;
+}
+th{
+    text-align: left;  
+    vertical-align: top;
+    padding-bottom: .5rem;
+    padding-right: .5rem;
+    font-size: 1.7rem;
+}
+#reportTitle{
+    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+.details{
+    font-size: 1.7rem;
+    font-weight: normal;
+}
+hr{
+    border: none;
+    border-top: 1px solid white;
+    padding-bottom: 2rem;
+    width: 40rem;
 }
 /* Report css ends */
 
