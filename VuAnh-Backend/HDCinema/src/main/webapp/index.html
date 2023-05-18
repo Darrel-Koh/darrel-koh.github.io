@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="staff/css/loginPage.css">
+    </head>
+    <body>
+        <form onsubmit="validateLogin(event)" method="post">
+            <div class="imgcontainer">
+              <img src="./SystemAdmin/Images/5B2G_Logo.jpg" alt="Logo" class="logo">
+            </div>
+
+            </div>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" id="usernameInput" required>
+                
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="passwordInput" required>
+                
+                <button type="submit">Login</button>
+                <label>
+                <!-- <input type="checkbox" checked="checked" name="remember"> Remember me -->
+              </label> 
+                <label class="forget-password"> <a href="forgot-password.html">Forgot Password?</a> </label>
+              </div>
+          
+            <!-- <div class="container" style="background-color:#f1f1f1">
+              <button type="button" class="cancelbtn">Cancel</button> 
+              <span class="psw"> <a href="#">Forgot password?</a></span>
+            </div>
+        -->
+        </form>
+    </body>
+</html>
+
+<!-- Javascript -->
+<script>
+    // to handle validatation temporarily
+    function validateLogin(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+      var username = document.getElementById("usernameInput").value;
+      var password = document.getElementById("passwordInput").value;
+      
+      if (username !== "" && password !== "")
+      {
+        if (username == "admin" && password == "admin")
+        {
+          window.location.href = "./SystemAdmin/systemAdminDashboard.html";
+        }
+        else if (username == "manager" && password == "manager")
+        {
+          window.location.href = "./Manager/movies.html"; 
+        }
+        else if (username == "staff" && password == "staff")
+        {
+          window.location.href = "./staff/staff.html";
+        }
+        else if (username == "customer" && password == "customer")
+        {
+          window.location.href = "./customer/custHome.html";
+        }
+        else{
+          alert("Wrong account details");
+        }
+      } else {
+        alert("Please enter both username and password again.");
+      }
+    }
+</script>

@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+:root{
+    --orange:#cd8c38;
+    --black:#2E2E2E;
+    --light-color:#D1D0D0;
+    --box-shadow:0 .5rem 1.5rem rgb(255, 255, 255);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Joan', serif;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+body {
+    background-color: #1e1f26;
+    display: grid;
+    grid-template-columns: 1000px;
+    justify-content: space-evenly;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: #adadad;
+}
+.btn {
+    display: inline-block;
+    padding: .5rem 1rem;
+    background-color: #cd8c38;
+    border-radius: 2rem;
+    color: #1e1f26;
+    transition: .3s;
+}
+.btn:hover {
+    background-color: #92601f;
+}
+.btn-l {
+    width: 100%;
+    text-align: center;
+}
+.active {
+    color: #cd8c38;
+}
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* main container */
+.main-container {
+    color: #adadad;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+}
+/* sidebar */
+.sidebar {
+    background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
+    backdrop-filter: blur(5px);
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+}
+.sidebar-groups {
+    margin-bottom: 1rem;
+}
+.sg-title {
+    margin-bottom: .5rem;
+    color: #fff;
+}
+input {
+    margin-bottom: .6rem;
+}
+input[type=checkbox]:checked {
+    accent-color: #cd8c38;
+}
+input[type=radio]:checked {
+    accent-color: #cd8c38;
+}
+label {
+    margin-left: .5rem;
+}
+/* movies container */
+.buttons {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+}
+.btn-alt {
+    background-color: #1e1f26;
+    color: #cd8c38;
+    border: 1px solid #cd8c38;
+    margin-left: 1rem;
+}
+.btn-alt:hover {
+    color: #1e1f26;
+    background-color: #cd8c38;
+}
+/* current movies */
+.movies-container {
+    padding-bottom: 2rem;
+}
+.current-movies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+.current-movie {
+    background: linear-gradient(45deg, rgba(255, 255, 255, .05), rgba(205, 140, 56, .15));
+    padding: 1rem;
+    border-radius: .5rem;
+}
+.cm-img-box {
+    position: relative;
+    height: 150px;
+    width: auto;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+.movie-title {
+    color: #fff;
+    margin-bottom: .2rem;
+}
+.booking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.price {
+    color: #cd8c38;
+}
+
+.btn1{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: var(--black);
+    background: var(--light-color);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+.btn1:hover{
+    color: var(--light-color);
+    background: var(--orange);
+    letter-spacing: .1rem;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #2E2E2E;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+header .logo{
+    color: #cd8c38;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+}
+header .navbar a.active,
+header .navbar a:hover{
+    color:#cd8c38;
+    background: var(--black);
+}
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 3rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: var(--light-color);
+}
+header .icons i:hover,
+header .icons a:hover{
+    color: var(--light-color);
+    background: var(--orange);
+    transform: rotate(360deg);
+}
+header .icons #menu-bars{
+    display: none;
+}
+#search-form{
+    position: fixed;
+    top: -110%; left: 0;
+    height: 100%; width: 100%;
+    z-index: 1004;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+#search-form.active{
+    top: 0;
+}
+#search-form #search-box{
+    width: 50rem;
+    border-bottom: .1rem solid #fff;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 3rem;
+    text-transform: none;
+    background: none;
+}
+#search-form #search-box::placeholder{
+    color: #eee;
+}
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+#search-form label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+}
+#search-form label:hover{
+    color: var(--orange);
+}
+#search-form #close{
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    top: 2rem; right: 3rem;
+    font-size: 5rem;
+}
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width:768px){
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #2E2E2E;
+        border-top: 1rem solid var(--black);
+        border-bottom: 1rem solid var(--black);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #2E2E2E;
+    }
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
+    }
+}
+@media (max-width:991px){
+    html{
+        font-size: 50%;
+    } 
+}
+

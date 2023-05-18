@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>HDCinema</display-name>
+  
+  <!-- Staff -->
+
+
+<servlet>
+ <servlet-name>StaffDeleteCustomerOrder</servlet-name>
+ <servlet-class>5B2Gcinema.Staff.StaffDeleteCustomerOrder</servlet-class>
+</servlet>
+
+<servlet>
+ <servlet-name>StaffRedeemCustomerReward</servlet-name>
+ <servlet-class>5B2Gcinema.Staff.StaffRedeemCustomerReward</servlet-class>
+</servlet>
+
+<servlet>
+ <servlet-name>StaffLogin</servlet-name>
+ <servlet-class>5B2Gcinema.Staff.StaffLogin</servlet-class>
+</servlet>
+
+<servlet>
+ <servlet-name>StaffLogout</servlet-name>
+ <servlet-class>5B2Gcinema.Staff.StaffLogout</servlet-class>
+</servlet>
+
+
+<!--  Testing JSON -->
+<servlet>
+  <servlet-name>MovieServlet</servlet-name>
+  <servlet-class>MovieServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>MovieServlet</servlet-name>
+  <url-pattern>/getMovie</url-pattern>
+</servlet-mapping>
+
+<!--  Create Ticket  -->
+
+<servlet>
+	<servlet-name>StaffCreateTicket</servlet-name>
+	<servlet-class>controller.StaffCreateTicket</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>StaffCreateTicket</servlet-name>
+	<url-pattern>/movie</url-pattern>
+</servlet-mapping>
+
+<!--  View Ticket -->
+
+<servlet>
+ <servlet-name>StaffViewTicket</servlet-name>
+ <servlet-class>controller.StaffViewTicket</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>StaffViewTicket</servlet-name>
+	<url-pattern>/viewTicket</url-pattern>
+</servlet-mapping>
+
+<!--  Update Ticket -->
+<servlet>
+ <servlet-name>StaffUpdateTicket</servlet-name>
+ <servlet-class>controller.StaffUpdateTicket</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>StaffUpdateTicket</servlet-name>
+	<url-pattern>/updateTicket</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+ <servlet-name>StaffCreateCustomerOrder</servlet-name>
+ <servlet-class>controller.StaffCreateCustomerOrder</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>StaffCreateCustomerOrder</servlet-name>
+	<url-pattern>/createOrder</url-pattern>
+</servlet-mapping>
+
+<servlet>
+ <servlet-name>StaffViewCustomerOrder</servlet-name>
+ <servlet-class>controller.StaffViewCustomerOrder</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>StaffViewCustomerOrder</servlet-name>
+	<url-pattern>/viewCustomerOrder</url-pattern>
+</servlet-mapping>
+
+<servlet>
+ <servlet-name>StaffUpdateCustomerOrder</servlet-name>
+ <servlet-class>controller.StaffUpdateCustomerOrder</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>StaffUpdateCustomerOrder</servlet-name>
+	<url-pattern>/updateCustomerOrder</url-pattern>
+</servlet-mapping>
+
+<servlet>
+ <servlet-name>StaffUpdateOrderStatus</servlet-name>
+ <servlet-class>controller.StaffUpdateOrderStatus</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>StaffUpdateOrderStatus</servlet-name>
+	<url-pattern>/updateOrderStatus</url-pattern>
+</servlet-mapping>
+
+<servlet>
+ <servlet-name>StaffRedeemCustomerPoint</servlet-name>
+ <servlet-class>controller.StaffRedeemCustomerPoint</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>StaffRedeemCustomerPoint</servlet-name>
+	<url-pattern>/StaffRedeemCusPoint</url-pattern>
+</servlet-mapping>
+
+<!--  Home page for update order -->
+
+
+
+
+
+
+
+  
+</web-app>

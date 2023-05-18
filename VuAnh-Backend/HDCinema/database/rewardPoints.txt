@@ -1,0 +1,5 @@
+FREE ONE OF ANY TYPE OF POPCORN	100	staff/images/popcorn3.jpg
+FREE ONE TICKET FOR ANY MOVIE	500	staff/images/movieTicket.jpg
+FREE DRINK	50	staff/images/cola.jpg
+20% DISCOUNT	40	staff/images/discount.jpg
+FREE FOOD	70	staff/images/hotdog.jpg
