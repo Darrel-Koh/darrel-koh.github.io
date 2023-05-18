@@ -131,6 +131,10 @@ th{
     margin-bottom: 2rem;
     padding-top: 2rem;
 }
+#reportTable .detailName::after {
+    content: ":";
+    float: right;
+}
 .details{
     font-size: 1.7rem;
     font-weight: normal;
