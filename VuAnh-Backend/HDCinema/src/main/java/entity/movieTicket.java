@@ -1,22 +1,32 @@
 package entity;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class movieTicket {
 	private String ticketNumber;
     private String movieTitle;
-    private String cinema; 
-    private String seatNumber;
+    private ArrayList<String> seatNumber;
     private String date; 
     private String time;
+    private String cinemaRoom; 
     private double price;
 
-    public movieTicket(String ticketNumber, String movieTitle, String date, String time, String seatNumber, String cinema, double price) {
+    public movieTicket(String ticketNumber, String movieTitle, String date, 
+    		String time, ArrayList<String> seatNumber, double price, String cinemaRoom) {
         this.ticketNumber = ticketNumber; 
     	this.movieTitle = movieTitle;
     	this.date = date; 
     	this.time = time;
-        this.cinema = cinema;
         this.seatNumber = seatNumber;
         this.price = price;
+        this.cinemaRoom = cinemaRoom; 
     }
+    
+    public String getCinemaRoom() {
+    	return cinemaRoom; 
+    }
+    
     
     public String getTicketNumber() {
     	return ticketNumber; 
@@ -26,11 +36,7 @@ public class movieTicket {
         return movieTitle;
     }
 
-    public String getCinema() {
-        return cinema;
-    }
-
-    public String getSeatNumber() {
+    public ArrayList<String> getSeatNumber() {
         return seatNumber;
     }
 
@@ -49,26 +55,14 @@ public class movieTicket {
     
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-
-     // add top border
-        sb.append("+--------------------------------------------------\n");
-
-        // add movie title and ticket number
-        sb.append(String.format("| %-50s \n", movieTitle + " - Ticket " + ticketNumber));
-
-        // add cinema, seat number, date and time
-        sb.append(String.format("| %-25s %-10s %-14s \n", "Cinema: " + cinema, "Seat: " + seatNumber, "Date: " + date));
-        sb.append(String.format("| %-25s %-10s %-14s \n", "", "", "Time: " + time));
-
-        // add price
-        sb.append(String.format("| %-50s \n", "Price: $" + price));
-
-        // add bottom border
-        sb.append("+--------------------------------------------------\n");
-
-
-        return sb.toString();
+        return "movieTicket{" +
+                "ticketNumber='" + ticketNumber + '\'' +
+                ", movieTitle='" + movieTitle + '\'' +
+                ", seatNumber=" + seatNumber +
+                ", date='" + date + '\'' +
+                ", time='" + time + '\'' +
+                ", price=" + price +
+                '}';
     }
 
 

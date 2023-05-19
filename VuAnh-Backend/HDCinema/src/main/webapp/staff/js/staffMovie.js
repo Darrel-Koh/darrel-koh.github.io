@@ -1,5 +1,9 @@
 
 
+function viewTicket(){
+	
+}
+
 // Load the list of movie
 function getMovieList() {
 			$.ajax({

@@ -44,7 +44,7 @@ public class SystemShowSeat extends HttpServlet {
 		for (int i = 0; i < seatMapArr.length; i++) {
 		    // Iterate over each column in the current row
 		    for (int j = 0; j < seatMapArr[i].length; j++) {
-		        System.out.print(seatMapArr[i][j] + " "); // Display the element
+		        
 		    }
 		    System.out.println(); // Move to the next line after each row
 		}

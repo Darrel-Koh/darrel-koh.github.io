@@ -16,89 +16,59 @@ document.querySelector('#close').onclick = () =>{
     document.querySelector('#search-form').classList.remove('active');
 }
 
-const container = document.querySelector(".container");
-const seats = document.querySelectorAll(".row .seat:not(.sold)");
-const count = document.getElementById("count");
-const total = document.getElementById("total");
-const movieSelect = document.getElementById("movie");
 
-populateUI();
-
-let ticketPrice = +movieSelect.value;
-
+var idValue = getUrlParameter('idvalue');
+var moviePrice = getUrlParameter('price'); 
+var movieDate = getUrlParameter('date');
+var guestName = getUrlParameter('guestName');
+var roomNumber = getUrlParameter('roomNumber');
+var movieTime = getUrlParameter('time');
+var movieName = getUrlParameter('title');
 
 
 
+function continueBooking(){
+	
+	var totalPrice = displayPrice(); 
+	var selectedElements = document.getElementsByClassName('selected');
+	var selectedSeat = [];
+	
+	for (var i = 0; i < selectedElements.length; i++) {
+		selectedSeat.push(selectedElements[i].id);
+	}
+	
+	selectedSeat.shift();
+	
+	var selectedSeatJson = JSON.stringify(selectedSeat);
+	
 
-// Get data from localstorage and populate UI
-function populateUI() {
-  const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
-
-  if (selectedSeats !== null && selectedSeats.length > 0) {
-    seats.forEach((seat, index) => {
-      if (selectedSeats.indexOf(index) > -1) {
-        console.log(seat.classList.add("selected"));
-      }
-    });
-  }
-
-  const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
-
-  if (selectedMovieIndex !== null) {
-    movieSelect.selectedIndex = selectedMovieIndex;
-    console.log(selectedMovieIndex)
-  }
-}
-console.log(populateUI())
-// Movie select event
-movieSelect.addEventListener("change", (e) => {
-  ticketPrice = +e.target.value;
-  setMovieData(e.target.selectedIndex, e.target.value);
-  updateSelectedCount();
-});
-
-// Seat click event
-container.addEventListener("click", (e) => {
-  if (
-    e.target.classList.contains("seat") &&
-    !e.target.classList.contains("sold")
-  ) {
-    e.target.classList.toggle("selected");
-
-    updateSelectedCount();
-  }
-});
-
-
-function continueBooking() {
-  const selectedSeat = document.querySelectorAll(".row .seat.selected");
-  const selectedSeatIds = Array.from(selectedSeat).map(seat => seat.id);
-  const payload = { selectedSeat: selectedSeatIds };
-  console.log("Selected Seat IDs:", selectedSeatIds);
-
-  fetch("https://jsonplaceholder.typicode.com/posts", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(payload)
-  })
-    .then(response => {
-      if (response.ok) {
-        // Seat booking successful, redirect to another page
-        // window.location.href = "makePaymentCust.html$" + selectedSeatIds;
-        window.location.href = "makePaymentCust.html?" + selectedSeatIds.join("&")
-        console.log("Selected Seat IDs:", selectedSeatIds);
-      } else {
-        // Seat booking failed, handle the error
-      }
-    })
-    .catch(error => {
-      // Handle any errors
-      console.log("Error occurred:", error);
-    });
+     
+     $.ajax({
+        url: 'SystemCreateTicket', // Sending to Ajax Handler 
+        method: 'POST',	  // Using POST Method 
+        data: {
+			movieTitle: movieName,
+			date: movieDate,
+			time: movieTime, 
+			movieId: idValue,
+			totalPrice: totalPrice,
+			seat: selectedSeatJson,
+			cinemaRoom: roomNumber
+        },
+        success: function (resultText) {
+          const encodedResultText = encodeURIComponent(resultText);
+  			window.location.href = `makePayment.html?result=${encodedResultText}`;
+        },
+        error: function (jqXHR, exception) {
+           console.log('Error occured!!');
+        }
+     });
+	
 }
 
+
+
+// Get passed value on URL
 function getUrlParameter(parameterName) {
   var urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(parameterName);
@@ -108,27 +78,32 @@ function getUrlParameter(parameterName) {
 
 function displayPrice(){
 	
-	var idValue = getUrlParameter('idvalue');
 	console.log("idValue:", idValue);
 	
 	var selectedSeats = $('.seat.selected');
 	
-	 
-	var price = getUrlParameter('price'); 
-	
-	var totalPrice = price * (selectedSeats.length - 1); 
+	var totalPrice = moviePrice * (selectedSeats.length - 1); 
 	
 	document.getElementById('count').textContent = (selectedSeats.length - 1) ;
 	document.getElementById('total').textContent = totalPrice ;
-
-		
 	
-	 
-  	
-  	
-	
+	return totalPrice; 
+ 	
 }
 
+function toggleSelectedClass(element) {
+	// Only allow select the chair that is not selected 
+    if (!element.hasClass('sold')) {
+        element.toggleClass('selected');
+    }
+}
+
+function showMovieName(){
+		
+	var movieName = getUrlParameter('title');
+	document.getElementById('movie-name').textContext = movieName; 
+	console.log("SHOW MOVIE NAME")
+}
 
 
 function showSeat(){
@@ -165,7 +140,7 @@ function showSeat(){
 				    .addClass(status)
 				    .attr('id', id++)
 				    .click(function() {
-				        $(this).toggleClass('selected');
+				        toggleSelectedClass($(this));
 				        displayPrice(); // Call the displayPrice() function
 				    });
 			        row.append(seatDiv);

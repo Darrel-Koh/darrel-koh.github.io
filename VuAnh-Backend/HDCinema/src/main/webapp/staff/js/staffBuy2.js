@@ -33,8 +33,6 @@ function checkOut(){
 	namesString = JSON.stringify(names);
 	quantitiesString = JSON.stringify(quantities);
 
-
-
      
      $.ajax({
         url: 'checkOut', // Sending to Ajax Handler 
