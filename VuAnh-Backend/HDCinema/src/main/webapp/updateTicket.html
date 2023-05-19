@@ -60,23 +60,17 @@
 
 <section class="buy" id="buy">
     <h3 class="sub-heading">Only For Staff</h3>
-    <h1 class="heading">Buy Ticket Form</h1>
+    <h1 class="heading">Update Ticket Details</h1>
 
     <form action="">
         <div class="inputBox">
             <div class="input">
-                <span>Your Username (N/A For Gest)</span>
-                <input type="text" id="s_guestName" placeholder="Enter Your Username">
+                <span>Your Room Number</span>
+                <input type="text" id="s_roomNum" placeholder="Enter cinema room">
             </div>
              <div class="input">
-                <span>Your Room Number</span>
-				<select id="s_roomNumber">
-				  <option value="1">Room 1</option>
-				  <option value="2">Room 2</option>
-				  <option value="3">Room 3</option>
-				  <option value="4">Room 4</option>
-				  <option value="5">Room 5</option>
-				</select>
+                <span>Select your seat</span>
+                <input type="text" id="s_seat" placeholder="Eg: A1, A2, A3">
             </div>
 
         </div>
@@ -92,7 +86,7 @@
             </div>
         </div>
 
-        <a href="seatMap.html" id="continueBtn" class="btn">Continue</a>
+        <a href="#" onclick="updateTicket()" id="continueBtn" class="btn">Continue</a>
     </form>
    
    
@@ -101,7 +95,7 @@
 
 
 <!-- js file link -->
-<script src="staff/js/staffBuy.js"></script>
+<script src="staff/js/updateTicket.js"></script>
 
 
 

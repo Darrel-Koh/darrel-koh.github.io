@@ -108,9 +108,14 @@ function showMovieName(){
 
 function showSeat(){
 	
+	var cinemaRoom = getUrlParameter('roomNumber'); 
+		
 	$.ajax({
 		url: 'SystemShowSeat',
 		method: 'POST',
+		data:{
+			cinemaRoom: cinemaRoom
+		},
 		success: function(result) {
 			console.log(result); 
 			

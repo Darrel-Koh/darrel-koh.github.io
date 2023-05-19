@@ -62,7 +62,7 @@ public class SystemCreateTicket extends HttpServlet {
         
         // The list of seat selected -> convert to correct format and display 
         for (String element : array) {
-            finalSeat.add(convertSeat(Integer.parseInt(element)));  
+            finalSeat.add(convertSeat(Integer.parseInt(element), cinemaRoom));  
         }
         
         // create new ticket object
@@ -79,7 +79,7 @@ public class SystemCreateTicket extends HttpServlet {
 		
 	}
 	
-	public String convertSeat(int raw) {
+	public String convertSeat(int raw, String cinemaRoom) {
 		
 
 	        int rowNumber = divideBy8(raw);
@@ -90,7 +90,7 @@ public class SystemCreateTicket extends HttpServlet {
 	        
 	        
 	        // Found this seat bought -> update in DBS
-	        updateSeatMap(rowNumber, columnNumber); 
+	        updateSeatMap(rowNumber, columnNumber, cinemaRoom); 
 	        
 	       
 	        	finalCol = columnNumber +1; 
@@ -134,17 +134,17 @@ public class SystemCreateTicket extends HttpServlet {
 		
 	}
 	
-	public void updateSeatMap(int row, int col) {
+	public void updateSeatMap(int row, int col, String cinemaRoom) {
 		
-		int[][] seatMap = readSeatDbs(); 
+		int[][] seatMap = readSeatDbs(cinemaRoom); 
 		seatMap[row][col] = 1; 
-		saveSeatDbs(seatMap); 
+		saveSeatDbs(seatMap, cinemaRoom); 
 		
 	}
 	
-	public int[][] readSeatDbs() {
+	public int[][] readSeatDbs(String cinemaRoom) {
 		int[][]seatMap = null; 
-		File file = new File("/Users/vuanhngo/Documents/eclipse-314/HDCinema/database/seatmaps.txt");
+		File file = new File("/Users/vuanhngo/Documents/eclipse-314/HDCinema/database/seatmaps"+cinemaRoom+".txt");
         try {
             Scanner scanner = new Scanner(file);
 
@@ -176,9 +176,11 @@ public class SystemCreateTicket extends HttpServlet {
         return seatMap;
 	}
 	
-	public void saveSeatDbs(int[][]seatMap) {
+	// Save into the correct DBS based on the movie 
+	public void saveSeatDbs(int[][]seatMap, String cinemaRoom) {
+		
 		try {
-            FileWriter writer = new FileWriter("/Users/vuanhngo/Documents/eclipse-314/HDCinema/database/seatmaps.txt");
+            FileWriter writer = new FileWriter("/Users/vuanhngo/Documents/eclipse-314/HDCinema/database/seatmaps"+cinemaRoom+".txt");
 
             // Iterate over the array elements and write them to the file
             for (int i = 0; i < seatMap.length; i++) {

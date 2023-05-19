@@ -15,3 +15,7 @@
 00015	Guardians of the Galaxy Vol.3			[]	12	0.0
 00016	Guardians of the Galaxy Vol.3	2023-05-06	10:09	[A1, A8]	a4	30.0
 00017	Guardians of the Galaxy Vol.3	2023-05-06	10:09	[E4, E5]	99	30.0
+00018	Guardians of the Galaxy Vol.3	2023-05-18	11:58	[B1, B2, B4, B5]	A12	40.0
+00019	Guardians of the Galaxy Vol.3	2023-05-04	13:50	[D1]	a4	15.0
+00020	Guardians of the Galaxy Vol.3	2023-05-23	15:43	[B1, B2]	2	30.0
+00021	Guardians of the Galaxy Vol.3	2023-05-20	15:45	[D4, D5]	1	30.0

@@ -2,6 +2,27 @@
 
 function viewTicket(){
 	
+	  var ticketId = document.getElementById("customer-id").value;
+
+		var encodedTicketId = encodeURIComponent(ticketId);
+		
+		  window.location.href = "staffTicket.html?result=" + encodedTicketId;
+
+}
+
+
+// Update the ticket
+function updateTicket(){
+	
+	  var ticketId = document.getElementById("customer-id").value;
+	  var encodedTicketId = encodeURIComponent(ticketId);
+
+		
+      window.location.href = "updateTicket.html?result=" + encodedTicketId;
+
+	 	 
+	  
+
 }
 
 // Load the list of movie

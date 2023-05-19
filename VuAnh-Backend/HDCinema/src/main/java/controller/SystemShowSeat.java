@@ -37,7 +37,11 @@ public class SystemShowSeat extends HttpServlet {
 			throws ServletException, IOException {
 		
 		PrintWriter out = response.getWriter(); 
-		int[][]seatMapArr = readDbs(); 
+		
+		String cinemaRoom = request.getParameter("cinemaRoom"); 
+		
+		int[][]seatMapArr = readDbs(cinemaRoom); 
+
 		
 		// Try to display the content of the array list
 		
@@ -59,10 +63,15 @@ public class SystemShowSeat extends HttpServlet {
 		
 	}
 	
-	public int[][] readDbs() {
+	public int[][] readDbs(String cinemaRoom) {
 		
 		int[][]seatMap = null; 
-		File file = new File("/Users/vuanhngo/Documents/eclipse-314/HDCinema/database/seatmaps.txt");
+		
+		System.out.println(cinemaRoom); 
+		
+		String inputFile = "/Users/vuanhngo/Documents/eclipse-314/HDCinema/database/seatmaps"+cinemaRoom+".txt";
+		
+		File file = new File(inputFile);
         try {
             Scanner scanner = new Scanner(file);
 

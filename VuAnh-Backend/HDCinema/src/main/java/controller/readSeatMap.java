@@ -129,8 +129,6 @@ public class readSeatMap extends HttpServlet {
 		}
 		
 		seatMap[value][column] = 1; 
-
-		
 		
 	}
 
