@@ -50,3 +50,27 @@ function listItem() {
         }
      });
   }
+  
+ 
+ function viewOrder(){
+	var orderId = document.getElementById("order-id").value;
+	var encodedOrderId = encodeURIComponent(orderId);
+	window.location.href = `viewOrder.html?result=${encodedOrderId}`;
+	
+}
+
+function updateOrder(){
+	 
+ 	var orderId = document.getElementById("order-id").value;
+ 	var encodedOrderId = encodeURIComponent(orderId);
+	window.location.href = `updateOrder1.html?result=${encodedOrderId}`;
+
+	
+}
+
+function updateOrderStatus(){
+	var orderId = document.getElementById("order-id").value;
+	var encodedOrderId = encodeURIComponent(orderId);
+	window.location.href = `updateOrderStatus.html?result=${encodedOrderId}`;
+
+}

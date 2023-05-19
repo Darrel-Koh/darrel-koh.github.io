@@ -39,7 +39,7 @@ public class viewOrder extends HttpServlet {
 			throws ServletException, IOException {
 	
 		// Template how to link JSON with Servlet
-		String searchId = request.getParameter("result");
+		String searchId = request.getParameter("result").trim();
 		
 		ArrayList<FoodDrinkOrder> FDOrder = new ArrayList<>();
 		Gson gson = new Gson(); 

@@ -15,6 +15,9 @@ function updateTicket(){
 	var seat = document.getElementById("s_seat").value;
 	var date = document.getElementById("s_date").value;
 	var time = document.getElementById("s_time").value;
+	
+	var encodedOrderId = encodeURIComponent(idValue);
+
      
      $.ajax({
         url: 'SystemUpdateTicket', // Sending to Ajax Handler 
@@ -28,6 +31,8 @@ function updateTicket(){
         },
         success: function (resultText) {
            console.log(resultText); 
+           window.location.href = `staffTicket.html?result=${encodedOrderId}`;
+
         },
         error: function (jqXHR, exception) {
            console.log('Error occured!!');
