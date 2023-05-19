@@ -40,7 +40,7 @@ function listOffer(){
          	var img =$('<img src="' + rw.img +'" class="product-img">');
          	var title = $('<h2 class="product-title">'+rw.name + '</h2>');
          	var point = $('<span class="price">'+rw.point + '</span>');
-         	var button = $('<a href="#" class="btn">'+ "Redeem Now" + '</a>')
+			var button = $('<a href="#" class="btn" data-point="'+ rw.point +'" onclick="redeemReward(event)">'+ "Redeem Now" + '</a>');
          	
          	mainDiv.append(img); 
          	mainDiv.append(title); 
@@ -56,4 +56,72 @@ function listOffer(){
            console.log('Error occured!!');
         }
      });
+}
+
+var inputElement = document.getElementById("order-id");
+inputElement.addEventListener("input", function() {
+  var enteredValue = inputElement.value;
+  // Call your function here with the enteredValue
+  checkBalance(enteredValue); 
+});
+
+
+
+function checkBalance(enteredValue){
+     
+     $.ajax({
+        url: 'SystemCheckPoint', // Sending to Ajax Handler 
+        method: 'POST',	  // Using POST Method 
+        data: {
+           custId: enteredValue
+        },
+        success: function (resultText) {
+           console.log(resultText); 
+          $('#total-point').html(resultText);
+
+        },
+        error: function (jqXHR, exception) {
+           console.log('Error occured!!');
+        }
+     });
+	
+}
+
+function popUp(){
+	alert("Done"); 
+}
+
+
+function redeemReward(){
+	
+	// Retrieve the ID 
+	var inputElement = document.getElementById("order-id");
+	var enteredValue = inputElement.value;
+	
+	var button = event.target;
+	
+	// This is the point selected
+	var point = button.dataset.point;
+	//console.log("Point:", point);
+	console.log("Placeholder content:", enteredValue);
+
+
+	 $.ajax({
+        url: 'SystemRedeemReward', // Sending to Ajax Handler 
+        method: 'POST',	  // Using POST Method 
+        data: {
+           custId: enteredValue,
+           rwPoint: point
+        },
+        success: function (resultText) {
+           console.log(resultText); 
+           popUp(); 
+
+        },
+        error: function (jqXHR, exception) {
+           console.log('Error occured!!');
+        }
+     });
+  
+  
 }
