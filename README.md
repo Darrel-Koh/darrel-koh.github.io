@@ -4,8 +4,7 @@
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Tech Stack](#tech-stack)
-4. [Installation](#installation)
-5. [Usage](#usage)
+4. [Usage](#usage)
 
 ## Introduction
 The Cinema Booking System is a comprehensive platform that caters to a variety of users such as administrators, managers, staff, and customers, each with unique preferences. 
